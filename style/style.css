@@ -1,5 +1,7 @@
-.main_section {
+body {
     margin: 0;
+}
+.main_section {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 34% 20% 20% auto;
@@ -11,6 +13,10 @@
         "logo_section_L logo_section_R";
 }
 .self_exploration_section {
-    background: brown;
-
+    margin: 0;
+    background-image: url('../assets/background_shadow.svg');
+    height: 676px;
+    width: 100%;
+    grid-area: self_exploration_L;
+    grid-column: 1/3;
 }
