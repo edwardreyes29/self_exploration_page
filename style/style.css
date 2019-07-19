@@ -10,7 +10,7 @@
         "job_section_L job_section_R"
         "logo_section_L logo_section_R";
 }
-.flashlight {
-    grid-area: self_exploraton_L;
-    transform: translateX(-40px);
+.background_shadow {
+    grid-area: self_exploration_L;
+    
 }
