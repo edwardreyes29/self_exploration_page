@@ -1,0 +1,12 @@
+.main_section {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 34% 20% 20% auto;
+    grid-template-areas:
+        "self_exploration_L self_exploration_R"
+        "furthermore_L furthermore_R"
+        "understanding_L understanding_R"
+        "job_section_L job_section_R"
+        "logo_section_L logo_section_R";
+}
