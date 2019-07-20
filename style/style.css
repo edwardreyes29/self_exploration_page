@@ -1,6 +1,11 @@
 body {
     margin: 0;
 }
+svg {
+  /*SVG: float a shape over another shape */
+  position: relative;
+}
+
 .self_exploration_page {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -13,7 +18,7 @@ body {
         "logo_section_L logo_section_R";
 }
 /*####Self Exporation Section ###*/
-.self_exploration_section {
+.background_shadow {
     margin: 0;
     background: linear-gradient(#60513E,#7A694F,#AB957C,#FFFFFF);
     height: 676px;
@@ -23,8 +28,9 @@ body {
 }
 /* title */
 .title {
-    width: 32%; /* makes size responsive */
+    width: 60%; /* makes size responsive */
     grid-area: self_exploration_L;
+    grid-column: 1/2;
 }
 .text {
     font-family: "TamilSangamMN-Bold",Tamil Sangam MN;
@@ -35,5 +41,20 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     transform: translate(10px,10px);
+}
+
+.flashlight_section {
+  grid-area: self_exploration_L;
+  grid-column: 1/3;
+  width: 150%;
+  transform: translate(-40px, -150px);  
+}
+
+.character_1_section {
+  grid-area: self_exploration_R;
+  width: 70%;
+  justify-self: center;
+
+
 }
 

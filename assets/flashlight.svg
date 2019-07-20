@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1416 1133">
+    <defs>
+        <linearGradient id="a" x1=".043" y1=".5" x2=".717" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff3d0"/>
+            <stop offset="1" stop-color="#fcfcfc"/>
+        </linearGradient>
+        <linearGradient id="b" x1="1" y1=".5" x2=".364" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fca12a"/>
+            <stop offset="1" stop-color="#f48b00"/>
+        </linearGradient>
+    </defs>
+    <path data-name="light" d="M2086.813 534.181c-30.894-9.38-51.654-38.147-50.572-69.545 1.023-29.7 21.4-55.893 50.572-64.715L3266.5-98v1133z" transform="translate(-1850 98)" fill="url(#a)"/>
+    <path d="M2086.326 467.051a771.763 771.763 0 0 1-2.917 67.613h-36.957l-55.434-39.6H1850v-55.058h141.018l55.434-39.6h36.957a772.933 772.933 0 0 1 2.917 66.645z" transform="translate(-1850 98)" fill="url(#b)"/>
+    <g data-name="Group 550">
+        <g data-name="Group 545">
+            <g data-name="Path 138" fill="#747373">
+                <path d="M124 575.5h-20c-5.238 0-9.5-4.262-9.5-9.5s4.262-9.5 9.5-9.5h20c5.238 0 9.5 4.262 9.5 9.5s-4.262 9.5-9.5 9.5z"/>
+                <path d="M104 557c-4.963 0-9 4.037-9 9s4.037 9 9 9h20c4.963 0 9-4.037 9-9s-4.037-9-9-9h-20m0-1h20c5.523 0 10 4.477 10 10s-4.477 10-10 10h-20c-5.523 0-10-4.477-10-10s4.477-10 10-10z" fill="#fffcfc"/>
+            </g>
+        </g>
+    </g>
+    <g data-name="Group 557">
+        <path data-name="Path 139" d="M104 558a8 8 0 1 1-8 8 8 8 0 0 1 8-8z" fill="#dedbdb"/>
+        <g data-name="Ellipse 21" transform="translate(99 561)" fill="none" stroke="#fff">
+            <circle cx="5" cy="5" r="5" stroke="none"/>
+            <circle cx="5" cy="5" r="4.5"/>
+        </g>
+    </g>
+</svg>
