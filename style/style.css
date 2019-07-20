@@ -1,7 +1,9 @@
 body {
     margin: 0;
 }
-.main_section {
+.self_exploration_page {
+    width: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 34% 20% 20% auto;
