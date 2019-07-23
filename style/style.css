@@ -17,7 +17,7 @@ p {
     grid-template-columns: 50% 50%;
     grid-template-rows: 34% 20% 20% auto;
     grid-template-areas:
-        "flashilight_L flashilight_R"
+        "flashilight_section_L flashilight_section_R"
         "heart_section_L heart_section_R"
         "triangle_section_L triangle_section_R"
         "job_section_L job_section_R"
@@ -40,49 +40,66 @@ p {
   transform: translate(10px,10px);
 }
 
+/* Character stylings */
+.character_brown { 
+  fill:#663a14;
+}
+.character_skin {
+  fill: #fcbb65
+  /* fill: red; */
+}
+
 /*####Self Exporation Section ###*/
 .background_shadow {
     margin: 0;
     background: linear-gradient(#60513E,#7A694F,#AB957C,#FFFFFF);
     height: 676px;
     width: 100%;
-    grid-area: flashilight_L;
+    grid-area: flashilight_section_L;
     grid-column: 1/3;
 }
 /* title */
 .title {
     width: 60%; /* makes size responsive */
-    grid-area: flashilight_L;
+    grid-area: flashilight_section_L;
     grid-column: 1/2;
 }
 
 .flashlight_section {
-  grid-area: flashilight_L;
+  grid-area: flashilight_section_L;
   grid-column: 1/3;
   width: 150%;
   transform: translate(-40px, -150px);  
 }
 
 .character_1_section {
-  grid-area: flashilight_R;
+  grid-area: flashilight_section_R;
   width: 70%;
   justify-self: center;
 }
 
 .shape_group_top {
-  grid-area: flashilight_L;
+  grid-area: flashilight_section_L;
   width: 15%;
 }
 #question_indicator_1 {
-  grid-area: flashilight_R;
+  grid-area: flashilight_section_R;
   width: 15%;
 }
 .self_exploration_text {
-  grid-area: flashilight_L;
+  grid-area: flashilight_section_L;
   grid-column: 1/3;
   width: 30%;
   height: 50%;
 }
 
 /*####Self Exporation Section ###*/
+.character_2_section {
+  grid-area: heart_section_L;
+  width: 85%;
+  justify-self: center;
+}
 
+.big_heart_section {
+  grid-area: heart_section_R;
+}
