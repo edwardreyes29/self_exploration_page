@@ -5,56 +5,85 @@ svg {
   /*SVG: float a shape over another shape */
   position: relative;
 }
-
+h1 {
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
 .self_exploration_page {
     display: grid;
+    overflow-x: hidden;
     grid-template-columns: 50% 50%;
     grid-template-rows: 34% 20% 20% auto;
     grid-template-areas:
-        "self_exploration_L self_exploration_R"
+        "flashilight_L flashilight_R"
         "furthermore_L furthermore_R"
         "understanding_L understanding_R"
         "job_section_L job_section_R"
         "logo_section_L logo_section_R";
 }
+
+.section_text {
+  font-family: "TamilSangamMN-Bold",Tamil Sangam MN;
+  font-size: 0.8em;
+}
+/* for svg Text */
+.text {
+  font-family: "TamilSangamMN-Bold",Tamil Sangam MN;
+}
+.title {
+  fill: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translate(10px,10px);
+}
+
 /*####Self Exporation Section ###*/
 .background_shadow {
     margin: 0;
     background: linear-gradient(#60513E,#7A694F,#AB957C,#FFFFFF);
     height: 676px;
     width: 100%;
-    grid-area: self_exploration_L;
+    grid-area: flashilight_L;
     grid-column: 1/3;
 }
 /* title */
 .title {
     width: 60%; /* makes size responsive */
-    grid-area: self_exploration_L;
+    grid-area: flashilight_L;
     grid-column: 1/2;
 }
-.text {
-    font-family: "TamilSangamMN-Bold",Tamil Sangam MN;
-}
-.title {
-    fill: #ffffff;
-    font-size: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transform: translate(10px,10px);
-}
+
 
 .flashlight_section {
-  grid-area: self_exploration_L;
+  grid-area: flashilight_L;
   grid-column: 1/3;
   width: 150%;
   transform: translate(-40px, -150px);  
 }
 
 .character_1_section {
-  grid-area: self_exploration_R;
+  grid-area: flashilight_R;
   width: 70%;
   justify-self: center;
-
-
 }
+
+.shape_group_top {
+  grid-area: flashilight_L;
+  width: 15%;
+}
+#question_indicator_1 {
+  grid-area: flashilight_R;
+  width: 15%;
+}
+.self_exploration_text {
+  grid-area: flashilight_L;
+  grid-column: 1/3;
+  width: 30%;
+  height: 50%;
+}
+
+/*####Self Exporation Section ###*/
 
