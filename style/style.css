@@ -4,12 +4,16 @@ body {
 svg {
   /*SVG: float a shape over another shape */
   position: relative;
+  z-index: 1;
 }
 h1 {
   margin: 0px;
+  z-index: 10;
 }
 p {
+  position: relative;
   margin: 0px;
+  z-index: 10;
 }
 .self_exploration_page {
     display: grid;
@@ -91,6 +95,7 @@ p {
   grid-column: 1/3;
   width: 30%;
   height: 50%;
+  transform: translate(200px,200px);
 }
 
 /*####Self Exporation Section ###*/
@@ -100,6 +105,17 @@ p {
   justify-self: center;
 }
 
+#question_indicator_2 {
+  grid-area: heart_section_L;
+  width: 15%;
+}
+
 .big_heart_section {
   grid-area: heart_section_R;
+}
+
+.furthermore_text {
+  grid-area: heart_section_R;
+  width: 50%;
+  height: 50%;
 }
