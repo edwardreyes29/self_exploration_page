@@ -56,7 +56,6 @@ p {
     grid-column: 1/2;
 }
 
-
 .flashlight_section {
   grid-area: flashilight_L;
   grid-column: 1/3;
