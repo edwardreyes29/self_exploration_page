@@ -133,3 +133,10 @@ p {
   grid-area: triangle_section_R;
   width: 80%;
 }
+
+.understanding_text {
+  grid-area: triangle_section_L;
+  grid-column: 1/3;
+  width: 30%;
+  height: 50%;
+}
