@@ -54,6 +54,9 @@ p {
   /* fill: red; */
 }
 
+.character_orange_1 {
+  fill: #FCA12A;
+}
 /*########## Flashlight Section ##########*/
 .background_shadow {
     margin: 0;
