@@ -47,13 +47,14 @@ p {
 /* Character stylings */
 .character_brown { 
   fill:#663a14;
+  /* fill: purple; */
 }
 .character_skin {
   fill: #fcbb65
   /* fill: red; */
 }
 
-/*####Self Exporation Section ###*/
+/*########## Flashlight Section ##########*/
 .background_shadow {
     margin: 0;
     background: linear-gradient(#60513E,#7A694F,#AB957C,#FFFFFF);
@@ -98,7 +99,7 @@ p {
   transform: translate(200px,200px);
 }
 
-/*####Self Exporation Section ###*/
+/*##########  Heart Section ##########*/
 .character_2_section {
   grid-area: heart_section_L;
   width: 85%;
@@ -118,4 +119,14 @@ p {
   grid-area: heart_section_R;
   width: 50%;
   height: 50%;
+}
+
+/*##########  Triangle Section ##########*/
+.triangle_section {
+  grid-area: triangle_section_L;
+}
+
+.character_3 {
+  grid-area: triangle_section_R;
+  width: 80%;
 }
