@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="77.084" height="81.26" viewBox="0 0 77 81">
-    <text data-name="?" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#b9b9b9" font-size="40" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
+    <text class="?" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#b9b9b9" font-size="40" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
         <tspan x="0" y="0">?</tspan>
     </text>
-    <path d="M13.164 46.562l13.612 8.266-8.179 13.757-13.612-8.266z" fill="#fca12a"/>
-    <path d="M37.6.001l.982 18.908-17.368-9.73z" fill="#1cc0d9"/>
-    <path d="M6.624 39.004L0 29.665l5.329-10.063 11.931-.661 6.56 9.342-5.311 10.062z" fill="#ef5656"/>
-    <path d="M49 18.383L63.392 11.6l6.711 14.546-14.392 6.783z" fill="#fca12a"/>
-    <path d="M54.741 52.457l6.252-9.6 11.206 1.422L77.084 55.3l-6.278 9.537-11.2-1.405z" fill="#ef5656"/>
-    <path d="M34.528 62.398l17.49 6.785-15.86 12.078z" fill="#1cc0d9"/>
+    <path d="M13.164 46.562l13.612 8.266-8.179 13.757-13.612-8.266z" fill="#fca12a" />
+    <path d="M37.6.001l.982 18.908-17.368-9.73z" fill="#1cc0d9" />
+    <path d="M6.624 39.004L0 29.665l5.329-10.063 11.931-.661 6.56 9.342-5.311 10.062z" fill="#ef5656" />
+    <path d="M49 18.383L63.392 11.6l6.711 14.546-14.392 6.783z" fill="#fca12a" />
+    <path d="M54.741 52.457l6.252-9.6 11.206 1.422L77.084 55.3l-6.278 9.537-11.2-1.405z" fill="#ef5656" />
+    <path d="M34.528 62.398l17.49 6.785-15.86 12.078z" fill="#1cc0d9" />
 </svg>
