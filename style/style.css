@@ -20,9 +20,9 @@ p {
     overflow-x: hidden;
     overflow-y: hidden;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 10% 60% 20% auto;
+    grid-template-rows: 40% 30% 20% auto;
     grid-template-areas:
-        "flashilight_section_L flashilight_section_R"
+        "flashlight_section_L flashlight_section_R"
         "heart_section_L heart_section_R"
         "triangle_section_L triangle_section_R"
         "job_section_L job_section_R"
@@ -42,7 +42,7 @@ p {
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  transform: translate(10px,10px);
+  transform: translate(20px,10px);
 }
 
 /* Character stylings */
@@ -64,44 +64,44 @@ p {
     background: linear-gradient(#60513E,#7A694F,#AB957C,#FFFFFF);
     height: 676px;
     width: 100%;
-    grid-area: flashilight_section_L;
+    grid-area: flashlight_section_L;
     grid-column: 1/3;
 }
 /* title */
 .title {
     width: 60%; /* makes size responsive */
-    grid-area: flashilight_section_L;
+    grid-area: flashlight_section_L;
     grid-column: 1/2;
 }
 
 .flashlight_section {
-  grid-area: flashilight_section_L;
+  grid-area: flashlight_section_L;
   grid-column: 1/3;
-  width: 150%;
-  transform: translate(-40px, -220px);  
+  transform: translate(120px, -150px) scale(1.4);  
 }
 
 .character_1_section {
-  grid-area: flashilight_section_R;
+  grid-area: flashlight_section_R;
   width: 70%;
-  justify-self: center;
+  transform: translate(70px,140px)
 }
 
 .shape_group_top {
-  grid-area: flashilight_section_L;
+  grid-area: flashlight_section_L;
   width: 15%;
   transform: translate(10px, 195px);
 }
 #question_indicator_1 {
-  grid-area: flashilight_section_R;
+  grid-area: flashlight_section_R;
   width: 15%;
+  transform: translate(320px, 120px);
 }
 .self_exploration_text {
-  grid-area: flashilight_section_L;
+  grid-area: flashlight_section_L;
   grid-column: 1/3;
-  width: 30%;
+  width: 27%;
   height: 50%;
-  transform: translate(200px,200px);
+  transform: translate(230px,235px);
 }
 
 /*##########  Heart Section ##########*/
@@ -109,6 +109,7 @@ p {
   grid-area: heart_section_L;
   width: 85%;
   justify-self: center;
+  /* transform: translate(0px,-390px); */
 }
 
 #question_indicator_2 {
