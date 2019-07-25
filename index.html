@@ -407,41 +407,38 @@
 
         <!--########## TRIANGLE SECTION ##########-->
 
-        <!-- Triangle -->
-        <div class="triangle_section">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 463.3 371.3">
-                <g transform="translate(-1637.679 -2342.544)">
-                    <g transform="translate(1346 322)">
-                        <linearGradient id="top_triangle_color" gradientUnits="userSpaceOnUse" x1="15.478" y1="2722.16"
-                            x2="15.869" y2="2721.452"
-                            gradientTransform="matrix(347.5818 73.9233 73.3962 -345.1033 -204690.031 940326.625)">
-                            <stop offset="0" stop-color="#1cc0d9" />
-                            <stop offset="1" stop-color="#1ca5ba" />
-                        </linearGradient>
-                        <path
-                            d="M743.5 2297.1l-99.2 82.3c-11 9.1-25.2 13.5-39.4 12.3l-19.5-1.7-176.7-15.6c-7.6-.6-14.7-3.9-20.1-9.1-9.4-8.8-12.6-22.4-8.3-34.5l102.4-285.9c3.6-9.1 13.4-13.6 22.2-10.3 2.1.8 4.1 1.9 5.8 3.4l233.6 209.9c12.9 11.2 14.5 31.2 3.5 44.7-.3.4-.6.8-.9 1.1l-.4.4c-.9 1-2 2-3 2.9v.1z"
-                            fill="url(#top_triangle_color)" />
-                        <path
-                            d="M743.5 2297.1l-98.6 81.8c-11.4 9.4-26 13.9-40.7 12.6l-18.7-1.6-176.7-15.6c-3.8-.3-6.7-3.7-6.3-7.5.3-2.9 2.4-5.4 5.2-6.1l327.8-78.7c4.7-1.1 9.5 1.7 10.7 6.4.8 3.1-.2 6.4-2.6 8.5l-.1.2z"
-                            fill="#1a94a7" />
-                    </g>
-                    <path
-                        d="M2100 2377.408l-9.75 35.749c-.654 2.11-2.341 3.796-4.484 4.26l-62.299 14.146c-2.792.633-5.622-.48-7.28-2.775l-26.665-37.565c-.868-1.207-1.262-2.721-.95-4.188l7.998-40.007c.582-2.738 3.114-4.55 5.838-4.38l52.66 2.817c4.036.245 7.844 1.566 11.249 3.823l31.25 21.776c2.082 1.26 3.07 3.822 2.432 6.344z"
-                        fill="#cc7b1b" />
-                    <path
-                        d="M2099.714 2373.463l-66.573 4.446c-1.236.043-2.368-.402-3.299-1.315l-31.092-33.089c1.088-.79 2.387-1.128 3.7-1.053l52.66 2.817c4.036.245 7.844 1.566 11.248 3.824l31.25 21.775c.972.718 1.706 1.59 2.106 2.595z"
-                        fill="#fca12a" />
-                    <linearGradient id="red_circle_color" gradientUnits="userSpaceOnUse" x1="1361.806" y1="3043.323"
-                        x2="1362.389" y2="3042.3" gradientTransform="matrix(100 0 0 -100 -134511.031 306754.438)">
+        <!-- Red Circle -->
+        <div class="red_circle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <defs>
+                    <linearGradient id="red_circle_gradient" x1=".302" y1=".059" x2=".885" y2="1.082" gradientUnits="objectBoundingBox">
                         <stop offset="0" stop-color="#fa7b7b" />
                         <stop offset="1" stop-color="#cc3434" />
                     </linearGradient>
-                    <circle cx="1693.4" cy="2463.9" r="50" fill="url(#red_circle_color)" stroke="#fff"
-                        stroke-width="6.45" stroke-miterlimit="10" />
-                </g>
+                </defs>
+                <circle cx="50" cy="50" r="50" fill="url(#red_circle_gradient)" />
             </svg>
         </div>
 
+        <!-- Blue Triangle -->
+        <div class="blue_triangle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376.7 358.4">
+                <g transform="translate(-370.2 -2030.912)">
+                    <linearGradient id="blue_triangle_gradient" gradientUnits="userSpaceOnUse" x1="5.036" y1="2804.476" x2="5.428"
+                        y2="2803.768"
+                        gradientTransform="matrix(347.5818 73.9233 73.3962 -345.1033 -207110.5 969503.25)">
+                        <stop offset="0" stop-color="#1cc0d9" />
+                        <stop offset="1" stop-color="#1ca5ba" />
+                    </linearGradient>
+                    <path
+                        d="M735.3 2294.5l-99.2 82.3c-11 9.1-25.2 13.5-39.4 12.3l-19.5-1.7-176.7-15.6c-7.6-.6-14.7-3.9-20.1-9.1-9.4-8.8-12.6-22.4-8.3-34.5l102.4-285.9c3.6-9.1 13.4-13.6 22.2-10.3 2.1.8 4.1 1.9 5.8 3.4l233.6 209.9c12.9 11.2 14.5 31.2 3.5 44.7-.3.4-.6.8-.9 1.1l-.4.4c-.9 1-2 2-3 2.9v.1z"
+                        fill="url(#blue_triangle_gradient)" />
+                    <path
+                        d="M735.3 2294.5l-98.6 81.8c-11.4 9.4-26 13.9-40.7 12.6l-18.7-1.6-176.7-15.6c-3.8-.3-6.7-3.7-6.3-7.5.3-2.9 2.4-5.4 5.2-6.1l327.8-78.7c4.7-1.1 9.5 1.7 10.7 6.4.8 3.1-.2 6.4-2.6 8.5l-.1.2z"
+                        fill="#1a94a7" />
+                </g>
+            </svg>
+        </div>
         <!-- Character 3 -->
         <div class="character character_3">
             <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335.3 251.1">
@@ -548,9 +545,12 @@
         <!-- Job Section Text -->
         <div class="job_section_text">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 539 78">
-                <text data-name="In your exploration of careers and job opportunities, it is a great idea to:" transform="translate(2)" fill="#1cc0d9" font-size="35" font-family="TamilSangamMN-Bold, Tamil Sangam MN" font-weight="700">
+                <text data-name="In your exploration of careers and job opportunities, it is a great idea to:"
+                    transform="translate(2)" fill="#1cc0d9" font-size="35"
+                    font-family="TamilSangamMN-Bold, Tamil Sangam MN" font-weight="700">
                     <tspan x="0" y="26" fill="#000">In your exploration of careers and </tspan>
-                    <tspan x="0" y="60" text-decoration="underline" fill="#000">job opportunities, it is a great idea to</tspan>
+                    <tspan x="0" y="60" text-decoration="underline" fill="#000">job opportunities, it is a great idea to
+                    </tspan>
                     <tspan y="60">:</tspan>
                 </text>
             </svg>
@@ -600,16 +600,21 @@
                             </g>
                         </g>
                         <text transform="translate(752.954 2684.437)" class="job_box_text job_text_size">Conduct</text>
-                        <text transform="translate(727.443 2715.437)" class="job_box_text job_text_size">International</text>
-                        <text transform="translate(742.685 2746.437)" class="job_box_text job_text_size">Interviews</text>
+                        <text transform="translate(727.443 2715.437)"
+                            class="job_box_text job_text_size">International</text>
+                        <text transform="translate(742.685 2746.437)"
+                            class="job_box_text job_text_size">Interviews</text>
                     </g>
                     <g id="job_box_3">
                         <path id="job_box_3-2" class="job_box_color_2"
                             d="M520 2619.3h159c8.3 0 15 6.7 15 15v143.4c0 8.3-6.7 15-15 15H520c-8.3 0-15-6.7-15-15v-143.4c0-8.3 6.7-15 15-15z" />
                         <g id="job_box_shapes_3" transform="rotate(-106 1022.455 2115.178)" class="job_decor_opacity">
-                            <path id="Polygon_2" class="job_decor_color" d="M609.3 1636.6l27.5 10.4-24.9 18.5-2.6-28.9z" />
-                            <path id="Polygon_2-2" class="job_decor_color" d="M599.3 1628.6l27.5 10.4-24.9 18.5-2.6-28.9z" />
-                            <path id="Polygon_2-3" class="job_decor_color" d="M611.3 1623.6l27.5 10.4-24.9 18.5-2.6-28.9z" />
+                            <path id="Polygon_2" class="job_decor_color"
+                                d="M609.3 1636.6l27.5 10.4-24.9 18.5-2.6-28.9z" />
+                            <path id="Polygon_2-2" class="job_decor_color"
+                                d="M599.3 1628.6l27.5 10.4-24.9 18.5-2.6-28.9z" />
+                            <path id="Polygon_2-3" class="job_decor_color"
+                                d="M611.3 1623.6l27.5 10.4-24.9 18.5-2.6-28.9z" />
                         </g>
                         <text transform="translate(575.466 2684.437)" class="job_box_text job_text_size">Job</text>
                         <text transform="translate(548.696 2715.437)" class="job_box_text job_text_size">Shadow</text>
