@@ -26,7 +26,7 @@
         </div>
 
         <!-- Adding flashlight 1416 1133-->
-        <div class="flashlight_section clicked">
+        <div id="flashlight_section" class="flashlight_click">
             <svg alt="flashlight animation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1416 1133">
                 <defs>
                     <linearGradient id="light_gradient" x1=".043" y1=".5" x2=".717" y2=".5"
@@ -40,7 +40,7 @@
                         <stop offset="1" stop-color="#f48b00" />
                     </linearGradient>
                 </defs>
-                <path id="light" class="clicked"
+                <path id="light" class="flashlight_click" 
                     d="M2086.813 534.181c-30.894-9.38-51.654-38.147-50.572-69.545 1.023-29.7 21.4-55.893 50.572-64.715L3266.5-98v1133z"
                     transform="translate(-1850 98)" fill="url(#light_gradient)" />
                 <path id="flashlight_handle"
@@ -48,14 +48,14 @@
                     transform="translate(-1850 98)" fill="url(#flashlight_handle_gradient)" />
                 <g class="toggle">
                     <g id="toggle_body">
-                        <path id="toggle_body_color" class="clicked"
+                        <path id="toggle_body_color" class="flashlight_click"
                             d="M124 575.5h-20c-5.238 0-9.5-4.262-9.5-9.5s4.262-9.5 9.5-9.5h20c5.238 0 9.5 4.262 9.5 9.5s-4.262 9.5-9.5 9.5z"
                             fill="#747373" />
                         <path id="toggle_body_outline"
                             d="M104 557c-4.963 0-9 4.037-9 9s4.037 9 9 9h20c4.963 0 9-4.037 9-9s-4.037-9-9-9h-20m0-1h20c5.523 0 10 4.477 10 10s-4.477 10-10 10h-20c-5.523 0-10-4.477-10-10s4.477-10 10-10z"
                             fill="#fffcfc" />
                     </g>
-                    <g id="toggle_button" class="clicked">
+                    <g id="toggle_button" class="flashlight_click" onclick="clickFunction(this.id)">
                         <path class="toggle_button_outer" d="M104 558a8 8 0 1 1-8 8 8 8 0 0 1 8-8z" fill="#dedbdb" />
                         <g class="toggle_button_inner" transform="translate(99 561)" fill="none" stroke="#fff">
                             <circle cx="5" cy="5" r="5" stroke="none" />
@@ -67,7 +67,7 @@
         </div>
 
         <!-- Character 1 -->
-        <div class="character character_1_section clicked">
+        <div id="character_1_section" class="flashlight_click">
             <svg id="character_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259 233">
                 <defs>
                     <linearGradient id="bg_ellipse_1_gradient" x1=".5" x2=".5" y2="1.634"
@@ -182,7 +182,7 @@
         </div>
 
         <!-- Self Exploration Text-->
-        <div class="section_text self_exploration_text clicked">
+        <div id="self_exploration_text" class="flashlight_click section_text">
             <h1>Self-Exploration</h1>
             <p>is a careful internal research process of discovering yourself through reflection
                 on past experiences and understand your interests, skills, strengths, personality,
@@ -365,7 +365,7 @@
         </div>
 
         <!-- Big Heart -->
-        <div id="big_heart_section" class="clickable" onclick="clickFunction()">
+        <div id="big_heart" class="big_heart_click" onclick="clickFunction(this.id)">
             <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485.5 498.6">
                 <style>
                     .st1 {
@@ -405,7 +405,7 @@
         </div>
 
         <!-- Furthermore Text-->
-        <div id="furthermore_text" class="section_text">
+        <div id="furthermore_text" class="big_heart_click section_text">
             <h1>Furthermore,</h1>
             <p>it is essential to understand that the world of work is also continually changing.
                 Because a single occupation will no longer take us from the beginning to the end
@@ -415,7 +415,7 @@
         <!--########## TRIANGLE SECTION ##########-->
 
         <!-- Red Circle -->
-        <div class="red_circle clicked">
+        <div id="red_circle" class="blue_triangle_click">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                 <defs>
                     <linearGradient id="red_circle_gradient" x1=".302" y1=".059" x2=".885" y2="1.082"
@@ -429,7 +429,7 @@
         </div>
 
         <!-- Orange Box -->
-        <div class="orange_box clicked">
+        <div id="orange_box" class="blue_triangle_click">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.295 112.11">
                 <path data-name="Path 140"
                     d="M118.974 43.907l-9.75 35.718a6 6 0 0 1-4.511 4.212L42.389 98.01a7.1 7.1 0 0 1-7.315-2.758L8.417 57.652a5.434 5.434 0 0 1-.927-4.205l8.01-39.965a5.632 5.632 0 0 1 5.876-4.401l52.688 2.812a21.624 21.624 0 0 1 11.198 3.83l31.27 21.736a5.991 5.991 0 0 1 2.451 6.45z"
@@ -441,7 +441,7 @@
         </div>
 
         <!-- Blue Triangle -->
-        <div class="blue_triangle clicked">
+        <div id="blue_triangle" class="blue_triangle_click" onclick="clickFunction(this.id)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376.7 358.4">
                 <g transform="translate(-370.2 -2030.912)">
                     <linearGradient id="blue_triangle_gradient" gradientUnits="userSpaceOnUse" x1="5.036" y1="2804.476"
@@ -554,7 +554,7 @@
         </div>
 
         <!-- Understanding Text-->
-        <div class="section_text understanding_text clicked">
+        <div class="blue_triangle_click section_text understanding_text">
             <h1>Understanding</h1>
             <p>the demands of today’s role of work and the skills needed in your career will also help you to make
                 better decisions.</p>

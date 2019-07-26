@@ -1,10 +1,11 @@
-function clickFunction() {
-    var element = document.querySelector(".clickable");
-    element.classList.add('clicked');
+function clickFunction(clicked_id) {
+    var element = document.getElementById(clicked_id);
 
-   console.log(element.id);
-   if (element.id == "big_heart_section") {
-       var textElement = document.getElementById("furthermore_text");
-       textElement.classList.add('clicked');
-   }
+    var elementClassList = document.querySelectorAll("." + element.classList[0]);
+
+    for (var i = 0; i < elementClassList.length; i++) {
+        console.log(elementClassList[i]); //
+        elementClassList[i].classList.add('clicked');
+    }
+    
 }
