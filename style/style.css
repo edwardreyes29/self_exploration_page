@@ -18,8 +18,8 @@ p {
   font-size: 1.1em;
 }
 .self_exploration_page {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -87,7 +87,7 @@ p {
 }
 
 .flashlight_section.clicked {
-  animation-duration: 5s;
+  animation-duration: 15s;
   animation-name: changeDegrees;
   animation-iteration-count: infinite;
 }
@@ -110,17 +110,71 @@ p {
   }
 }
 
+#toggle_button.clicked {
+  transform: translateX(0px);
+  animation: toggleShift 0.5s forwards;
+}
+@keyframes toggleShift {
+  0%{
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+#toggle_body_color.clicked {
+  fill: #747373;
+  animation: toggleColorShift 0.5s forwards;
+}
+@keyframes toggleColorShift {
+  25%{
+    fill: #747373;
+  }
+  100%{
+    fill: green;
+  }
+}
+#light {
+  opacity: 0;
+}
+
+#light.clicked {
+  animation: letThereBeLight 0.25s forwards;
+}
+
+@keyframes letThereBeLight {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .character_1_section {
   grid-area: flashlight_section_R;
   width: 60%;
   transform: translate(120px,150px);
+  opacity: 0.7;
+}
+
+.character_1_section.clicked {
+  animation: characterReveal 0.3s forwards;
+}
+
+@keyframes characterReveal {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .shape_group_top {
   grid-area: flashlight_section_L;
-  width: 15%;
-  transform: translate(5px, 185px);
+  width: 20%;
+  transform: translate(-10px, -45px);
 }
 #question_indicator_1 {
   grid-area: flashlight_section_R;
@@ -132,7 +186,20 @@ p {
   grid-column: 1/3;
   width: 27%;
   height: 50%;
-  transform: translate(255px,220px);
+  transform: translate(150px,150px) scale(0);
+}
+
+.self_exploration_text.clicked {
+  animation: 0.01s revealText 0.25s forwards;
+}
+
+@keyframes revealText {
+  from {
+    transform: translate(150px,150px) scale(0);
+  }
+  to {
+    transform: translate(255px,220px) scale(1);
+  }
 }
 
 /*##########  Heart Section ##########*/
@@ -152,36 +219,45 @@ p {
 .big_heart_section {
   grid-area: heart_section_R;
   width: 110%;
-  transform: translate(-60px, -160px);
+  transform: translate(-50px, -160px) scale(0.3);
 }
 
 .big_heart_section.clicked {
-  animation-duration: 5s;
+  animation: enlargeHeart 0.5s forwards, 8s heartBeat 3s infinite;;
+  /* animation-duration: 8s;
   animation-name: heartBeat;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
+}
+@keyframes enlargeHeart {
+  0% {
+    transform: translate(-50px, -160px) scale(0.3);
+  }
+  100% {
+    transform: translate(-50px, -160px) scale(1);
+  }
 }
 
 @keyframes heartBeat {
   0% {
-    transform: translate(-60px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(1);
   }
   12% {
-    transform: translate(-60px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(1);
   }
   14% {
-    transform: translate(-60px, -160px) scale(1.2);
+    transform: translate(-50px, -160px) scale(1.2);
   }
   16% {
-    transform: translate(-60px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(1);
   }
   18% {
-    transform: translate(-60px, -160px) scale(1.1);
+    transform: translate(-50px, -160px) scale(1.1);
   }
   20% {
-    transform: translate(-60px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(1);
   }
   100% {
-    transform: translate(-60px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(1);
   }
   
 }
@@ -190,7 +266,19 @@ p {
   grid-area: heart_section_R;
   width: 55%;
   height: 50%;
-  transform: translate(95px, 90px);
+  transform: translate(75px, 35px) scale(0);
+}
+.furthermore_text.clicked {
+  animation: enlargeText2 0.48s forwards;
+}
+
+@keyframes enlargeText2 {
+  0% {
+    transform: translate(75px, 35px) scale(0);
+  }
+  100% {
+    transform: translate(95px, 90px) scale(1);
+  }
 }
 
 /*##########  Triangle Section ##########*/
@@ -202,30 +290,68 @@ p {
 .red_circle {
   grid-area: triangle_section_L;
   width: 18%;
-  transform: translate(10px, -120px);
+  transform: translate(65px, 130px);
+}
+
+.red_circle.clicked {
+  animation: moveCircle 0.5s forwards;
+  
+}
+@keyframes moveCircle {
+  0%{
+    transform: translate(65px, 130px);
+  }
+  100% {
+    transform: translate(30px, 40px);
+  }
 }
 
 .orange_box {
   grid-area: triangle_section_R;
   width: 25%;
-  transform: translate(-120px, -190px);
+  transform: translate(-195px, 95px);
+}
+.orange_box.clicked {
+  animation: moveBox 0.5s forwards;
+}
+@keyframes moveBox {
+  0%{
+    transform: translate(-195px, 80px);
+  }
+  100% {
+    transform: translate(-120px, 0px);
+  }
 }
 
 .blue_triangle {
   grid-area: triangle_section_L;
   width: 95%;
-  transform: translate(50px, -200px) scale(1);
+  transform: translate(20px, 100px) scale(0.4);
 }
+
+.blue_triangle.clicked {
+  animation: enlargeTriangle 0.5s forwards;
+}
+
+@keyframes enlargeTriangle {
+  0%{
+    transform: translate(20px, 100px) scale(0.4);
+  }
+  100% {
+    transform: translate(50px, 0px) scale(.9);
+  }
+}
+
 .character_3 {
   grid-area: triangle_section_R;
   width: 75%;
-  transform: translate(65px, -100px);
+  transform: translate(65px, 130px);
 }
 
 #question_indicator_3 {
   grid-area: triangle_section_R;
   width: 15%;
-  transform: translate(340px, -120px);
+  transform: translate(340px, 120px);
 }
 
 .understanding_text {
@@ -233,7 +359,20 @@ p {
   grid-column: 1/3;
   width: 25%;
   height: 50%;
-  transform: translate(140px, -20px);
+  transform: translate(110px, 200px) scale(0.2);
+}
+
+.understanding_text.clicked {
+  animation: enlargeText3 0.48s forwards;
+}
+
+@keyframes enlargeText3 {
+  0% {
+    transform: translate(110px, 200px) scale(0.2);
+  }
+  100% {
+    transform: translate(150px, 170px) scale(1);
+  }
 }
 
 /*##########  Job Section ##########*/
@@ -247,7 +386,7 @@ p {
   grid-area: job_section_L;
   grid-column: 1/3;
   width: 60%;
-  transform: translateY(-200px);
+  transform: translateY(20px);
 }
 .job_boxes {
   align-self: center;
@@ -255,7 +394,7 @@ p {
   grid-area: job_section_L;
   grid-column: 1/3;
   width: 80%;
-  transform: translateY(-80px)
+  transform: translateY(180px)
 }
 
 .logo_section {
@@ -264,5 +403,11 @@ p {
   grid-area: logo_section_L;
   grid-column: 1/3;
   width: 60%;
-  transform: translateY(0px)
+  transform: translateY(25px)
+}
+
+.shape_group_bottom {
+  grid-area: logo_section_L;
+  width: 30%;
+  transform: translate(-25px, 230px);
 }
