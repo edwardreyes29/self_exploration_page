@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-
+<head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
 <body>
     <div class="self_exploration_page">
         <script src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="style/style.css">
+        <script src="script/script.js"></script>
 
         <!--########## FLASHLIGHT SECTION ##########-->
         <div class="background_shadow"></div>
@@ -362,7 +365,7 @@
         </div>
 
         <!-- Big Heart -->
-        <div class="big_heart_section clicked">
+        <div id="big_heart_section" class="clickable" onclick="clickFunction()">
             <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 485.5 498.6">
                 <style>
                     .st1 {
@@ -402,7 +405,7 @@
         </div>
 
         <!-- Furthermore Text-->
-        <div class="section_text furthermore_text clicked">
+        <div id="furthermore_text" class="section_text">
             <h1>Furthermore,</h1>
             <p>it is essential to understand that the world of work is also continually changing.
                 Because a single occupation will no longer take us from the beginning to the end

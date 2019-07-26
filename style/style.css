@@ -216,13 +216,13 @@ p {
   transform: translate(40px, -80px);
 }
 
-.big_heart_section {
+#big_heart_section {
   grid-area: heart_section_R;
   width: 110%;
-  transform: translate(-50px, -160px) scale(0.3);
+  transform: translate(-50px, -120px) scale(0.3);
 }
 
-.big_heart_section.clicked {
+#big_heart_section.clicked {
   animation: enlargeHeart 0.5s forwards, 8s heartBeat 3s infinite;;
   /* animation-duration: 8s;
   animation-name: heartBeat;
@@ -230,7 +230,7 @@ p {
 }
 @keyframes enlargeHeart {
   0% {
-    transform: translate(-50px, -160px) scale(0.3);
+    transform: translate(-50px, -120px) scale(0.3);
   }
   100% {
     transform: translate(-50px, -160px) scale(1);
@@ -262,13 +262,13 @@ p {
   
 }
 
-.furthermore_text {
+#furthermore_text {
   grid-area: heart_section_R;
   width: 55%;
   height: 50%;
   transform: translate(75px, 35px) scale(0);
 }
-.furthermore_text.clicked {
+#furthermore_text.clicked {
   animation: enlargeText2 0.48s forwards;
 }
 
