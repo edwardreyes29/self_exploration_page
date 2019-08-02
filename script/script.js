@@ -6,6 +6,5 @@ function clickFunction(clicked_id) {
     for (var i = 0; i < elementClassList.length; i++) {
         console.log(elementClassList[i]); //
         elementClassList[i].classList.add('clicked');
-    }
-    
+    }   
 }
