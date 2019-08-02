@@ -1,13 +1,16 @@
 <!DOCTYPE html>
+
 <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
+
 <body>
     <div class="self_exploration_page">
         <script src="https://code.jquery.com/jquery-3.4.1.js"
             integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
         <link rel="stylesheet" href="style/style.css">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script src="script/script.js"></script>
 
         <!--########## FLASHLIGHT SECTION ##########-->
@@ -40,7 +43,7 @@
                         <stop offset="1" stop-color="#f48b00" />
                     </linearGradient>
                 </defs>
-                <path id="light" class="flashlight_click" 
+                <path id="light" class="flashlight_click"
                     d="M2086.813 534.181c-30.894-9.38-51.654-38.147-50.572-69.545 1.023-29.7 21.4-55.893 50.572-64.715L3266.5-98v1133z"
                     transform="translate(-1850 98)" fill="url(#light_gradient)" />
                 <path id="flashlight_handle"
@@ -164,7 +167,7 @@
                 </g>
             </svg>
         </div> -->
-        
+
         <!-- Question Indicator 1-->
         <div class="question_idicator" id="question_indicator_1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
@@ -562,6 +565,22 @@
 
         <!--########## JOB SECTION ##########-->
 
+         <!-- Question Indicator 4-->
+         <div class="question_idicator" id="question_indicator_4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
+                    <text class="?" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#b9b9b9" font-size="40"
+                        font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
+                        <tspan x="0" y="0">?</tspan>
+                    </text>
+                    <path d="M13.164 46.562l13.612 8.266-8.179 13.757-13.612-8.266z" fill="#fca12a" />
+                    <path d="M37.6.001l.982 18.908-17.368-9.73z" fill="#1cc0d9" />
+                    <path d="M6.624 39.004L0 29.665l5.329-10.063 11.931-.661 6.56 9.342-5.311 10.062z" fill="#ef5656" />
+                    <path d="M49 18.383L63.392 11.6l6.711 14.546-14.392 6.783z" fill="#fca12a" />
+                    <path d="M54.741 52.457l6.252-9.6 11.206 1.422L77.084 55.3l-6.278 9.537-11.2-1.405z" fill="#ef5656" />
+                    <path d="M34.528 62.398l17.49 6.785-15.86 12.078z" fill="#1cc0d9" />
+                </svg>
+            </div>
+    
         <!-- Job Section Text -->
         <div class="job_section_text">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 539 78">
@@ -703,7 +722,59 @@
                 <path d="M60.149 34.491l18.887 1.33-11.774 16.052z" fill="#1cc0d9" />
             </svg>
         </div>
+        <!--### Modals ###-->
 
+        <!-- Modal 1-->
+        <div id="first-modal" class="modal">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_hjGNNq.json" background="transparent"
+                    speed="1" style="width: 300px; height: 300px; display: inline-block !important" loop autoplay>
+                </lottie-player>
+                <h2 class="modal_text">Interests</h2>
+                <p class="modal_text">What do you enjoy doing?</p>
+            </div>
+        </div>
+
+        <!-- Modal 2-->
+        <div id="second-modal" class="modal">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_OqVGlj.json" background="transparent"
+                    speed="1" style="width: 300px; height: 300px; display: inline-block !important" loop autoplay>
+                </lottie-player>
+                <h2 class="modal_text">Interests</h2>
+                <p class="modal_text">What do you enjoy doing?</p>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div id="third-modal" class="modal">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_Y1Hu67.json" background="transparent"
+                    speed="1" style="width: 300px; height: 300px; display: inline-block !important" loop autoplay>
+                </lottie-player>
+                <h2 class="modal_text">Interests</h2>
+                <p class="modal_text">What do you enjoy doing?</p>
+            </div>
+        </div>
+
+        <!-- Modal 4 -->
+        <div id="fourth-modal" class="modal">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_2uEkeO.json" background="transparent"
+                    speed="1" style="width: 300px; height: 300px; display: inline-block !important" loop autoplay>
+                </lottie-player>
+                <h2 class="modal_text">Interests</h2>
+                <p class="modal_text">What do you enjoy doing?</p>
+            </div>
+        </div>
 
     </div>
 </body>
