@@ -411,7 +411,7 @@ p {
   grid-area: job_section_L;
   grid-column: 1/3;
   width: 80%;
-  transform: translateY(180px)
+  transform: translateY(150px)
 }
 
 .logo_section {
@@ -422,6 +422,14 @@ p {
   width: 60%;
   transform: translateY(25px)
 }
+
+.job_box {
+  transition: transform 0.3s ease;
+}
+.job_box:hover {
+  transform: translateY(-20px);
+}
+
 
 .shape_group_bottom {
   grid-area: logo_section_L;
