@@ -447,7 +447,7 @@ p {
 
 /* Modal Content/Box */
 
-.modal-content {
+.modal_content {
   background: linear-gradient(#FFEABD, #FFD682);
   margin: 5% auto;
   padding: 20px;
@@ -455,6 +455,19 @@ p {
   width: 45%;
   font-size: 50%;
   border-radius: 25px;
+}
+
+#first_modal > .modal_content {
+  transform: translateY(10%);
+}
+#second_modal > .modal_content {
+  transform: translateY(80%);
+}
+#third_modal > .modal_content {
+  transform: translateY(160%);
+}
+#fourth_modal > .modal_content {
+  transform: translateY(200%);
 }
 
 /* The Close button */
@@ -480,3 +493,4 @@ h2.modal_text {
 p.modal_text {
   font-size: 2.5em;
 }
+
