@@ -187,11 +187,19 @@ p {
   grid-area: flashlight_section_R;
   width: 15%;
   transform: translate(320px, 130px);
-  animation: appear 1s forward;
-  transform: 
 }
-@keyframes appear {
 
+.question_mark_1.clicked {
+  animation: 0.09s color_transition 0.25s forwards;
+}
+
+@keyframes color_transition {
+  0% {
+    fill: #E8E2E2;
+  }
+  100% {
+    fill: #7C7B7B;
+  }
 }
 
 #self_exploration_text {
