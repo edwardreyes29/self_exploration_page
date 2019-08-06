@@ -187,7 +187,13 @@ p {
   grid-area: flashlight_section_R;
   width: 15%;
   transform: translate(320px, 130px);
+  animation: appear 1s forward;
+  transform: 
 }
+@keyframes appear {
+
+}
+
 #self_exploration_text {
   grid-area: flashlight_section_L;
   grid-column: 1/3;
@@ -286,7 +292,7 @@ p {
     transform: translate(75px, 35px) scale(0);
   }
   100% {
-    transform: translate(95px, 90px) scale(1);
+    transform: translate(100px, 95px) scale(1);
   }
 }
 
@@ -348,7 +354,7 @@ p {
     transform: translate(20px, 100px) scale(0.4);
   }
   100% {
-    transform: translate(50px, 0px) scale(.9);
+    transform: translate(50px, 0px) scale(1.05);
   }
 }
 
@@ -365,7 +371,7 @@ p {
   transform: translate(340px, 120px);
 }
 
-#understanding_text {
+#furthermore_text {
   grid-area: triangle_section_L;
   grid-column: 1/3;
   width: 25%;
@@ -373,7 +379,7 @@ p {
   transform: translate(110px, 200px) scale(0);
 }
 
-#understanding_text.clicked {
+#furthermore_text.clicked {
   animation: enlargeText3 0.48s forwards;
 }
 
@@ -382,16 +388,27 @@ p {
     transform: translate(110px, 200px) scale(0);
   }
   100% {
-    transform: translate(150px, 170px) scale(1);
+    transform: translate(140px, 130px) scale(1);
   }
 }
 
 /*##########  Job Section ##########*/
+#understanding_text {
+  grid-area: job_section_L;
+  grid-column: 1/3;
+  justify-self: center;
+  text-align: center;
+  width: 95%;
+  font-size: .9em;
+  color: #663A14;
+  transform: translateY(130px);
+}
+
 #question_indicator_4 {
   cursor: pointer;
   grid-area: job_section_L;
   width: 18%;
-  transform: translate(20px, 130px);
+  transform: translate(20px, 195px);
 }
 .job_text {
   font-weight: 700;
@@ -403,7 +420,7 @@ p {
   grid-area: job_section_L;
   grid-column: 1/3;
   width: 60%;
-  transform: translateY(20px);
+  transform: translateY(105px);
 }
 .job_boxes {
   align-self: center;
@@ -411,7 +428,7 @@ p {
   grid-area: job_section_L;
   grid-column: 1/3;
   width: 80%;
-  transform: translateY(150px)
+  transform: translateY(230px)
 }
 
 .logo_section {
@@ -420,7 +437,7 @@ p {
   grid-area: logo_section_L;
   grid-column: 1/3;
   width: 60%;
-  transform: translateY(25px)
+  transform: translateY(80px)
 }
 
 .job_box {
@@ -459,7 +476,7 @@ p {
   background: linear-gradient(#FFEABD, #FFD682);
   margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
+  /* border: 1px solid #888; */
   width: 45%;
   font-size: 50%;
   border-radius: 25px;
