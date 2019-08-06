@@ -243,10 +243,37 @@ p {
   grid-area: heart_section_R;
   width: 110%;
   transform: translate(-50px, -160px) scale(0.3);
+  animation: heartBeat_2 5s infinite;
 }
 
+@keyframes heartBeat_2 {
+  0% {
+    transform: translate(-50px, -160px) scale(.3);
+  }
+  12% {
+    transform: translate(-50px, -160px) scale(.3);
+  }
+  14% {
+    transform: translate(-50px, -160px) scale(.5);
+  }
+  16% {
+    transform: translate(-50px, -160px) scale(.3);
+  }
+  18% {
+    transform: translate(-50px, -160px) scale(.4);
+  }
+  20% {
+    transform: translate(-50px, -160px) scale(.3);
+  }
+  100% {
+    transform: translate(-50px, -160px) scale(.3);
+  }
+}
+
+
 #big_heart.clicked {
-  animation: enlargeHeart 0.5s forwards, 8s heartBeat 3s infinite;;
+  cursor: default;
+  animation: enlargeHeart 0.5s forwards, 8s heartBeat 3s infinite;
   /* animation-duration: 8s;
   animation-name: heartBeat;
   animation-iteration-count: infinite; */
@@ -294,6 +321,9 @@ p {
 #one_great_advice_text.clicked {
   animation: enlargeText2 0.48s forwards;
 }
+#one_great_advice_text > p {
+  font-size: 1.3em;
+}
 
 @keyframes enlargeText2 {
   0% {
@@ -313,11 +343,24 @@ p {
 #red_circle {
   grid-area: triangle_section_L;
   width: 18%;
+  transform-origin: translate(65px, 130px);
   transform: translate(65px, 130px);
+  animation: static_animation_circle 12s infinite;
+}
+@keyframes static_animation_circle {
+  0% {
+    transform: translate(65px, 130px) rotate(0deg);
+  }
+  50% {
+    transform: translate(65px, 130px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(65px, 130px) rotate(0deg);
+  }
 }
 
 #red_circle.clicked {
-  animation: moveCircle 0.5s forwards;
+  animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;;
   
 }
 @keyframes moveCircle {
@@ -329,13 +372,39 @@ p {
   }
 }
 
+@keyframes static_animation_circle_2 {
+  0% {
+    transform: translate(30px, 40px) rotate(0deg);
+  }
+  50% {
+    transform: translate(30px, 40px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(30px, 40px) rotate(0deg);
+  }
+}
+
 #orange_box {
   grid-area: triangle_section_R;
   width: 25%;
+  /* transform-origin: translate(-195px, 95px); */
   transform: translate(-195px, 95px);
+  animation: static_animation_box 8.5s infinite;
 }
+@keyframes static_animation_box {
+  0% {
+    transform: translate(-195px, 95px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-195px, 95px) rotate(10deg);
+  }
+  100% {
+    transform: translate(-195px, 95px) rotate(0deg);
+  }
+}
+
 #orange_box.clicked {
-  animation: moveBox 0.5s forwards;
+  animation: moveBox 0.5s forwards, 1s, 8.5s static_animation_box_2 0.5s infinite;
 }
 @keyframes moveBox {
   0%{
@@ -346,15 +415,40 @@ p {
   }
 }
 
+@keyframes static_animation_box_2 {
+  0% {
+    transform: translate(-120px, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-120px, 0px) rotate(10deg);
+  }
+  100% {
+    transform: translate(-120px, 0px) rotate(0deg);
+  }
+}
+
 #blue_triangle {
   cursor: pointer;
   grid-area: triangle_section_L;
   width: 95%;
   transform: translate(20px, 100px) scale(0.4);
+  animation: static_animation_triangle 7s infinite;
+}
+@keyframes static_animation_triangle {
+    0% {
+      transform: translate(20px, 100px) scale(0.4) rotate(0deg);
+    }
+    50% {
+      transform: translate(20px, 100px) scale(0.4) rotate(-10deg);
+    }
+    100% {
+      transform: translate(20px, 100px) scale(0.4) rotate(0deg);
+    }
 }
 
 #blue_triangle.clicked {
-  animation: enlargeTriangle 0.5s forwards;
+  cursor: default;
+  animation: enlargeTriangle 0.5s forwards, 15s static_animation_triangle_2 0.5s infinite;;
 }
 
 @keyframes enlargeTriangle {
@@ -363,6 +457,18 @@ p {
   }
   100% {
     transform: translate(50px, 0px) scale(1.05);
+  }
+}
+
+@keyframes static_animation_triangle_2 {
+  0% {
+    transform: translate(50px, 0px) scale(1.05) rotate(0deg);
+  }
+  50% {
+    transform: translate(50px, 0px) scale(1.05) rotate(-10deg);
+  }
+  100% {
+    transform: translate(50px, 0px) scale(1.05) rotate(0deg);
   }
 }
 
