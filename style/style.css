@@ -9,7 +9,7 @@ svg {
 h1 {
   margin: 0px;
   z-index: 10;
-  font-size: 2.1em;
+  font-size: 2.2em;
 }
 h2 {
   margin: 0px;
@@ -19,7 +19,7 @@ p {
   position: relative;
   margin: 0px;
   z-index: 10;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 .self_exploration_page {
     width: 100vw;
@@ -47,9 +47,9 @@ p {
 }
 .title {
   fill: #ffffff;
-  font-size: 35px;
+  font-size: 60px;
   font-weight: 700;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   transform: translate(20px,10px);
 }
 
@@ -191,7 +191,7 @@ p {
 #self_exploration_text {
   grid-area: flashlight_section_L;
   grid-column: 1/3;
-  width: 27%;
+  width: 30%;
   height: 50%;
   transform: translate(150px,150px) scale(0);
 }
@@ -205,7 +205,7 @@ p {
     transform: translate(150px,150px) scale(0);
   }
   to {
-    transform: translate(255px,220px) scale(1);
+    transform: translate(255px,210px) scale(1);
   }
 }
 
@@ -242,42 +242,42 @@ p {
     transform: translate(-50px, -160px) scale(0.3);
   }
   100% {
-    transform: translate(-50px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(.9);
   }
 }
 
 @keyframes heartBeat {
   0% {
-    transform: translate(-50px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(.9);
   }
   12% {
-    transform: translate(-50px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(.9);
   }
   14% {
-    transform: translate(-50px, -160px) scale(1.2);
-  }
-  16% {
-    transform: translate(-50px, -160px) scale(1);
-  }
-  18% {
     transform: translate(-50px, -160px) scale(1.1);
   }
-  20% {
+  16% {
+    transform: translate(-50px, -160px) scale(.9);
+  }
+  18% {
     transform: translate(-50px, -160px) scale(1);
   }
+  20% {
+    transform: translate(-50px, -160px) scale(.9);
+  }
   100% {
-    transform: translate(-50px, -160px) scale(1);
+    transform: translate(-50px, -160px) scale(.9);
   }
   
 }
 
-#furthermore_text {
+#one_great_advice_text {
   grid-area: heart_section_R;
   width: 55%;
   height: 50%;
   transform: translate(75px, 35px) scale(0);
 }
-#furthermore_text.clicked {
+#one_great_advice_text.clicked {
   animation: enlargeText2 0.48s forwards;
 }
 
