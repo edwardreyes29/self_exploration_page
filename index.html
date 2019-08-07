@@ -58,9 +58,11 @@
                             d="M104 557c-4.963 0-9 4.037-9 9s4.037 9 9 9h20c4.963 0 9-4.037 9-9s-4.037-9-9-9h-20m0-1h20c5.523 0 10 4.477 10 10s-4.477 10-10 10h-20c-5.523 0-10-4.477-10-10s4.477-10 10-10z"
                             fill="#fffcfc" />
                     </g>
+
                     <g id="toggle_button" class="flashlight_click" onclick="clickFunction(this.id)">
                         <path class="toggle_button_outer" d="M104 558a8 8 0 1 1-8 8 8 8 0 0 1 8-8z" fill="#dedbdb" />
                         <g class="toggle_button_inner" transform="translate(99 561)" fill="none" stroke="#fff">
+                            <circle id="pulse-1" class="pulse" cx="5" cy="5" r="10px"></circle>
                             <circle cx="5" cy="5" r="5" stroke="none" />
                             <circle cx="5" cy="5" r="4.5" />
                         </g>
@@ -783,7 +785,7 @@
         </div>
 
         <!-- Modal 4 -->
-        <div  id="fourth_modal" class="modal_click_4 modal">
+        <div id="fourth_modal" class="modal_click_4 modal">
             <!-- Modal content-->
             <div class="modal_content">
                 <span id="close_4" class="close" onclick="clickClose(this.id)">&times;</span>

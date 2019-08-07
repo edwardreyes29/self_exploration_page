@@ -140,6 +140,43 @@ p {
     fill: green;
   }
 }
+
+.pulse {
+  /* stroke: #FFFF33; */
+  stroke: #FFE65F;
+  /* stroke: #2ECC71; */
+  stroke-width: 1px;
+  stroke-opacity: 1;
+  fill: #FFE65F;;
+  fill-opacity: 0;
+  transform-origin: 5px 5px;
+  animation-duration: 2s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+
+}
+
+.pulse-1 {
+  display: block; /* changed */
+}
+
+@keyframes pulse {
+  0%{
+      stroke-width: 5px;
+      stroke-opacity: 1;
+      transform: scale(1);
+  }
+  25% {
+      stroke-opacity: 1;
+      
+  }
+  100% {
+      stroke-width: 0;
+      stroke-opacity: 0;
+      transform: scale(4);
+  }
+}
+
 #light {
   opacity: 0;
 }
