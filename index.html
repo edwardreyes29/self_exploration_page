@@ -16,16 +16,19 @@
         <!--########## FLASHLIGHT SECTION ##########-->
         <div class="background_shadow"></div>
 
+
         <!--Title of the page-->
         <div class="title">
-            <svg class="title_text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235 193">
+            <h1 class="title_text text">Learn About <span class="text_underline">Yourself</span><span class="text_red">
+                    !</span></h1>
+            <!-- <svg class="title_text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235 193">
                 <text class="text">
                     <tspan class="text_stroke" x="0" y="45">Learn </tspan>
                     <tspan x="0" y="95">About </tspan>
                     <tspan x="0" y="145" text-decoration="underline">Yourself</tspan>
                     <tspan y="145" fill="#ff6c6c">!</tspan>
                 </text>
-            </svg>
+            </svg> -->
         </div>
 
         <!-- Adding flashlight 1416 1133-->
@@ -62,7 +65,7 @@
                     <g id="toggle_button" class="flashlight_click" onclick="clickFunction(this.id)">
                         <path class="toggle_button_outer" d="M104 558a8 8 0 1 1-8 8 8 8 0 0 1 8-8z" fill="#dedbdb" />
                         <g class="toggle_button_inner" transform="translate(99 561)" fill="none" stroke="#fff">
-                            <circle id="pulse-1" class="pulse" cx="5" cy="5" r="10px"></circle>
+                            <circle id="pulse_1" class="pulse" cx="5" cy="5" r="10px"></circle>
                             <circle cx="5" cy="5" r="5" stroke="none" />
                             <circle cx="5" cy="5" r="4.5" />
                         </g>
@@ -70,6 +73,24 @@
                 </g>
             </svg>
         </div>
+
+        <div id="click_here_hover">
+            <div id="square_1" class="square" onmouseover="arrowHoverOn(this.id)" onmouseout="arrowHoverOff()">
+                <svg id="flashlight_logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 17.3">
+                    <path d="M24 8.6c0 3.1-.1 6-.3 8.7H20l-5.6-5.1H0V5.1h14.3L20 0h3.8c.1 2.6.2 5.5.2 8.6z"
+                        fill="#ffffff" />
+                </svg>
+                <svg class="arrows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20">
+                    <g data-name="Group 570">
+                        <path class="arrow" id="arrow_1" d="M20 4V0L0 10l20 10v-4L8 10z" />
+                        <path class="arrow" id="arrow_2" d="M40 4V0L20 10l20 10v-4l-12-6z" />
+                        <path class="arrow" id="arrow_3" d="M60 4V0L40 10l20 10v-4l-12-6z" />
+                    </g>
+                </svg>
+                <p id="click_here_text" class="section_text">TURN ON</p>
+            </div>
+        </div>
+
 
         <!-- Character 1 -->
         <div id="character_1_section" class="flashlight_click">
@@ -173,8 +194,8 @@
         <!-- Question Indicator 1-->
         <div class="modal_click_1 question_idicator" id="question_indicator_1" onclick="clickFunction(this.id)">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
-                <text class="flashlight_click question_mark_1" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#E8E2E2" font-size="40"
-                    font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
+                <text class="flashlight_click question_mark_1" transform="matrix(.979 -.206 .206 .979 31.78 57.949)"
+                    fill="#E8E2E2" font-size="40" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
                     <tspan x="0" y="0">?</tspan>
                 </text>
                 <path d="M13.164 46.562l13.612 8.266-8.179 13.757-13.612-8.266z" fill="#fca12a" />
@@ -408,11 +429,27 @@
                 </g>
             </svg>
         </div>
+        <div id="click_here_hover2">
+            <div class="square" id="square_2" onmouseover="arrowHoverOn(this.id)" onmouseout="arrowHoverOff()">
+                <svg id="heart_shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="#ffffff">
+                    <path
+                        d="M14.708 15.847C14.252 14.864 14 13.742 14 12.5s.252-2.489.708-3.659a10.976 10.976 0 0 1 1.929-3.205c.814-.938 1.784-1.723 2.86-2.271C20.574 2.814 21.758 2.5 23 2.5s2.426.252 3.503.707a9.02 9.02 0 0 1 4.789 4.79c.457 1.076.708 2.261.708 3.503a8.96 8.96 0 0 1-2.637 6.364C28.55 18.678 17.077 29.044 16 29.5c-1.077-.456-12.55-10.822-13.364-11.636A8.978 8.978 0 0 1 0 11.5a8.978 8.978 0 0 1 2.636-6.364A8.974 8.974 0 0 1 9 2.5c1.243 0 2.427.314 3.503.863 1.077.55 2.046 1.334 2.861 2.272a11.02 11.02 0 0 1 1.929 3.205c.455 1.171.707 2.418.707 3.66s-.252 2.364-.707 3.347a7.315 7.315 0 0 1-1.929 2.518" />
+                </svg>
+                <svg class="arrows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20">
+                    <g data-name="Group 570">
+                        <path class="arrow" id="arrow_1" d="M20 4V0L0 10l20 10v-4L8 10z" />
+                        <path class="arrow" id="arrow_2" d="M40 4V0L20 10l20 10v-4l-12-6z" />
+                        <path class="arrow" id="arrow_3" d="M60 4V0L40 10l20 10v-4l-12-6z" />
+                    </g>
+                </svg>
+                <p id="click_here_text_2" class="section_text">CLICK HEART</p>
+            </div>
+        </div>
 
         <!-- One Great Advice Text-->
         <div id="one_great_advice_text" class="big_heart_click section_text">
             <h1>One great advice</h1>
-            <p>is to dream about your future. Keeping what you want in mind can give you 
+            <p>is to dream about your future. Keeping what you want in mind can give you
                 the motivation to deal with life’s challenges. </p>
         </div>
 
@@ -560,35 +597,35 @@
         <!-- Understanding Text-->
         <div id="furthermore_text" class="blue_triangle_click section_text">
             <h1>Furthermore,</h1>
-            <p>it is essential to understand that the world of work is also continually changing. 
+            <p>it is essential to understand that the world of work is also continually changing.
                 Because a single occupation will no longer
-                take us from the beginning to the end of our 
+                take us from the beginning to the end of our
                 working lives, adaptability is an important skill to carry into the future.</p>
         </div>
 
         <!--########## JOB SECTION ##########-->
 
         <div id="understanding_text" class="section_text">
-            <h2>Understanding the demands of today’s role of work and the skills needed in your career will 
+            <h2>Understanding the demands of today’s role of work and the skills needed in your career will
                 also help you to make better decisions.</h2>
         </div>
 
-         <!-- Question Indicator 4-->
-         <div class="modal_click_4 question_idicator" id="question_indicator_4" onclick="clickFunction(this.id)">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
-                    <text class="?" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#7C7B7B" font-size="40"
-                        font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
-                        <tspan x="0" y="0">?</tspan>
-                    </text>
-                    <path d="M13.164 46.562l13.612 8.266-8.179 13.757-13.612-8.266z" fill="#fca12a" />
-                    <path d="M37.6.001l.982 18.908-17.368-9.73z" fill="#1cc0d9" />
-                    <path d="M6.624 39.004L0 29.665l5.329-10.063 11.931-.661 6.56 9.342-5.311 10.062z" fill="#ef5656" />
-                    <path d="M49 18.383L63.392 11.6l6.711 14.546-14.392 6.783z" fill="#fca12a" />
-                    <path d="M54.741 52.457l6.252-9.6 11.206 1.422L77.084 55.3l-6.278 9.537-11.2-1.405z" fill="#ef5656" />
-                    <path d="M34.528 62.398l17.49 6.785-15.86 12.078z" fill="#1cc0d9" />
-                </svg>
-            </div>
-    
+        <!-- Question Indicator 4-->
+        <div class="modal_click_4 question_idicator" id="question_indicator_4" onclick="clickFunction(this.id)">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
+                <text class="?" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#7C7B7B" font-size="40"
+                    font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
+                    <tspan x="0" y="0">?</tspan>
+                </text>
+                <path d="M13.164 46.562l13.612 8.266-8.179 13.757-13.612-8.266z" fill="#fca12a" />
+                <path d="M37.6.001l.982 18.908-17.368-9.73z" fill="#1cc0d9" />
+                <path d="M6.624 39.004L0 29.665l5.329-10.063 11.931-.661 6.56 9.342-5.311 10.062z" fill="#ef5656" />
+                <path d="M49 18.383L63.392 11.6l6.711 14.546-14.392 6.783z" fill="#fca12a" />
+                <path d="M54.741 52.457l6.252-9.6 11.206 1.422L77.084 55.3l-6.278 9.537-11.2-1.405z" fill="#ef5656" />
+                <path d="M34.528 62.398l17.49 6.785-15.86 12.078z" fill="#1cc0d9" />
+            </svg>
+        </div>
+
         <!-- Job Section Text -->
         <div class="job_section_text">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 539 78">
@@ -601,6 +638,7 @@
                     <tspan y="60">:</tspan>
                 </text>
             </svg>
+
         </div>
 
         <!-- Job boxes -->

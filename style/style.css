@@ -47,10 +47,19 @@ p {
 }
 .title {
   fill: #ffffff;
-  font-size: 60px;
+  color: #ffffff;
+  font-size: 1.6em;
   font-weight: 700;
+  margin: 0;
+  padding: 0;
   /* text-transform: uppercase; */
   transform: translate(20px,10px);
+}
+.text_underline {
+  border-bottom: 2px solid #ffffff;
+}
+.text_red {
+  color: #ef5656;;
 }
 
 /* Character stylings */
@@ -115,6 +124,27 @@ p {
 }
 #toggle_button {
   cursor: pointer;
+  animation: toggleStatic 3s infinite;
+}
+@keyframes toggleStatic {
+  0% {
+    transform: translate(0px);
+  }
+  10% {
+    transform: translate(5px);
+  }
+  20% {
+    transform: translate(0px);
+  }
+  30% {
+    transform: translate(8px);
+  }
+  40% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(0px);
+  }
 }
 #toggle_button.clicked {
   transform: translateX(0px);
@@ -142,38 +172,43 @@ p {
 }
 
 .pulse {
+  display: none;
   /* stroke: #FFFF33; */
-  stroke: #FFE65F;
+  stroke: #ef5656;
+  stroke-width: 0px;
   /* stroke: #2ECC71; */
-  stroke-width: 1px;
-  stroke-opacity: 1;
-  fill: #FFE65F;;
-  fill-opacity: 0;
+  /* stroke-width: 1px; */
+  /* stroke-opacity: 1; */
+  fill: #EA4040;
+  fill-opacity: 0.2;
   transform-origin: 5px 5px;
   animation-duration: 2s;
   animation-name: pulse;
   animation-iteration-count: infinite;
-
 }
 
-.pulse-1 {
-  display: block; /* changed */
+.pulse.show {
+  display: block;
 }
+
 
 @keyframes pulse {
   0%{
-      stroke-width: 5px;
-      stroke-opacity: 1;
+      /* stroke-width: 5px;
+      stroke-opacity: 1; */
       transform: scale(1);
+      fill-opacity: 0.4;
   }
   25% {
-      stroke-opacity: 1;
+      /* stroke-opacity: 1; */
+      fill-opacity: 0.6;
       
   }
   100% {
-      stroke-width: 0;
-      stroke-opacity: 0;
-      transform: scale(4);
+      /* stroke-width: 0;
+      stroke-opacity: 0; */
+      transform: scale(6);
+      fill-opacity: 0;
   }
 }
 
@@ -190,9 +225,131 @@ p {
     opacity: 0;
   }
   to {
+    opacity: .85;
+  }
+}
+
+#click_here_hover {
+  display: flex;
+  align-items: center;
+  grid-area: flashlight_section_L;
+  transform: translate(120px, -60px) scale(.7);
+
+}
+
+.click_shape {
+  display: flex;
+}
+
+.arrows {
+  display: flex;
+  flex-basis: 80%;
+  flex-grow: 1;
+  min-width: 40px;
+  max-width: 40px;
+  left: 0px;
+  fill: #ffffff;
+  right: 2px;
+}
+
+#arrow_1.hovered {
+  animation: 1s arrowFade 0.6s infinite;
+}
+#arrow_2.hovered {
+  animation: 1s arrowFade 0.4s infinite;
+}
+#arrow_3.hovered {
+  animation: 1s arrowFade 0.2s infinite;
+}
+@keyframes arrowFade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
     opacity: 1;
   }
 }
+
+#flashlight_logo {
+  opacity: 1;
+  display: flex;
+  transform: scale(3) rotateX(0deg);
+  min-width: 14.5px;
+  left: 25.5px;
+}
+#flashlight_logo.hide {
+  animation: hideLogo 0.15s forwards;
+}
+@keyframes hideLogo {
+  0% {
+    transform: scale(3) rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3) rotateX(90deg);
+    opacity: 1;
+    
+  }
+}
+
+
+
+#click_here_text {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-width: 200px;
+  max-width: 200px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  right: 65px; 
+}
+
+#square_1{
+  grid-area: flashlight_section_L;
+  display: flex;
+  flex-direction: row;
+  flex-flow: start;
+  width: 70px;
+  height: 70px;
+  background: #EA4040;
+  border-radius: 100px;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+#square_1:hover {
+  width: 250px;
+  background: #EA4040;
+}
+
+#square_1:hover > p {
+  
+  width: 250px;
+  animation: textAppear .3s forwards;
+}
+
+@keyframes textAppear {
+  0%{
+    opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
+}
+
+#square_1 > p {
+  opacity: 0;
+  color: #ffffff;
+  font-size: 1.5em;
+  width: 200%;
+  font-weight: 700;
+  transform: translate(100px, 25px);
+}
+
 
 #character_1_section {
   grid-area: flashlight_section_R;
@@ -307,6 +464,87 @@ p {
   }
 }
 
+#click_here_hover2 {
+  display: flex;
+  align-items: center;
+  grid-area: heart_section_R;
+  transform: translate(0px, 0px) scale(.7);
+}
+#square_2 {
+  grid-area: flashlight_section_L;
+  display: flex;
+  flex-direction: row;
+  flex-flow: start;
+  width: 70px;
+  height: 70px;
+  background: #EA4040;
+  border-radius: 100px;
+  transition: width 0.2s ease;
+}
+#square_2 > .arrows {
+  transform: translateX(-2.5px) rotate(60deg);
+}
+#square_2:hover {
+  width: 285px;
+}
+#click_here_text_2 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-width: 200px;
+  max-width: 200px;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  right: 65px; 
+}
+
+#square_2 > p {
+  opacity: 0;
+  color: #ffffff;
+  font-size: 1.5em;
+  width: 200%;
+  font-weight: 700;
+  transform: translate(100px, 25px);
+}
+#square_2:hover > p {
+  width: 250px;
+  animation: textAppear .3s forwards;
+}
+
+@keyframes textAppear {
+  0%{
+    opacity: 0;
+  }
+  100% {
+   opacity: 1;
+  }
+}
+
+#heart_shape{
+  opacity: 1;
+  display: flex;
+  transform: scale(3.15);
+  min-width: 16px;
+  max-width: 16px;
+  left: 27.5px;
+  top: 4.7px;
+}
+#heart_shape.hide {
+  animation: hideHeart 0.12s forwards;
+}
+
+@keyframes hideHeart {
+  0% {
+    transform: scale(3.15) rotateX(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3.15) rotateX(90deg);
+    opacity: 1;
+    
+  }
+}
 
 #big_heart.clicked {
   cursor: default;
@@ -617,6 +855,7 @@ p {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
+
 .modal.clicked {
   display: block;
 }
