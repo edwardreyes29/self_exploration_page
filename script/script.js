@@ -12,6 +12,8 @@ function clickFunction(clicked_id) {
         document.getElementById('click_here_hover').style.display = "none";
     } else if (element.id == 'big_heart') { 
         document.getElementById('click_here_hover2').style.display = "none";
+    } else if (element.id == 'blue_triangle') { 
+        document.getElementById('click_here_hover3').style.display = "none";
     }
 
 }
@@ -58,6 +60,9 @@ function arrowHoverOn(over_id) {
     } else if (over_id == 'square_2') {
         var heart_shape = document.getElementById('heart_shape');
         heart_shape.classList.add('hide');
+    } else if (over_id = 'squre_3') {
+        var triangle_shape = document.getElementById('triangle_shape');
+        triangle_shape.classList.add('hide');
     }
     
    
@@ -76,4 +81,7 @@ function arrowHoverOff() {
 
     var heart_shape = document.getElementById('heart_shape');
     heart_shape.classList.remove('hide');
+
+    var triangle_shape = document.getElementById('triangle_shape');
+    triangle_shape.classList.remove('hide');
 }

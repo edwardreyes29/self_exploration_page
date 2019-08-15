@@ -179,7 +179,7 @@ p {
   /* stroke: #2ECC71; */
   /* stroke-width: 1px; */
   /* stroke-opacity: 1; */
-  fill: #EA4040;
+  fill: white;
   fill-opacity: 0.2;
   transform-origin: 5px 5px;
   animation-duration: 2s;
@@ -281,21 +281,14 @@ p {
   left: 25.5px;
 }
 #flashlight_logo.hide {
-  animation: hideLogo 0.15s forwards;
+  animation: hideShape 0.08s forwards;
 }
-@keyframes hideLogo {
-  0% {
-    transform: scale(3) rotateX(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(3) rotateX(90deg);
-    opacity: 1;
-    
-  }
+#arrows1 {
+  opacity: 0;
 }
-
-
+#square_1:hover > .arrows {
+  animation: textAppear .3s forwards;
+}
 
 #click_here_text {
   margin: 0;
@@ -303,7 +296,6 @@ p {
   display: flex;
   min-width: 200px;
   max-width: 200px;
-  color: white;
   font-size: 1.5em;
   font-weight: 700;
   right: 65px; 
@@ -316,20 +308,22 @@ p {
   flex-flow: start;
   width: 70px;
   height: 70px;
-  background: #EA4040;
+  border-width: 5;
+  border-style: solid;
+  border-color: #E6E6E6;
+  background:#695544;
   border-radius: 100px;
   transition: width 0.2s ease, background 0.2s ease;
 }
 
 #square_1:hover {
   width: 250px;
-  background: #EA4040;
+  
 }
 
 #square_1:hover > p {
-  
   width: 250px;
-  animation: textAppear .3s forwards;
+  animation: makeAppear .3s forwards;
 }
 
 @keyframes textAppear {
@@ -468,7 +462,7 @@ p {
   display: flex;
   align-items: center;
   grid-area: heart_section_R;
-  transform: translate(0px, 0px) scale(.7);
+  transform: translate(-40px, -250px) scale(.7);
 }
 #square_2 {
   grid-area: flashlight_section_L;
@@ -477,12 +471,22 @@ p {
   flex-flow: start;
   width: 70px;
   height: 70px;
-  background: #EA4040;
+  /* background: #EF5656; */
+  border-width: 5;
+  border-style: solid;
+  border-color: #E6E6E6;
+  background:#695544;
   border-radius: 100px;
   transition: width 0.2s ease;
 }
-#square_2 > .arrows {
-  transform: translateX(-2.5px) rotate(60deg);
+#arrows2 {
+  opacity: 0;
+  fill:#ffffff;
+  transform: translateX(210px) rotate(270deg);
+}
+
+#square_2:hover > .arrows {
+  animation: makeAppear .3s forwards;
 }
 #square_2:hover {
   width: 285px;
@@ -492,27 +496,25 @@ p {
   padding: 0;
   display: flex;
   min-width: 200px;
-  max-width: 200px;
-  color: white;
   font-size: 1.5em;
   font-weight: 700;
-  right: 65px; 
+  right: 120px; 
 }
 
 #square_2 > p {
   opacity: 0;
-  color: #ffffff;
   font-size: 1.5em;
+  color: #ffffff;
   width: 200%;
   font-weight: 700;
   transform: translate(100px, 25px);
 }
 #square_2:hover > p {
   width: 250px;
-  animation: textAppear .3s forwards;
+  animation: makeAppear .3s forwards;
 }
 
-@keyframes textAppear {
+@keyframes makeAppear {
   0%{
     opacity: 0;
   }
@@ -524,24 +526,27 @@ p {
 #heart_shape{
   opacity: 1;
   display: flex;
-  transform: scale(3.15);
+  transform: scale(2.5) rotate(15deg);
   min-width: 16px;
   max-width: 16px;
   left: 27.5px;
-  top: 4.7px;
+  top: 15px;
 }
 #heart_shape.hide {
-  animation: hideHeart 0.12s forwards;
+  animation: hideShape 0.12s forwards;
 }
 
-@keyframes hideHeart {
+@keyframes hideShape {
   0% {
     transform: scale(3.15) rotateX(0deg);
     opacity: 1;
   }
+  25% {
+    opacity: 1;
+  }
   100% {
     transform: scale(3.15) rotateX(90deg);
-    opacity: 1;
+    opacity: 0;
     
   }
 }
@@ -610,6 +615,75 @@ p {
 }
 
 /*##########  Triangle Section ##########*/
+#click_here_hover3 {
+  display: flex;
+  align-items: center;
+  grid-area: triangle_section_L;
+  transform: translate(-30px, -100px) scale(.7);
+}
+#square_3 {
+  display: flex;
+  flex-direction: row;
+  flex-flow: start;
+  width: 70px;
+  height: 70px;
+  /* background: #EF5656; */
+  border-width: 5;
+  border-style: solid;
+  border-color: #E6E6E6;
+  background: #695544;
+  border-radius: 100px;
+  transition: width 0.2s ease;
+}
+#arrows3 {
+  opacity: 0;
+  transform: translateX(210px) rotate(270deg);
+}
+
+#square_3:hover > .arrows {
+  animation: makeAppear .3s forwards;
+}
+#square_3:hover {
+  width: 285px;
+}
+#click_here_text_3 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-width: 200px;
+  max-width: 200px;
+  font-size: 1.5em;
+  font-weight: 700;
+  right: 135px; 
+}
+
+#square_3 > p {
+  opacity: 0;
+  color: #ffffff;
+  font-size: 1.5em;
+  width: 200%;
+  font-weight: 700;
+  transform: translate(100px, 25px);
+}
+#square_3:hover > p {
+  width: 250px;
+  animation: makeAppear .3s forwards;
+}
+
+#triangle_shape{
+  opacity: 1;
+  display: flex;
+  transform: scale(2.5) rotate(0deg);
+  min-width: 16px;
+  max-width: 16px;
+  left: 27.5px;
+  top: 18px;
+}
+
+#triangle_shape.hide {
+  animation: hideShape 0.12s forwards;
+}
+
 #triangle_section {
   grid-area: triangle_section_L;
   width: 110%;
@@ -909,3 +983,35 @@ p.modal_text {
   font-size: 2.5em;
 }
 
+/* q indicator shape hovers */
+.move1 {
+  animation: float1 3s infinite;
+}
+
+@keyframes float1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.move2 {
+  animation: float2 3s infinite;
+}
+
+@keyframes float2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
