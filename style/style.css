@@ -462,7 +462,7 @@ p {
   display: flex;
   align-items: center;
   grid-area: heart_section_R;
-  transform: translate(-40px, -250px) scale(.7);
+  transform: translate(-40px, -290px) scale(.7);
 }
 #square_2 {
   grid-area: flashlight_section_L;
