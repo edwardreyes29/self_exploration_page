@@ -85,3 +85,108 @@ function arrowHoverOff() {
     var triangle_shape = document.getElementById('triangle_shape');
     triangle_shape.classList.remove('hide');
 }
+
+function indicatorHover(indicator_id){
+
+    // Shortens Code!!!!!!!!
+    var element = document.getElementById(indicator_id).getElementsByClassName('question_mark');
+    element[0].classList.remove('revertColor');
+    element[0].classList.add('changeColor');
+
+    var element2 = document.getElementById(indicator_id).getElementsByClassName('indicator_box');
+    element2[0].classList.remove('shrink');
+    element2[0].classList.add('expand');
+
+    var element3 = document.getElementById(indicator_id).getElementsByClassName('ask_yourself_text');
+    console.log(element3);
+    element3[0].classList.remove('showAsk');
+    element3[0].classList.add('hideAsk');
+
+    // if (indicator_id == 'question_indicator_1') {
+    //     // let element = document.getElementById('indicator_box_1');
+    //     // element.classList.remove('shrink');
+    //     // element.classList.add('expand');
+        
+    //     element = document.getElementById('ask_yourself_text_1');
+    //     element.classList.remove('showAsk');
+    //     element.classList.add('hideAsk');
+    // } else if (indicator_id == 'question_indicator_2') {
+    //     // let element = document.getElementById('indicator_box_2');
+    //     // element.classList.remove('shrink');
+    //     // element.classList.add('expand');
+
+    //     element = document.getElementById('ask_yourself_text_2');
+    //     element.classList.remove('showAsk');
+    //     element.classList.add('hideAsk');
+
+        
+    //     // element = document.getElementById('question_mark_2');
+    //     // element.classList.remove('revertColor');
+    //     // element.classList.add('changeColor');
+    // } else if (indicator_id == 'question_indicator_3') {
+    //     // let element = document.getElementById('indicator_box_3');
+    //     // element.classList.remove('shrink');
+    //     // element.classList.add('expand');
+    // } else if (indicator_id == 'question_indicator_4') {
+    //     // let element = document.getElementById('indicator_box_4');
+    //     // element.classList.remove('shrink');
+    //     // element.classList.add('expand');
+
+    //     element = document.getElementById('ask_yourself_text_4');
+    //     element.classList.remove('showAsk');
+    //     element.classList.add('hideAsk');
+    // }
+
+    
+}
+function indicatorHoverOff(indicator_id){
+
+
+    var element = document.getElementById(indicator_id).getElementsByClassName('question_mark');
+    element[0].classList.add('revertColor');
+    element[0].classList.remove('changeColor');
+
+    element = document.getElementById(indicator_id).getElementsByClassName('indicator_box');
+    element[0].classList.add('shrink');
+    element[0].classList.remove('expand');
+
+    element = document.getElementById(indicator_id).getElementsByClassName('ask_yourself_text');
+    element[0].classList.remove('hideAsk');
+    element[0].classList.add('showAsk');
+   
+
+    // if (indicator_id == 'question_indicator_1') {
+    //     let element = document.getElementById('indicator_box_1');
+    //     // element.classList.remove('expand');
+    //     // element.classList.add('shrink');
+
+    //     element = document.getElementById('ask_yourself_text_1');
+    //     element.classList.remove('hideAsk');
+    //     element.classList.add('showAsk');
+
+    // } else if (indicator_id == 'question_indicator_2') {
+    //     let element = document.getElementById('indicator_box_2');
+    //     // element.classList.remove('expand');
+    //     // element.classList.add('shrink');
+
+    //     element = document.getElementById('ask_yourself_text_2');
+    //     element.classList.remove('hideAsk');
+    //     element.classList.add('showAsk');
+
+    // } else if (indicator_id == 'question_indicator_3') {
+    //     let element = document.getElementById('indicator_box_3');
+    //     // element.classList.remove('expand');
+    //     // element.classList.add('shrink');
+    // } else if (indicator_id == 'question_indicator_4') {
+    //     let element = document.getElementById('indicator_box_4');
+    //     // element.classList.remove('expand');
+    //     // element.classList.add('shrink');
+
+    //     element = document.getElementById('ask_yourself_text_4');
+    //     element.classList.remove('hideAsk');
+    //     element.classList.add('showAsk');
+    // }
+
+    
+
+}
