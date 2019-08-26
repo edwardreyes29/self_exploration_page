@@ -107,6 +107,7 @@ p {
 }
 
 #flashlight_section {
+  display: flex;
   grid-area: flashlight_section_L;
   grid-column: 1/3;
   transform: translate(95px, -55px) scale(1.35) rotate(0deg);
@@ -407,6 +408,7 @@ p {
   transform: translate(1px, -71px);
   animation: rotateText 20s infinite linear;
 }
+
 [class^="ask_yourself_text"].hideAsk, [class^="ask_yourself_text"].clicked.hideAsk {
   animation: rotateText 20s infinite linear, hideAsk 0.25s forwards ease-in;
 }
@@ -487,24 +489,28 @@ p {
   position:absolute;
   top:0; right:0; 
 }
+
 #indicator_box_1.expand {
   animation: expandBox1 0.15s forwards ease-out;
 }
-#indicator_box_1.shrink {
-  animation: shrinkBox 0.08s forwards ease-in;
-}
+
 #indicator_box_2 {
   transform: translate(-3px, -145.5px);
+}
+
+#indicator_box_3 {
+  position:absolute;
+  top:0; right:0; 
+}
+
+#indicator_box_1.shrink {
+  animation: shrinkBox 0.08s forwards ease-in;
 }
 #indicator_box_2.expand {
   animation: expandBox2 0.15s forwards ease-out;
 }
 #indicator_box_2.shrink {
   animation: shrinkBox 0.08s forwards ease-in;
-}
-#indicator_box_3 {
-  position:absolute;
-  top:0; right:0; 
 }
 #indicator_box_3.expand {
   animation: expandBox3 0.15s forwards ease-out;
@@ -532,12 +538,11 @@ p {
 .indicator_text {
     display: none;
 }
-.indicator_box.expand  > .indicator_text{
+.indicator_box.expand  > .indicator_text {
   display: inline-block;
 }
 
 @keyframes expandBox1 {
- 
   0% {
     opacity: 0;
     border-radius: 50px;
@@ -546,8 +551,7 @@ p {
   }
   25% {
     opacity: 0;
-  }
-  
+  } 
   100% {
     opacity: 1;
     border-radius: 35px 35px 35px 35px;
@@ -657,8 +661,6 @@ p {
   justify-self: center;
   transform: translate(-30px, -40px);
 }
-
-
 
 #big_heart {
   cursor: pointer;
@@ -1305,7 +1307,6 @@ p.modal_text {
     transform: translate(95px, -55px) scale(1.35) rotate(0deg);
   }
 }
-
 
 @keyframes toggleStatic {
   0% {
