@@ -1,0 +1,106 @@
+
+.container {
+    max-width: 1414px;
+}
+
+/*========== General Rules ==========*/
+.main_text {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*========== Flashlight Section ==========*/
+
+
+.background_shadow {
+    grid-area: flashlight;
+    grid-column: 1/3;
+    background: linear-gradient(#60513E, #7A694F, #AB957C,#FFFFFF);
+    width: 100%; /* alows it to scale */
+    
+}
+
+#title_section {
+    grid-area: flashlight;
+    align-self: top;
+    justify-self: left;
+    font-weight: 700;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.text_underline {
+    border-bottom: 2px solid #ffffff;
+}
+
+.text_red {
+    color: #ef5656;
+}
+
+/* Flashlight */
+#flashlight {
+    grid-area: flashlight;
+    grid-column: 1/3;
+    height: auto;
+}
+
+/* Self Exploration Text */
+#self_exploration_text {
+    grid-area: flashlight;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+
+/*========== Main Content Shapes ==========*/
+#flashlight_section {
+    position: relative;
+    min-height: 1133px;
+    display: grid;
+    grid-template-areas:
+         "flashlight character_1";
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(1,minmax(0px, auto)); /* won't get smaller than 0px, max is auto */
+}
+
+#heart_section {
+    position: relative;
+    min-height: 550px;
+    display: grid;
+    grid-template-areas: 
+            "character_2 heart";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1,minmax(0px, auto));
+
+}
+
+
+/*========== Character Rules ==========*/
+/* Character Basic Colors */
+.character_brown {
+    fill: #663a14;
+}
+
+.character_skin {
+    fill: #fcbb65
+}
+
+.character_orange_1 {
+    fill: #FCA12A;
+}
+
+/* Character 1 */
+#character_1 {
+    grid-area: character_1;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+}
+
+#character_2 {
+    grid-area: character_2;
+    height: auto;
+    align-self: top;
+    justify-self: center;
+}
