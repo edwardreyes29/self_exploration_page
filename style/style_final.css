@@ -1788,11 +1788,11 @@ p.modal_text {
 /* ################ Click Here Hovers ################ */
 
 /* Click Here Hover Divs */
-.click_here_hover {
+.click_here_hover { /* Changed to click-prompt */
     display: flex;
     align-items: center;
 }
-#click_here_hover1 {
+#click_here_hover1 { /* Changed to click-prompt-1 */
     grid-area: flashlight_section_L;
     transform: translate(120px, -60px) scale(.7);
 }
@@ -1972,61 +1972,6 @@ p.modal_text {
     animation: hideShape 0.12s forwards;
 }
 
-@-webkit-keyframes hideShape {
-    0% {
-        transform: scale(2.5) rotateX(0deg);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2.5) rotateX(90deg);
-        opacity: 0;
-    }
-}
-@-moz-keyframes hideShape {
-    0% {
-        transform: scale(2.5) rotateX(0deg);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2.5) rotateX(90deg);
-        opacity: 0;
-    }
-}
-@-o-keyframes hideShape {
-    0% {
-        transform: scale(2.5) rotateX(0deg);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2.5) rotateX(90deg);
-        opacity: 0;
-    }
-}
-@keyframes hideShape {
-    0% {
-        transform: scale(2.5) rotateX(0deg);
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: scale(2.5) rotateX(90deg);
-        opacity: 0;
-    }
-}
-
-
-
 /* keyframes */
 @-webkit-keyframes arrowFade {
     0% {
@@ -2105,5 +2050,59 @@ p.modal_text {
         opacity: 1;
     }
 }
+
+@-webkit-keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+@-moz-keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+@-o-keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+@keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
 
 

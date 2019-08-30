@@ -1,83 +1,52 @@
+body {
+    margin: 0;
+}
 
 .container {
-    max-width: 1414px;
+    max-width: 864px;
+    min-height: 1980px;
+    margin: 0;
+    /* background:linear-gradient(#60513E, #7A694F, #AB957C,#FFFFFF, #FFFFFF, #FFFFFF); */
+    overflow-x: hidden;
 }
 
 /*========== General Rules ==========*/
-.main_text {
+
+/* title */
+
+.main-text {
     font-family: 'Roboto', sans-serif;
 }
 
-/*========== Flashlight Section ==========*/
+/* Add underline to text using <span> (white) */
 
-
-.background_shadow {
-    grid-area: flashlight;
-    grid-column: 1/3;
-    background: linear-gradient(#60513E, #7A694F, #AB957C,#FFFFFF);
-    width: 100%; /* alows it to scale */
-    
-}
-
-#title_section {
-    grid-area: flashlight;
-    align-self: top;
-    justify-self: left;
-    font-weight: 700;
-    font-size: 20px;
-    color: #ffffff;
-}
-
-.text_underline {
+.underline-text {
     border-bottom: 2px solid #ffffff;
 }
 
-.text_red {
+/* Add underline to text using <span> (black) */
+
+.underline-text-2 {
+    border-bottom: 2px solid #000000;
+}
+
+/* Make text this type of red */
+
+.red-text {
     color: #ef5656;
 }
 
-/* Flashlight */
-#flashlight {
-    grid-area: flashlight;
-    grid-column: 1/3;
-    height: auto;
+/* Styling for starting words in text */
+
+.main-text-intro {
+    font-size: 1.7em;
+    font-weight: 700;
 }
-
-/* Self Exploration Text */
-#self_exploration_text {
-    grid-area: flashlight;
-    align-self: center;
-    justify-self: center;
-}
-
-
-
-
-/*========== Main Content Shapes ==========*/
-#flashlight_section {
-    position: relative;
-    min-height: 1133px;
-    display: grid;
-    grid-template-areas:
-         "flashlight character_1";
-     grid-template-columns: repeat(2, 1fr);
-     grid-template-rows: repeat(1,minmax(0px, auto)); /* won't get smaller than 0px, max is auto */
-}
-
-#heart_section {
-    position: relative;
-    min-height: 550px;
-    display: grid;
-    grid-template-areas: 
-            "character_2 heart";
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1,minmax(0px, auto));
-
-}
-
 
 /*========== Character Rules ==========*/
+
 /* Character Basic Colors */
+
 .character_brown {
     fill: #663a14;
 }
@@ -90,17 +59,826 @@
     fill: #FCA12A;
 }
 
+/*========== Flashlight Section (Browser) ==========*/
+
+/* Flashlight Section Container */
+
+#flashlight-section {
+    position: relative;
+    display: grid;
+    grid-template-areas: "title space-01 space-02" "flashlight self-exploration-text character-1" "space-20 space-21 space-22";
+    grid-template-columns: repeat(3, minmax(256px, 288px));
+    grid-template-rows: repeat(3, minmax(100px, 225px));
+    grid-gap: 0px;
+}
+
+/* Background for flashlight */
+
+.flashlight-background-1 {
+    grid-area: title;
+    grid-column: 1/4;
+    grid-row: 1/4;
+    background: linear-gradient(#60513E, #7A694F, #AB957C, #FFFFFF);
+    width: 100%;
+}
+
+/* Main title */
+
+#title-section {
+    grid-area: title;
+    align-self: start;
+    justify-self: start;
+    font-weight: 700;
+    font-size: 120%;
+    width: 70%;
+    margin: 0;
+    padding-left: 20px;
+    color: #ffffff;
+}
+
+/* Flashlight */
+
+#flashlight {
+    grid-area: flashlight;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    height: auto;
+    max-width: auto;
+    min-width: 100px;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    transform: translateX(-50px);
+    z-index: 0;
+}
+/* Self Exploration Text */
+
+#self-exploration-text {
+    grid-area: self-exploration-text;
+    align-self: center;
+    justify-self: center;
+    font-size: 90%;
+    z-index: 1;
+}
+
+#self-exploration-text.clicked {
+    -webkit-animation: 0.01s revealText 0.25s forwards;
+    -moz-animation: 0.01s revealText 0.25s forwards;
+    -o-animation: 0.01s revealText 0.25s forwards;
+    animation: 0.01s revealText 0.25s forwards;
+}
+
 /* Character 1 */
-#character_1 {
-    grid-area: character_1;
+
+#character-1 {
+    grid-area: character-1;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    max-width: 259px;
+    min-width: 100px;
+    width: 100%;
+    z-index: 1;
+}
+
+/*========== Flashlight Section (iPhone 6/7/8 plus) ==========*/
+
+@media (max-width: 414px) {
+    #flashlight-section {
+        grid-template-areas: "title space-01" 
+                             "ask-yourself-1 ask-yourself-text-1" 
+                             "flashlight character-1" 
+                             "flashlight self-exploration-text";
+        grid-template-columns: minmax(354px, 354px) minmax(365px, 414px);
+        grid-template-rows: 198px 86px 238.5px 238.5px;
+        grid-gap: 0px;
+    }
+    .mobile-background-1 {
+        grid-area: flashlight;
+        grid-row: 3/5;
+        grid-column: 1/3;
+        background: linear-gradient(#FCC988, #FDB118);
+    }
+    /* mobile-box */
+    .mobile-ask-yourself-box {
+        background: #8B6C5B;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #695544;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        z-index: 1;
+    }
+    #mobile-ask-yourself-box-1 {
+        grid-area: ask-yourself-1;
+        grid-column: 1/3;
+    }
+    /* Flashlight */
+    #flashlight {
+        grid-area: flashlight;
+        grid-column: 1/3;
+        grid-row: 3/5;
+        transform: translateX(-70px);
+    }
+    /* Character-1 */
+    #character-1 {
+        grid-area: character-1;
+        width: 65%;
+        transform: translateY(40px);
+    }
+    /* Self Exploration Text */
+    #self-exploration-text {
+        grid-area: self-exploration-text;
+        font-size: 75%;
+        margin-left: 50px;
+        margin-right: 25px;
+        transform: translate(20px, -15px);
+        text-align: left;
+    }
+}
+
+/*========== Heart Section (Browser) ==========*/
+
+/* Heart Section Container */
+
+#heart-section {
+    position: relative;
+    display: grid;
+    grid-template-areas: "character-2 heart";
+    grid-template-columns: minmax(363px, 390px) minmax(402px, 474px);
+    grid-template-rows: repeat(1, minmax(100px, 382px));
+    grid-gap: 0px;
+}
+
+#character-2 {
+    grid-area: character-2;
+    height: auto;
+    align-self: top;
+    justify-self: center;
+    max-width: 356.5px;
+    min-width: 100px;
+    width: 100%;
+}
+
+/* Big Heart */
+
+#big-heart {
+    grid-area: heart;
+    height: auto;
+    max-width: auto;
+    min-width: 100px;
+    width: 95%;
+    align-self: center;
+    justify-self: center;
+}
+
+#one-great-advice-text {
+    grid-area: heart;
+    align-self: center;
+    justify-self: center;
+    font-size: 90%;
+    width: 60%;
+    transform: translate(25px, 80px);
+    z-index: 1;
+}
+
+/*========== Heart Section (iPhone 6/7/8 plus) ==========*/
+
+@media (max-width: 414px) {
+    /* Heart Section Container */
+    #heart-section {
+        grid-template-areas: 
+            "ask-yourself-2 space-01 ask-yourself-text-2" 
+            "character-2 space-11 space-12" 
+            "one-great-advice-text space-21 space-22";
+        grid-template-columns: 414px 177px 177px;
+        grid-template-rows: 86px 320px auto;
+        grid-gap: 0px;
+    }
+    #mobile-ask-yourself-box-2 {
+        grid-area: ask-yourself-2;
+        grid-column: 1/4;
+    }
+    .mobile-background-2 {
+        grid-area: character-2;
+        grid-column: 1/4;
+        grid-row: 2/4;
+        background: #FAB0B0;
+        transform: translate(0px, 0px);
+        z-index: -10;
+    }
+    #big-heart {
+        grid-area: character-2;
+        width: 155%;
+        transform: translate(0px, -20px) rotate(-10deg);
+        z-index: -1;
+    }
+    #character-2 {
+        grid-area: character-2;
+        width: 75%;
+        transform: translate(100px, 40px);
+    }
+    #one-great-advice-text {
+        grid-area: one-great-advice-text;
+        font-size: 80%;
+        width: 60%;
+        transform: translate(20px, -45px);
+        z-index: 1;
+    }
+}
+
+/*========== Triangle Section (Browser) ==========*/
+
+/* Triangle Section Containter */
+
+#triangle-section {
+    position: relative;
+    /* min-height: 400px; */
+    display: grid;
+    grid-template-areas: "blue-triangle character-3";
+    grid-template-columns: minmax(426px, 462px) minmax(342px, 402px);
+    grid-template-rows: repeat(1, minmax(100px, 365px));
+    /* grid-template-columns: repeat(2, minmax(375px, auto));
+    grid-template-rows: repeat(1,minmax(0px, auto)); */
+    grid-gap: 0px;
+}
+
+/* Blue Triangle */
+
+#blue-triangle {
+    grid-area: blue-triangle;
+    height: auto;
+    max-width: auto;
+    min-width: 100px;
+    width: 95%;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Character 3 */
+
+#character-3 {
+    grid-area: character-3;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    max-width: 335.3px;
+    min-width: 100px;
+    width: 100%;
+}
+
+#furthermore-text {
+    grid-area: blue-triangle;
+    align-self: center;
+    justify-self: center;
+    font-size: 90%;
+    margin-left: 100px;
+    margin-right: 120px;
+    transform: translate(0px, 20px);
+    z-index: 1;
+}
+
+/*========== Triangle Section (iPhone 6/7/8 plus) ==========*/
+
+@media (max-width: 414px) {
+    /* Triangle Section Containter */
+    #triangle-section {
+        grid-template-areas: "ask-yourself-3 space-01 ask-yourself-text-3" "space-10 character-3 space-12" "space-20 furthermore-text space-22" "ask-yourself-4 space-31 ask-yourself-text-4";
+        grid-template-columns: 220px 414px auto;
+        grid-template-rows: 86px 317px 158px 86px;
+        grid-gap: 0px;
+    }
+    #mobile-ask-yourself-box-3 {
+        grid-area: ask-yourself-3;
+        grid-column: 1/4;
+    }
+    .mobile-background-3 {
+        grid-area: space-10;
+        grid-column: 1/4;
+        grid-row: 2/4;
+        background: #A1D8E0;
+        z-index: -10;
+    }
+    /* Blue Triangle */
+    #blue-triangle {
+        grid-area: character-3;
+        width: 155%;
+        transform: translate(0px, 60px);
+        z-index: -1;
+    }
+    /* Character 3 */
+    #character-3 {
+        grid-area: character-3;
+        width: 75%;
+    }
+    
+    #furthermore-text {
+        grid-area: furthermore-text;
+        font-size: 75%;
+        width: 75%;
+        margin-left: 30px;
+        margin-right: 0px;
+        transform: translate(-35px, -60px);
+        z-index: 1;
+    }
+    #mobile-ask-yourself-box-4 {
+        grid-area: ask-yourself-4;
+        grid-column: 1/4;
+    }
+}
+
+/*==========Job Section (Browser) ==========*/
+
+.job-section {
+    position: relative;
+    display: grid;
+    grid-template-areas: "understanding-text" "job-section-text" "job-boxes";
+    grid-template-rows: 80px 100px 220px;
+    grid-template-columns: auto;
+}
+
+.understanding-text {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 95%;
+    grid-area: understanding-text;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #664122;
+}
+
+.job-section-text {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-size: 90%;
+    grid-area: job-section-text;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.job-section-text>h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.job-section-text>h1:last-child {
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+/*========== Job Boxes ==========*/
+
+.job-boxes-container {
+    grid-area: job-boxes;
+    align-self: center;
+    justify-self: center;
+    width: 740px;
+    height: 230px;
+    display: -moz-box;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.job-box {
+    width: 170px;
+    height: 170px;
+    border-radius: 15px;
+}
+
+#job-box-1 {
+    position: relative;
+}
+
+#job-box-2 {
+    position: relative;
+}
+
+#job-box-3 {
+    position: relative;
+}
+
+#job-box-4 {
+    position: relative;
+}
+
+.job-shape {
+    transform: translate(125px, -15px);
+    opacity: .5;
+}
+
+#job-shape-1 {
+    position: absolute;
+}
+
+#job-shape-2 {
+    position: absolute;
+}
+
+#job-shape-3 {
+    position: absolute;
+}
+
+#job-shape-4 {
+    position: absolute;
+}
+
+.box-color-1 {
+    background: #695544;
+}
+
+.box-color-2 {
+    background: #8B6C5B;
+}
+
+/* Job boexes */
+
+@media (max-width: 732px) {
+    .job-boxes-container {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 402px) {
+    .job-boxes-container {
+        flex-direction: column;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        width: 230px;
+        height: 740px;
+    }
+}
+
+/*==========Job Section (iPad) ==========*/
+
+@media (max-width: 768px) {
+    .job-section {
+        position: relative;
+        display: grid;
+        grid-template-areas: "understanding-text" "job-section-text" "job-boxes";
+        grid-template-rows: 104px 104px 420px;
+        grid-template-columns: auto;
+    }
+}
+
+/* Keyframes */
+
+@-webkit-keyframes revealText {
+    from {
+        transform: translate(150px, 150px) scale(0);
+    }
+    to {
+        transform: translate(255px, 210px) scale(1);
+    }
+}
+
+@-moz-keyframes revealText {
+    from {
+        transform: translate(150px, 150px) scale(0);
+    }
+    to {
+        transform: translate(255px, 210px) scale(1);
+    }
+}
+
+@-o-keyframes revealText {
+    from {
+        transform: translate(150px, 150px) scale(0);
+    }
+    to {
+        transform: translate(255px, 210px) scale(1);
+    }
+}
+
+@keyframes revealText {
+    from {
+        transform: translate(150px, 150px) scale(0);
+    }
+    to {
+        transform: translate(255px, 210px) scale(1);
+    }
+}
+
+/*========== Character Rules ==========*/
+
+/* Click Prompt */
+
+.click-prompt {
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+}
+
+/* Click Prompt id's */
+
+#click-prompt-1 {
+    grid-area: flashlight;
+    align-self: center;
+    justify-self: center;
+    transform: translate(120px, -60px) scale(.7);
+}
+
+/* Arrows */
+
+.arrows {
+    opacity: 0;
+    flex-basis: 80%;
+    flex-grow: 1;
+    min-width: 40px;
+    max-width: 40px;
+    left: 0px;
+    fill: #ffffff;
+    right: 2px;
+}
+
+#arrows1 {
+    transform: translateX(0px) rotate(0deg);
+}
+
+#arrow_1.hovered {
+    -webkit-animation: 1s arrowFade 0.6s infinite;
+    -moz-animation: 1s arrowFade 0.6s infinite;
+    -o-animation: 1s arrowFade 0.6s infinite;
+    animation: 1s arrowFade 0.6s infinite;
+}
+
+#arrow_2.hovered {
+    -webkit-animation: 1s arrowFade 0.4s infinite;
+    -moz-animation: 1s arrowFade 0.4s infinite;
+    -o-animation: 1s arrowFade 0.4s infinite;
+    animation: 1s arrowFade 0.4s infinite;
+}
+
+#arrow_3.hovered {
+    -webkit-animation: 1s arrowFade 0.2s infinite;
+    -moz-animation: 1s arrowFade 0.2s infinite;
+    -o-animation: 1s arrowFade 0.2s infinite;
+    animation: 1s arrowFade 0.2s infinite;
+}
+
+[id^="square_"]:hover>.arrows {
+    -webkit-animation: makeAppear .3s forwards;
+    -moz-animation: makeAppear .3s forwards;
+    -o-animation: makeAppear .3s forwards;
+    animation: makeAppear .3s forwards;
+}
+
+/* Square */
+
+.square {
+    display: flex;
+    flex-direction: row;
+    flex-flow: start;
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    border-width: 5;
+    border-style: solid;
+    border-color: #E6E6E6;
+    background: #695544;
+    border-radius: 100px;
+}
+
+[id^="square_"] {
+    -webkit-transition: width 0.2s ease;
+    -moz-transition: width 0.2s ease;
+    -o-transition: width 0.2s ease;
+    transition: width 0.2s ease;
+}
+
+[id^="square_"]:hover {
+    width: 285px;
+}
+
+[id^="square_"]:hover>p {
+    -webkit-animation: makeAppear .3s forwards;
+    -moz-animation: makeAppear .3s forwards;
+    -o-animation: makeAppear .3s forwards;
+    animation: makeAppear .3s forwards;
+}
+
+/* Text */
+
+.click-prompt-text {
+    /* .click_here_text  */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-width: 200px;
+    max-width: 200px;
+    font-size: 1.5em;
+    /* font-weight: 700; */
+}
+
+#click-prompt-text-1 {
+    /* #click_here_text_1 */
+    right: 65px;
+    bottom: 5px;
+}
+
+#square_1>p {
+    opacity: 0;
+    color: #ffffff;
+    width: 200%;
+    transform: translate(100px, 25px);
+}
+
+/* Click Here Images */
+
+#flashlight_logo {
+    opacity: 1;
+    display: flex;
+    transform: scale(2.5) rotateX(0deg);
+    min-width: 14.5px;
+    max-width: 14.5px;
+    left: 25.5px;
+}
+
+#flashlight_logo.hide {
+    -webkit-animation: hideShape 0.08s forwards;
+    -moz-animation: hideShape 0.08s forwards;
+    -o-animation: hideShape 0.08s forwards;
+    animation: hideShape 0.08s forwards;
+}
+
+/* keyframes */
+
+@-webkit-keyframes arrowFade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes arrowFade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes arrowFade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes arrowFade {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes makeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes makeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes makeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes makeAppear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes hideShape {
+    0% {
+        transform: scale(2.5) rotateX(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) rotateX(90deg);
+        opacity: 0;
+    }
+}
+
+/*========== Ask Yourself Prompts ==========*/
+
+/* Question Prompts */
+
+.question_indicator {
+    /* change to ask-youself-prompt */
+    max-height: 99px;
+    max-width: 99px;
+    position: relative;
+    visibility: hidden;
+}
+
+#question_indicator_1 {
+    grid-area: flashlight;
     height: auto;
     align-self: center;
     justify-self: center;
 }
 
-#character_2 {
-    grid-area: character_2;
-    height: auto;
-    align-self: top;
-    justify-self: center;
+/* Ask Yourself Text */
+
+.ask_yourself_text {
+    fill: #7C7B7B;
+    transform: translate(1px, -71px);
+    -webkit-animation: rotateText 20s infinite linear;
+    -moz-animation: rotateText 20s infinite linear;
+    -o-animation: rotateText 20s infinite linear;
+    animation: rotateText 20s infinite linear;
+}
+
+/* Question Mark */
+
+.question-mark {
+    position: absoulte;
 }
