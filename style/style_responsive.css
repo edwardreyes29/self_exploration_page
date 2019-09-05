@@ -4,10 +4,11 @@ body {
 
 .container {
     max-width: 864px;
-    min-height: 1980px;
+    min-height: 1572px;
     margin: 0;
     /* background:linear-gradient(#60513E, #7A694F, #AB957C,#FFFFFF, #FFFFFF, #FFFFFF); */
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /*========== General Rules ==========*/
@@ -16,6 +17,10 @@ body {
 
 .main-text {
     font-family: 'Roboto', sans-serif;
+}
+
+.main-text-2 {
+    font-family: 'Barlow', sans-serif;
 }
 
 /* Add underline to text using <span> (white) */
@@ -141,8 +146,22 @@ body {
     z-index: 1;
 }
 
+#mobile-ask-yourself-box-1 {
+    visibility: none;
+    width: 0px;
+    height:0px;
+}
+.mobile-ask-yourself-text {
+    display: none;
+}
 /*========== Flashlight Section (iPhone 6/7/8 plus) ==========*/
-
+.mobile-question-mark {
+    visibility: hidden;
+    
+}
+.mobile-ask-yourself-circle {
+    visibility: hidden;
+}
 @media (max-width: 414px) {
     #flashlight-section {
         grid-template-areas: "title" "ask-yourself-1" "character-1" "self-exploration-text";
@@ -156,12 +175,14 @@ body {
         background: linear-gradient(#60513E, #7A694F);
         z-index: -2;
     }
+
     .mobile-background-1 {
         grid-area: character-1;
         grid-row: 3/5;
         background: #FCC988;
         z-index: -4;
     }
+
     #title-section {
         grid-area: title;
         align-self: center;
@@ -175,19 +196,94 @@ body {
         padding: 0;
         color: #ffffff;
     }
+    #mobile-ask-yourself-box-1 {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+    }
     /* mobile-box */
     .mobile-ask-yourself-box {
-        background: #8B6C5B;
-        border-style: solid;
-        border-width: 3px;
-        border-color: #695544;
-        border-left-width: 0px;
-        border-right-width: 0px;
+        background: #695544;
+        display: grid;
+        grid-template-areas:
+            "ask-circle ask-text space";
+        grid-template-columns: 86px 250px auto;
+        grid-template-rows: 86px;
         z-index: 5;
     }
+    .mobile-ask-yourself-text {
+        display: inline;
+        grid-area: ask-text;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 85%;
+        color: #E8E2E2;
+    }
+    .mobile-ask-yourself-text > * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .mobile-question-mark {
+        visibility: visible;
+        grid-area: ask-circle;
+        align-self: center;
+        justify-self: center;
+        width: 90px;
+        
+    }
+    .mobile-ask-yourself-circle {
+        visibility: visible;
+        grid-area: ask-circle;
+        fill: #E8E2E2;
+        align-self: center;
+        justify-self: center;
+        width: 90%;
+        -webkit-animation: mobile-rotate-text 30s infinite linear;
+        -moz-animation: mobile-rotate-text 30s infinite linear;
+        -o-animation: mobile-rotate-text 30s infinite linear;
+        animation: mobile-rotate-text 30s infinite linear;
+    }
+    @-webkit-keyframes mobile-rotate-text {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @-moz-keyframes mobile-rotate-text {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @-o-keyframes mobile-rotate-text {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes mobile-rotate-text {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    
     #mobile-ask-yourself-box-1 {
         grid-area: ask-yourself-1;
     }
+
     /* Flashlight */
     #flashlight {
         grid-area: character-1;
@@ -263,6 +359,12 @@ body {
     z-index: 1;
 }
 
+#mobile-ask-yourself-box-2 {
+    visibility: none;
+    width: 0px;
+    height: 0px;
+}
+
 /*========== Heart Section (iPhone 6/7/8 plus) ==========*/
 
 @media (max-width: 414px) {
@@ -283,6 +385,11 @@ body {
         grid-row: 2/4;
         background: #FAB0B0;
         z-index: -2;
+    }
+    #mobile-ask-yourself-box-2 {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
     }
     #big-heart {
         grid-area: character-2;
@@ -356,6 +463,16 @@ body {
     transform: translate(0px, 20px);
     z-index: 1;
 }
+#mobile-ask-yourself-box-3 {
+    visibility: none;
+    width: 0px;
+    height: 0px;
+}
+#mobile-ask-yourself-box-4 {
+    visibility: none;
+    width: 0px;
+    height: 0px;
+}
 
 /*========== Triangle Section (iPhone 6/7/8 plus) ==========*/
 
@@ -364,7 +481,7 @@ body {
     #triangle-section {
         grid-template-areas: "ask-yourself-3" "character-3" "furthermore-text" "ask-yourself-4";
         grid-template-columns: minmax(375px, 414px);
-        grid-template-rows: 86px 317px 158px 86px;
+        grid-template-rows: 86px 267px 158px 172px;
         grid-gap: 0px;
     }
     #mobile-ask-yourself-box-3 {
@@ -381,29 +498,71 @@ body {
    
     #blue-triangle {
         grid-area: character-3;
-        width: 155%;
-        transform: translate(0px, 60px);
+        width: 160%;
+        transform: translate(30px, 80px);
         z-index: -1;
     }
     
     #character-3 {
         grid-area: character-3;
+        align-self: end;
+        justify-self: center;
         width: 75%;
+        z-index: 3;
     }
     
     #furthermore-text {
         grid-area: furthermore-text;
-        font-size: 75%;
-        width: 75%;
-        margin-left: 30px;
-        margin-right: 0px;
-        transform: translate(-35px, -60px);
+        font-size: 12px;
+        width: 80%;
+        align-self: start;
+        justify-self: center;
+        margin-top: 0px;
+        margin-left: 45px;
+        margin-right: 45px;
+        padding: 0px;
+        transform: translateY(-10px);
         z-index: 1;
     }
+
+    #mobile-ask-yourself-box-3 {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+    }
+    #mobile-ask-yourself-box-4 {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* mobile-box */
+    #mobile-ask-yourself-box-4.mobile-ask-yourself-box {
+        grid-area: ask-yourself-4;
+        background: #695544;
+        display: grid;
+        grid-template-areas:
+            "ask-circle ask-text space";
+        grid-template-columns: 86px 275px auto;
+        grid-template-rows: 172px;
+        z-index: 5;
+        
+    }
+
     #mobile-ask-yourself-box-4 {
         grid-area: ask-yourself-4;
         grid-column: 1/4;
+       
     }
+    
+    .mobile-ask-yourself-text {
+        padding: 0px;
+        text-align: left;
+    }
+
+
+    
+
 }
 
 /*==========Job Section (Browser) ==========*/
@@ -413,7 +572,7 @@ body {
     display: grid;
     grid-template-areas: "understanding-text" "job-section-text" "job-boxes";
     grid-template-rows: 80px 100px 220px;
-    grid-template-columns: auto;
+    grid-template-columns: minmax(375px, 414px);;
 }
 
 .understanding-text {
@@ -462,9 +621,24 @@ body {
 }
 
 .job-box {
+    /* position: relative; */
     width: 170px;
     height: 170px;
     border-radius: 15px;
+}
+
+.job-box-text {
+    /* position: absolute; */
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 170%;
+}
+
+#job-box-text-2, #job-box-text-3 {
+    transform: translateY(15px);
 }
 
 #job-box-1 {
@@ -484,6 +658,7 @@ body {
 }
 
 .job-shape {
+    position: absolute;
     transform: translate(125px, -15px);
     opacity: .5;
 }
@@ -516,12 +691,13 @@ body {
 
 @media (max-width: 732px) {
     .job-boxes-container {
-        width: 400px;
-        height: 400px;
+        width: 370px;
+        height: 370px;
     }
+    
 }
 
-@media (max-width: 402px) {
+/* @media (max-width: 402px) {
     .job-boxes-container {
         flex-direction: column;
         flex-flow: row wrap;
@@ -529,17 +705,31 @@ body {
         width: 230px;
         height: 740px;
     }
-}
+} */
 
-/*==========Job Section (iPad) ==========*/
+/*==========Job Section (iPhone) ==========*/
 
-@media (max-width: 768px) {
+@media (max-width: 414px) {
     .job-section {
         position: relative;
         display: grid;
         grid-template-areas: "understanding-text" "job-section-text" "job-boxes";
-        grid-template-rows: 104px 104px 420px;
+        grid-template-rows: 104px 104px 380px;
         grid-template-columns: auto;
+    }
+
+    .understanding-text {
+        grid-area: understanding-text;
+        font-size: 70%;
+    }
+    .job-section-text {
+        grid-area: job-section-text;
+        font-size: 60%;
+    }
+    .job-boxes-container {
+        grid-area: job-boxes;
+        align-self: center;
+        justify-self: center;
     }
 }
 
@@ -900,4 +1090,83 @@ body {
 
 .question-mark {
     position: absoulte;
+}
+
+/*========== Logo Section ==========*/
+#logo-section {
+    position: relative;
+    display: grid;
+    grid-template-areas: "shape-group-bottom logo career-center space";
+    grid-template-columns: 181px 136px 369px auto;
+    grid-template-rows: 210px;
+    grid-gap: 0px;
+}
+.career-center-text {
+    grid-area: career-center;
+    align-self: center;
+    justify-self: center;
+    margin-top: 20px;
+    font-size: 60%;
+}
+.link {
+    font-weight: 200;
+}
+.career-center-link-text {
+    grid-area: career-center;
+    align-self: center;
+    justify-self: center;
+    font-size: 60%;
+}
+.logo {
+    grid-area: logo;
+    align-self: center;
+    justify-self: center;
+}
+.shape-group-bottom {
+    grid-area: shape-group-bottom;
+    align-self: end;
+    justify-self: start;
+    transform: translate(-15px, 10px);
+}
+/* .job-section {
+    
+    grid-template-areas: "understanding-text" "job-section-text" "job-boxes";
+    grid-template-rows: 80px 100px 220px;
+    grid-template-columns: auto;
+} */
+
+@media (max-width: 414px) {
+    #logo-section {
+        grid-template-areas: "career-center" "career-center-link" "logo";
+        grid-template-columns: minmax(375px, 414px);
+        grid-template-rows: 88px 59px 150px;
+        grid-gap: 0px;
+    }
+    .career-center-text {
+        grid-area: career-center;
+        align-self: center;
+        justify-self: center;
+        margin-top: 20px;
+        font-size: 60%;
+    }
+    .link {
+        font-weight: 200;
+    }
+    .career-center-link-text {
+        grid-area: career-center-link;
+        align-self: center;
+        justify-self: center;
+        font-size: 60%;
+    }
+    .logo {
+        grid-area: logo;
+        align-self: center;
+        justify-self: center;
+    }
+    .shape-group-bottom {
+        grid-area: logo;
+        align-self: end;
+        justify-self: start;
+        transform: translateX(-15px);
+    }
 }
