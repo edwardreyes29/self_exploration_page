@@ -118,72 +118,32 @@ p {
     animation: changeDegrees 15s infinite;
 }
 @-webkit-keyframes changeDegrees {
-    0% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
-    25% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    50% {
-        transform: translate(95px, -55px) scale(1.35) rotate(-3deg);
-    }
-    75% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    100% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
+    0% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
+    25% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    50% { transform: translate(95px, -55px) scale(1.35) rotate(-3deg); }
+    75% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    100% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
 }
 @-moz-keyframes changeDegrees {
-    0% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
-    25% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    50% {
-        transform: translate(95px, -55px) scale(1.35) rotate(-3deg);
-    }
-    75% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    100% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
+    0% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
+    25% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    50% { transform: translate(95px, -55px) scale(1.35) rotate(-3deg); }
+    75% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    100% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
 }
 @-o-keyframes changeDegrees {
-    0% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
-    25% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    50% {
-        transform: translate(95px, -55px) scale(1.35) rotate(-3deg);
-    }
-    75% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    100% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
+    0% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
+    25% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    50% { transform: translate(95px, -55px) scale(1.35) rotate(-3deg); }
+    75% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    100% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
 }
 @keyframes changeDegrees {
-    0% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
-    25% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    50% {
-        transform: translate(95px, -55px) scale(1.35) rotate(-3deg);
-    }
-    75% {
-        transform: translate(95px, -55px) scale(1.35) rotate(3deg);
-    }
-    100% {
-        transform: translate(95px, -55px) scale(1.35) rotate(0deg);
-    }
+    0% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
+    25% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    50% { transform: translate(95px, -55px) scale(1.35) rotate(-3deg); }
+    75% { transform: translate(95px, -55px) scale(1.35) rotate(3deg); }
+    100% { transform: translate(95px, -55px) scale(1.35) rotate(0deg); }
 }
 
 #toggle_button {

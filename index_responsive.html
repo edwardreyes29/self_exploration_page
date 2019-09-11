@@ -6,7 +6,7 @@
             rel="stylesheet">
         <!-- <link href="https://www.vidteamcc.com/Cards_CC/style/style_final.css" rel="stylesheet"> -->
         <link href="style/style_responsive.css" rel="stylesheet">
-        <script src="https://www.vidteamcc.com/Cards_CC/script/script.js"></script>
+        <script src="script/script-response.js"></script>
 
         <!--########## Flashlight Section ##########-->
 
@@ -44,7 +44,7 @@
             </div>
 
             <!-- Flashlight SVG -->
-            <div id="flashlight" class="flashlight_click" alt="Self-Exploration, Flashlight With Animation">
+            <div id="flashlight" class="flashlight-click" alt="Self-Exploration, Flashlight With Animation">
                 <svg alt="flashlight animation" xmlns="http://www.w3.org/2000/svg" width="1416" height="1133"
                     viewBox="0 0 1416 1133">
                     <defs>
@@ -59,7 +59,7 @@
                             <stop offset="1" stop-color="#f48b00" />
                         </linearGradient>
                     </defs>
-                    <path id="light" class="flashlight_click" alt="Light from orange flashlight"
+                    <path id="light" class="flashlight-click" alt="Light from orange flashlight"
                         d="M2086.813 534.181c-30.894-9.38-51.654-38.147-50.572-69.545 1.023-29.7 21.4-55.893 50.572-64.715L3266.5-98v1133z"
                         transform="translate(-1850 98)" fill="url(#light_gradient)" />
                     <path id="flashlight_handle"
@@ -67,7 +67,7 @@
                         transform="translate(-1850 98)" fill="url(#flashlight_handle_gradient)" />
                     <g class="toggle">
                         <g id="toggle_body">
-                            <path id="toggle_body_color" class="flashlight_click"
+                            <path id="toggle_body_color" class="flashlight-click"
                                 d="M124 575.5h-20c-5.238 0-9.5-4.262-9.5-9.5s4.262-9.5 9.5-9.5h20c5.238 0 9.5 4.262 9.5 9.5s-4.262 9.5-9.5 9.5z"
                                 fill="#747373" />
                             <path id="toggle_body_outline"
@@ -75,9 +75,9 @@
                                 fill="#fffcfc" />
                         </g>
 
-                        <g id="toggle_button"
+                        <g id="toggle-button"
                             alt="Toggle Button, Invoke Flashlight Animation, Reveal Self-Exploration Text"
-                            class="flashlight_click" alt="Toggle Button for orange flashlight"
+                            class="flashlight-click" alt="Toggle Button for orange flashlight"
                             onclick="clickFunction(this.id)">
                             <path class="toggle_button_outer" d="M104 558a8 8 0 1 1-8 8 8 8 0 0 1 8-8z"
                                 fill="#dedbdb" />
@@ -91,8 +91,9 @@
                 </svg>
             </div>
 
+
             <!-- Self Exploration Text-->
-            <div id="self-exploration-text" class="flashlight_click main-text">
+            <div id="self-exploration-text" class="flashlight-click main-text">
                 <!-- <h1>Self-Exploration</h1> -->
                 <p><span class="main-text-intro">Self-Exploration</span> is a careful internal research process of
                     discovering yourself through reflection
@@ -181,6 +182,31 @@
                 </g>
             </svg>
 
+            <!-- <div id="click-prompt-1" class="click-prompt" onmouseover="clickPromptOn(this.id)" onmouseout="clickPromptOff(this.id)">
+                <div id="square-1" class="square">
+                    
+                </div>
+                <div id="square-2" class="square"></div>
+                <div id="square-3" class="square"></div>   
+            </div> -->
+            <div id="click_here_hover1" class="click_here_hover" alt="Flashlight Prompt, Click Toggle Button">
+                <div id="square_1" class="square" onmouseover="arrowHoverOn(this.id)" onmouseout="arrowHoverOff()">
+                    <svg id="flashlight_logo" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 17.3">
+                        <path d="M24 8.6c0 3.1-.1 6-.3 8.7H20l-5.6-5.1H0V5.1h14.3L20 0h3.8c.1 2.6.2 5.5.2 8.6z"
+                            fill="#ffffff" />
+                    </svg>
+                    <svg id="arrows1" class="arrows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20">
+                        <g data-name="Group 570">
+                            <path class="arrow" id="arrow_1" d="M20 4V0L0 10l20 10v-4L8 10z" />
+                            <path class="arrow" id="arrow_2" d="M40 4V0L20 10l20 10v-4l-12-6z" />
+                            <path class="arrow" id="arrow_3" d="M60 4V0L40 10l20 10v-4l-12-6z" />
+                        </g>
+                    </svg>
+                    <p id="click_here_text_1" class="click_here_text main-text">TURN ON</p>
+                </div>
+            </div>
+           
+
         </div>
 
         <!--########## Heart Section ##########-->
@@ -250,6 +276,26 @@
                     </g>
                 </g>
             </svg>
+
+            <div id="click_here_hover2" class="click_here_hover" alt="Red Heart Prompt, Click Red Heart Image">
+                <div class="square" id="square_2" onmouseover="arrowHoverOn(this.id)" onmouseout="arrowHoverOff()">
+                    <svg id="heart_shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 38"
+                        fill="#ffffff">
+                        <path
+                            d="M4.6 3.9c.3-.3.6-.5 1-.5.3 0 .6.1.9.4.3.3.5.7.5 1.2 0 .3-.1.6-.3.8-.2.3-.6.5-1 .5-.2 0-.5-.1-.8-.3v-.1c-.6-.5-.7-1.4-.3-2zM15.2 4.4c-.4-.6-.3-1.4.2-1.9.2-.1.5-.2.7-.2.4 0 .9.2 1.2.7.2.3.3.6.3.9 0 .4-.2.8-.4 1.1-.2.1-.5.2-.7.2-.3 0-.6-.1-.8-.3-.3-.2-.4-.4-.5-.5zM3.4 30.5v.4c0 .6-.3 1.1-.9 1.3h-.1H2.1c-.3 0-.6-.1-.9-.3-.1-.1-.3-.2-.4-.4-.1-.2-.2-.3-.2-.5-.2-.7.2-1.4.8-1.6h.4c.8-.2 1.4.3 1.6 1.1z" />
+                        <path
+                            d="M4.7 36.7c-3.2-5 2.3-23.1 12-26.2 0-.1-.1-.3-.1-.4 0-.7.5-1.3 1.2-1.3h.2c.4 0 .7.2.9.5.2.2.3.5.4.8 4.8-.7 10.5-.4 12.4 7.1 3.5 13.4-23.6 24.7-27 19.5zM9.4 1.8c-.2-.7.1-1.4.7-1.7h.5c.6 0 1.2.5 1.4 1.2v.3c0 .6-.3 1.1-.8 1.2h-.1-.4c-.3 0-.6-.1-.9-.3 0 0-.1-.2-.2-.3-.1-.1-.2-.3-.2-.4zM1.4 25.3c-.3 0-.6-.1-.8-.3-.2-.1-.3-.3-.4-.5-.1-.2-.2-.5-.2-.7 0-.7.5-1.3 1.1-1.4h.2c.4 0 .7.2.9.5.2.3.4.6.4 1.1 0 .7-.5 1.3-1.1 1.3h-.1zM.3 17v-.2c.1-.7.7-1.3 1.4-1.1h.1c.7.2 1.2.9 1.2 1.7-.1.7-.6 1.2-1.2 1.2h-.2-.1l-.6-.3C.5 18 .3 17.5.3 17zM1.6 10.5c0-.1 0-.3.1-.4.2-.7.9-1.1 1.6-.9.7.3 1.1 1.1.9 1.9-.2.7-.7 1-1.2 1-.1 0-.3 0-.4-.1-.1-.1-.2-.1-.3-.2-.5-.3-.7-.8-.7-1.3z" />
+                    </svg>
+                    <svg id="arrows2" class="arrows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 20">
+                        <g data-name="Group 570">
+                            <path class="arrow" id="arrow_1" d="M20 4V0L0 10l20 10v-4L8 10z" />
+                            <path class="arrow" id="arrow_2" d="M40 4V0L20 10l20 10v-4l-12-6z" />
+                            <path class="arrow" id="arrow_3" d="M60 4V0L40 10l20 10v-4l-12-6z" />
+                        </g>
+                    </svg>
+                    <p id="click_here_text_2" class="click_here_text main-text">CLICK HEART</p>
+                </div>
+            </div>
 
             <!-- Character 2 -->
             <svg id="character-2" xmlns="http://www.w3.org/2000/svg" width="356.5" height="262.8"
@@ -623,7 +669,10 @@
             </div>
             <img class="logo" src="assets/logo.svg" />
             <img class="shape-group-bottom" src="assets/shape_group_bottom.svg" />
+
         </div>
+
+        
     </div>
 </body>
 
