@@ -1600,8 +1600,10 @@ body {
 
 .question_mark {
     position: absolute;
-    align-self: center;
-    justify-self: center;
+    
+}
+
+#question_mark_1 {
     transform: translate(-12px, -14px);
 }
 
@@ -1710,6 +1712,14 @@ body {
     z-index: 20;
 }
 
+#question_indicator_3 {
+    grid-area: character-3;
+    align-self: start;
+    justify-self: end;
+    transform: translate(-15px, 20px);
+    z-index: 20;
+}
+
 /*######## ASK YOURSELF TEXT ########*/
 .ask_yourself_text {
     position: absolute;
@@ -1767,6 +1777,10 @@ body {
     animation: rotateText 20s infinite linear;
 }
 
+#ask_yourself_text_1.clicked {
+    fill: #7C7B7B;
+}
+
 @-webkit-keyframes rotateText {
     0% {
         transform: translate(-5px, -23px) rotate(0deg);
@@ -1801,49 +1815,57 @@ body {
 }
 
 #ask_yourself_text_2 { 
-    transform: translate(-60.5px, -5.5px);
+    transform: translate(-5px, -5.5px);
     -webkit-animation: rotateText2 20s infinite linear;
     -moz-animation: rotateText2 20s infinite linear;
     -o-animation: rotateText2 20s infinite linear;
     animation: rotateText2 20s infinite linear;
 }
 
+#ask_yourself_text_3 { 
+    transform: translate(-5px, -5.5px);
+    -webkit-animation: rotateText2 20s infinite linear;
+    -moz-animation: rotateText2 20s infinite linear;
+    -o-animation: rotateText2 20s infinite linear;
+    animation: rotateText2 20s infinite linear;
+}
+
+
 @-webkit-keyframes rotateText2 {
     0% {
-        transform: translate(-60.5px, -5.5px) rotate(0deg);
+        transform: translate(-5px, -5.5px) rotate(0deg);
     }
     100% {
-        transform: translate(-60.5px, -5.5px) rotate(360deg);
+        transform: translate(-5px, -5.5px) rotate(360deg);
     }
 }
 @-moz-keyframes rotateText2 {
     0% {
-        transform: translate(-60.5px, -5.5px) rotate(0deg);
+        transform: translate(-5px, -5.5px) rotate(0deg);
     }
     100% {
-        transform: translate(-60.5px, -5.5px) rotate(360deg);
+        transform: translate(-5px, -5.5px) rotate(360deg);
     }
 }
 @-o-keyframes rotateText2 {
     0% {
-        transform: translate(-60.5px, -5.5px) rotate(0deg);
+        transform: translate(-5px, -5.5px) rotate(0deg);
     }
     100% {
-        transform: translate(-60.5px, -5.5px) rotate(360deg);
+        transform: translate(-5px, -5.5px) rotate(360deg);
     }
 }
 @keyframes rotateText2 {
     0% {
-        transform: translate(-60.5px, -5.5px) rotate(0deg);
+        transform: translate(-5px, -5.5px) rotate(0deg);
     }
     100% {
-        transform: translate(-60.5px, -5.5px) rotate(360deg);
+        transform: translate(-5px, -5.5px) rotate(360deg);
     }
 }
 
-#ask_yourself_text_1.clicked {
-    fill: #7C7B7B;
-}
+
+
 
 
 
@@ -1970,7 +1992,7 @@ body {
 }
 
 #indicator_box_2 {
-    transform: translate(-8.5px, -72px);
+    transform: translate(-8.5px, -9.5px);
 }
 
 #indicator_box_2.expand {
