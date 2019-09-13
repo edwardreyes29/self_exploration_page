@@ -483,6 +483,7 @@ p {
 .question_indicator {
     width: 15%;
     height: 5%;
+    background: red;
 }
 
 /**
