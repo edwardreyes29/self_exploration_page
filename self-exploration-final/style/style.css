@@ -72,6 +72,7 @@
 
 #flashlight-section {
     padding: 0px;
+    overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
     display: grid;
@@ -446,6 +447,8 @@
 
 @media (max-width: 414px) {
     #flashlight-section {
+        overflow-x: hidden;
+        overflow-y: hidden;
         grid-template-areas: "title" "ask-yourself-1" "character-1" "self-exploration-text";
         grid-template-columns: minmax(375px, 414px);
         grid-template-rows: 100px 86px 262px 200px;
@@ -600,7 +603,6 @@
 
 #heart-section {
     padding: 0px;
-    overflow-y: hidden;
     position: relative;
     display: grid;
     grid-template-areas: "character-2 heart";
@@ -654,6 +656,8 @@
 
 @media (max-width: 414px) {
     #heart-section {
+        overflow-x: hidden;
+        overflow-y: hidden;
         grid-template-areas: "ask-yourself-2" "character-2" "one-great-advice-text";
         grid-template-columns: minmax(375px, 414px);
         grid-template-rows: 86px 285px 200px;
@@ -705,13 +709,13 @@
 
 #triangle-section {
     padding: 0px;
-    overflow-y: hidden;
     position: relative;
     display: grid;
     grid-template-areas: "blue-triangle character-3";
     grid-template-columns: minmax(426px, 462px) minmax(342px, 402px);
     grid-template-rows: repeat(1, minmax(100px, 365px));
     grid-gap: 0px;
+    padding-bottom: 40px;
 }
 
 /* Blue Triangle */
@@ -765,10 +769,13 @@
 
 @media (max-width: 414px) {
     #triangle-section {
+        overflow-x: hidden;
+        overflow-y: hidden;
         grid-template-areas: "ask-yourself-3" "character-3" "furthermore-text" "ask-yourself-4";
         grid-template-columns: minmax(375px, 414px);
         grid-template-rows: 86px 267px 158px 172px;
         grid-gap: 0px;
+        padding-bottom: 0px;
     }
     #mobile-ask-yourself-box-3 {
         grid-area: ask-yourself-3;
@@ -845,32 +852,39 @@
     position: relative;
     display: grid;
     grid-template-areas: "understanding-text" "job-section-text" "job-boxes";
-    grid-template-rows: 120px 100px 200px;
+    grid-template-rows: 80px 100px 200px;
     grid-template-columns: minmax(768px, auto);
 }
 
-.understanding-text {
+.understanding-text-container {
     align-self: end;
-    justify-self: center;
-    text-align: center;
-    font-size: 95%;
+    justify-self: end;
+    
+    
     grid-area: understanding-text;
-    margin-left: 20px;
-    margin-right: 20px;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    
+}
+.understanding-text {
+    text-align: center;
+    font-size: 165%;
     color: #664122;
 }
 
-.job-section-text {
+.job-section-text-container {
+    margin:0;
     align-self: center;
     justify-self: center;
-    text-align: center;
-    font-size: 90%;
     grid-area: job-section-text;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
-.job-section-text>h1 {
+.job-section-text {
+    text-align: center;
+    font-size: 195%;
+}
+
+/* .job-section-text>h1 {
     margin: 0px;
     padding: 0px;
 }
@@ -878,7 +892,7 @@
 .job-section-text>h1:last-child {
     margin-bottom: 25px;
     padding: 0;
-}
+} */
 
 /*========== Job Boxes ==========*/
 
@@ -893,6 +907,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
 }
+
 
 .job-box {
     /* position: relative; */
@@ -991,19 +1006,21 @@
 
 @media (max-width: 414px) {
     .job-section {
+        overflow-x: hidden;
+        overflow-y: hidden;
         position: relative;
         display: grid;
         grid-template-areas: "understanding-text" "job-section-text" "job-boxes";
-        grid-template-rows: 104px 104px 380px;
-        grid-template-columns: auto;
+        grid-template-rows: 75px 75px 380px;
+        grid-template-columns: minmax(100px, 414px);
+        padding-top: 30px;
     }
     .understanding-text {
-        grid-area: understanding-text;
-        font-size: 70%;
+        font-size: 95%;
+        padding-bottom: 15px;
     }
     .job-section-text {
-        grid-area: job-section-text;
-        font-size: 60%;
+        font-size: 100%;
     }
     .job-boxes-container {
         grid-area: job-boxes;
@@ -1057,7 +1074,6 @@
 
 #logo-section {
     padding: 0px;
-    overflow-y: hidden;
     position: relative;
     display: grid;
     grid-template-areas: "shape-group-bottom logo career-center space";
@@ -1066,29 +1082,34 @@
     grid-gap: 0px;
 }
 
-.career-center-text {
+.career-center-explore-text {
     grid-area: career-center;
     align-self: center;
     justify-self: center;
     margin-top: 20px;
-    font-size: 60%;
-}
-
-.link {
-    font-weight: 200;
+    font-weight: 500;
+    font-size: 135%;
 }
 
 .career-center-link-text {
     grid-area: career-center;
     align-self: center;
     justify-self: center;
-    font-size: 60%;
+    font-size: 125%;
+    font-weight: 400;
+}
+.link {
+    text-decoration-line: underline;
+    -webkit-text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
+    color:#0645AD;
 }
 
 .logo {
     grid-area: logo;
     align-self: center;
     justify-self: center;
+    transform: translateY(-25px);
 }
 
 .shape-group-bottom {
@@ -1107,17 +1128,19 @@
 
 @media (max-width: 414px) {
     #logo-section {
+        overflow-x: hidden;
+        overflow-y: hidden;
         grid-template-areas: "career-center" "career-center-link" "logo";
         grid-template-columns: minmax(375px, 414px);
         grid-template-rows: 88px 59px 150px;
         grid-gap: 0px;
     }
-    .career-center-text {
+    .career-center-explore-text {
         grid-area: career-center;
         align-self: center;
         justify-self: center;
         margin-top: 20px;
-        font-size: 60%;
+        font-size: 125%;
     }
     .link {
         font-weight: 200;
@@ -1126,7 +1149,7 @@
         grid-area: career-center-link;
         align-self: center;
         justify-self: center;
-        font-size: 60%;
+        font-size: 115%;
     }
     .logo {
         grid-area: logo;
@@ -1607,6 +1630,11 @@
     background: red;
     border-radius: 50px;
 }
+@media (max-width: 414px) {
+    .question_indicator {
+        display: none;
+    }
+}
 
 .question_mark {
     position: absolute;
@@ -1919,6 +1947,7 @@
     border-color: #E6E6E6;
     transform: translate(9.5px, -10px);
 }
+
 
 #indicator_box_1 {
     position: absolute;
