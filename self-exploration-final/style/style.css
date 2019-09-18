@@ -910,25 +910,33 @@
 
 
 .job-box {
-    /* position: relative; */
+    position: relative;
     width: 170px;
     height: 170px;
     border-radius: 15px;
 }
 
 .job-box-text {
-    /* position: absolute; */
+    position: absolute;
     align-self: center;
     justify-self: center;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 170%;
+    transform: translate(52px, 30px);
+}
+#job-box-text-3 {
+    transform: translate(40px, 30px);
+}
+#job-box-text-4 {
+    transform: translate(18px, 30px);
+}
+.job-text {
+    font-size: 95%;
+    margin: 0px;
+    padding: 0px;
 }
 
-#job-box-text-2, #job-box-text-3 {
-    transform: translateY(15px);
-}
 
 #job-box-1 {
     position: relative;
