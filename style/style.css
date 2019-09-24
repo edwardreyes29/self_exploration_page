@@ -300,6 +300,9 @@ p {
   border-color: #E6E6E6;
   background: #695544;
   border-radius: 100px;
+  -webkit-transition: width 0.2s ease, background 0.2s ease;
+  -moz-transition: width 0.2s ease, background 0.2s ease;
+  -o-transition: width 0.2s ease, background 0.2s ease;
   transition: width 0.2s ease, background 0.2s ease;
 }
 

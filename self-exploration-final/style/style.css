@@ -2241,22 +2241,20 @@ h1 {
 }
 
 #question_mark_1 {
-    fill: #E8E2E2;
     transform: translate(2px, 0px);
 }
-
-.q_1 {
-    -webkit-transition: fill 0.85s ease;
-    -moz-transition: fill 0.85s ease;
-    -o-transition: fill 0.85s ease;
-    transition: fill 0.85s ease;
+#question_mark_1 > text {
+    -webkit-transition: fill .7s linear;
+  -moz-transition: fill .7s linear;
+  -o-transition: fill .7s linear;
+  transition: fill .7s linear;
 }
-
-.q_1.clicked {
+#question_mark_1.clicked > text {
     fill: #7C7B7B;
 }
 
 #question_mark_2 {
+
     transform: translate(0px, -2px);
 }
 
@@ -2328,10 +2326,6 @@ h1 {
     -moz-animation: color_transition 0.8s forwards;
     -o-animation: rcolor_transition0.8s forwards;
     animation: color_transition 0.8s forwards;
-}
-
-#question_mark_1>.question_mark.revertColor {
-    fill: #E8E2E2;
 }
 
 /* #question_mark_1.clicked {
