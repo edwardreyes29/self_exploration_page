@@ -10,9 +10,9 @@ function clickFunction(clicked_id) {
     console.log(element.id);
     if (element.id == 'toggle-button') {
         document.getElementById('click_here_hover1').style.display = "none";
-    } else if (element.id == 'big_heart') { 
+    } else if (element.id == 'big-heart') { 
         document.getElementById('click_here_hover2').style.display = "none";
-    } else if (element.id == 'blue_triangle') { 
+    } else if (element.id == 'blue-triangle') { 
         document.getElementById('click_here_hover3').style.display = "none";
     }
 

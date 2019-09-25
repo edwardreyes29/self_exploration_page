@@ -1070,7 +1070,6 @@ h1 {
     grid-template-columns: minmax(426px, 462px) minmax(342px, 402px);
     grid-template-rows: repeat(1, minmax(100px, 365px));
     grid-gap: 0px;
-    padding-bottom: 40px;
 }
 
 #red_circle {
@@ -2261,7 +2260,6 @@ h1 {
 
 
 #question_mark_2 {
-
     transform: translate(0px, -2px);
 }
 
@@ -2285,11 +2283,11 @@ h1 {
     animation: changeColor 0.8s forwards;
 } */
 
-#question_mark_2>.question_mark.changeColor, #question_mark_3>.question_mark.changeColor, #question_mark_4>.question_mark.changeColor, #question_mark_1>.question_mark.clicked.changeColor {
-    -webkit-animation: changeColor 0.8s forwards;
-    -moz-animation: changeColor 0.8s forwards;
-    -o-animation: changeColor 0.8s forwards;
-    animation: changeColor 0.8s forwards;
+#question_mark_2.changeColor > text, #question_mark_3.changeColor > text, #question_mark_4.changeColor > text {
+    -webkit-animation: changeColor 0.4s forwards;
+    -moz-animation: changeColor 0.4s forwards;
+    -o-animation: changeColor 0.4s forwards;
+    animation: changeColor 0.4s forwards;
 }
 
 @-webkit-keyframes changeColor {

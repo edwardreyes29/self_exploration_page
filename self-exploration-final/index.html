@@ -262,8 +262,8 @@
         <div class="mobile-background-2"></div>
 
         <!-- Big Heart -->
-        <svg id="big-heart" xmlns="http://www.w3.org/2000/svg" width="485.5" height="498.6"
-            viewBox="0 0 485.5 498.6">
+        <svg id="big-heart" class="big_heart_click" xmlns="http://www.w3.org/2000/svg" width="485.5" height="498.6"
+            viewBox="0 0 485.5 498.6" alt="Self-Exploration, Beating Red Heart" onclick="clickFunction(this.id)">
             <style>
                 .st1 {
                     fill: #fa7b7b
@@ -485,17 +485,12 @@
             alt="Self-Exploration, Ask Yourself Hover Text, Personality" onmouseover="indicatorHover(this.id)"
             onmouseout="indicatorHoverOff(this.id)">
             <svg id="question_mark_2" class="question_mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
-                <text id="question_mark_2" class="question_mark"
+                <text
                     transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#7C7B7B" font-size="40"
                     font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
                     <tspan x="0" y="0">?</tspan>
                 </text>
-                <!-- <path class="move1" d="M13.164 46.562l13.612 8.266-8.179 13.757-13.612-8.266z" fill="#fca12a" />
-    <path class="move1" d="M37.6.001l.982 18.908-17.368-9.73z" fill="#1cc0d9" />
-    <path class="move2" d="M6.624 39.004L0 29.665l5.329-10.063 11.931-.661 6.56 9.342-5.311 10.062z" fill="#ef5656" />
-    <path class="move2" d="M49 18.383L63.392 11.6l6.711 14.546-14.392 6.783z" fill="#fca12a" />
-    <path class="move1" d="M54.741 52.457l6.252-9.6 11.206 1.422L77.084 55.3l-6.278 9.537-11.2-1.405z" fill="#ef5656" />
-    <path class="move2" d="M34.528 62.398l17.49 6.785-15.86 12.078z" fill="#1cc0d9" /> -->
+                
             </svg>
             <svg id="ask_yourself_text_2" class="ask_yourself_text" xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 99.2 99.5">
@@ -559,9 +554,35 @@
         <!--(Mobile) Red Background that appears in mobile devices-->
         <div class="mobile-background-3"></div>
 
+          <!-- Red Circle -->
+          <div id="red_circle" class="blue_triangle_click" alt="Red Circle Decoration">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <defs>
+                        <linearGradient id="red_circle_gradient" x1=".302" y1=".059" x2=".885" y2="1.082"
+                            gradientUnits="objectBoundingBox">
+                            <stop offset="0" stop-color="#fa7b7b" />
+                            <stop offset="1" stop-color="#cc3434" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="50" fill="url(#red_circle_gradient)" />
+                </svg>
+            </div>
+
+        <!-- Orange Box -->
+        <div id="orange_box" class="blue_triangle_click" alt="Orange Box Decoration">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.295 112.11">
+                    <path data-name="Path 140"
+                        d="M118.974 43.907l-9.75 35.718a6 6 0 0 1-4.511 4.212L42.389 98.01a7.1 7.1 0 0 1-7.315-2.758L8.417 57.652a5.434 5.434 0 0 1-.927-4.205l8.01-39.965a5.632 5.632 0 0 1 5.876-4.401l52.688 2.812a21.624 21.624 0 0 1 11.198 3.83l31.27 21.736a5.991 5.991 0 0 1 2.451 6.45z"
+                        fill="#cc7b1b" />
+                    <path data-name="Path 141"
+                        d="M118.67 40.02l-66.565 4.486a4.131 4.131 0 0 1-3.266-1.273l-31.14-33.081a5.882 5.882 0 0 1 3.693-1.074l52.687 2.812a21.631 21.631 0 0 1 11.2 3.831l31.27 21.736a6.121 6.121 0 0 1 2.122 2.563z"
+                        fill="#fca12a" />
+                </svg>
+            </div>
+
         <!-- Blue Triangle -->
-        <svg id="blue-triangle" xmlns="http://www.w3.org/2000/svg" width="376.7" height="358.4"
-            viewBox="0 0 376.7 358.4">
+        <svg id="blue-triangle" class="blue_triangle_click" xmlns="http://www.w3.org/2000/svg" width="376.7" height="358.4"
+            viewBox="0 0 376.7 358.4" alt="Self-Exploration, Blue Triangle" onclick="clickFunction(this.id)">
             <g transform="translate(-370.2 -2030.912)">
                 <linearGradient id="blue_triangle_gradient" gradientUnits="userSpaceOnUse" x1="5.036" y1="2804.476"
                     x2="5.428" y2="2803.768"
@@ -699,7 +720,7 @@
             alt="Self-Exploration, Ask Yourself Hover Text, Values" onmouseover="indicatorHover(this.id)"
             onmouseout="indicatorHoverOff(this.id)">
             <svg id="question_mark_3" class="question_mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
-                <text class="question_mark" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#7C7B7B"
+                <text transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#7C7B7B"
                     font-size="40" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
                     <tspan x="0" y="0">?</tspan>
                 </text>
@@ -720,6 +741,32 @@
 
     <!--########## Job Information Section ##########-->
     <div class="job-section">
+
+        <!-- Question Indicator 4-->
+        <div class="question_indicator" id="question_indicator_4" alt="Self-Exploration, Ask Yourself Hover Text, Skills" onmouseover="indicatorHover(this.id)"
+            onmouseout="indicatorHoverOff(this.id)">
+            <svg id="question_mark_4" class="question_mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 81">
+                <text  class="question_mark" transform="matrix(.979 -.206 .206 .979 31.78 57.949)" fill="#7C7B7B"
+                    font-size="40" font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
+                    <tspan x="0" y="0">?</tspan>
+                </text>
+            </svg>
+            <svg id="ask_yourself_text_4" class="ask_yourself_text" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 99.2 99.5">
+                <path
+                    d="M38.2 10.4l-3.4 1.2.1 1.8-3.1 1.1.2-11.2 3.3-1.1 7 8.6-3.2 1.1-.9-1.5zm-1.4-2l-2.3-3.2.1 3.9 2.2-.7zM42 7.4l3-.4c.1.5.3.9.5 1.1.4.4.8.6 1.5.5.5 0 .8-.2 1-.4.2-.2.3-.5.3-.8 0-.3-.2-.5-.4-.7-.2-.2-.8-.4-1.7-.5-1.4-.2-2.5-.6-3.1-1.1-.6-.5-1-1.1-1-1.9 0-.5.1-1 .4-1.5.3-.5.7-.9 1.3-1.2.6-.3 1.4-.5 2.5-.6 1.3-.1 2.3.1 3.1.5.7.4 1.2 1.2 1.4 2.3l-3 .4c-.1-.5-.3-.8-.6-1-.2-.1-.6-.2-1-.1-.4 0-.6.1-.8.3-.2.2-.3.4-.2.6 0 .2.1.3.3.4.2.1.5.2 1.1.3 1.4.2 2.4.4 3.1.7.6.3 1.1.6 1.4 1.1s.5.9.5 1.5c0 .7-.1 1.3-.4 1.9s-.8 1-1.5 1.4c-.6.3-1.5.5-2.5.6-1.8.1-3-.1-3.7-.8-.9-.7-1.3-1.5-1.5-2.6zM54.8.1l3.2.7-.8 3.8 4.1-3.2 4.2.9L61 5.4l2.6 7.1-3.9-.8-1.3-4.6-2 1.4-.5 2.5-3.1-.6 2-10.3zM73 5.6l2.9 2-.3 4.1 3.7-1.7 2.9 2-6.7 2.7-2.5 3.6-2.7-1.8 2.5-3.6.2-7.3zM79.8 16.6c1.3-1.1 2.6-1.6 3.9-1.5 1.3.1 2.5.8 3.6 2.1s1.6 2.6 1.6 3.9-.8 2.5-2 3.6c-.9.8-1.8 1.3-2.7 1.5-.9.2-1.7.1-2.5-.2-.8-.3-1.6-.9-2.4-1.8-.8-.9-1.3-1.7-1.5-2.6s-.2-1.7.1-2.6c.4-.7 1-1.6 1.9-2.4zm2.1 2.5c-.8.7-1.2 1.3-1.3 1.9s.1 1.1.5 1.7c.5.5 1 .8 1.6.8.6 0 1.3-.4 2.2-1.1.7-.6 1.2-1.3 1.2-1.8s-.1-1.1-.5-1.7c-.5-.6-1-.9-1.6-.9-.6 0-1.3.4-2.1 1.1zM95.7 31.1L97 34l-5.6 2.5c-.6.3-1.1.4-1.7.4-.6 0-1.1 0-1.7-.2-.5-.2-1-.5-1.3-.8-.5-.5-.9-1.1-1.2-1.9-.2-.5-.4-1-.6-1.6-.2-.6-.3-1.1-.2-1.5s.1-.9.4-1.4c.2-.5.5-.8.8-1.1.5-.5 1-.8 1.5-1l5.6-2.5 1.3 2.9-5.8 2.6c-.5.2-.9.6-1 1-.2.4-.1.9.1 1.4.2.5.5.8 1 1 .4.2.9.1 1.4-.1l5.7-2.6zM87.9 39.7l10.3-1.4.7 5.3c.1 1 .2 1.7.1 2.3-.1.5-.3 1-.8 1.4-.4.4-.9.6-1.6.7-.6.1-1.1 0-1.5-.2-.4-.2-.8-.5-1.1-.9-.2-.2-.4-.6-.6-1.1-.1.4-.2.7-.3.9-.1.1-.2.3-.5.6-.2.3-.4.4-.6.5l-2.8 2-.5-3.6 2.9-2.1c.4-.3.6-.5.7-.7.1-.3.2-.5.1-.8v-.3l-4.2.6-.3-3.2zm6.5 2.3l.2 1.3c0 .1.1.4.3.8.1.2.2.4.4.5.2.1.4.1.6.1.3 0 .6-.2.7-.4s.2-.6.1-1.2l-.2-1.4-2.1.3zM92.6 50.1l-.2 3.1c-.5 0-.9.1-1.2.3-.5.3-.7.7-.8 1.3-.1.5 0 .8.2 1.1s.4.4.7.5c.3 0 .5-.1.8-.3s.5-.7.8-1.6c.5-1.4 1-2.3 1.6-2.8.6-.5 1.3-.8 2.1-.7.5.1 1 .3 1.4.6.4.4.7.9.9 1.5s.2 1.5.1 2.6c-.1 1.3-.4 2.3-1 3-.6.6-1.4 1-2.5 1l.2-3c.5 0 .8-.2 1.1-.4.2-.2.4-.6.4-1s0-.7-.1-.9c-.1-.2-.3-.3-.5-.3s-.3 0-.5.2c-.2.1-.3.5-.5 1-.5 1.4-.9 2.3-1.3 2.9s-.8 1-1.3 1.2-1 .3-1.6.2c-.7-.1-1.2-.3-1.8-.8-.5-.4-.9-1-1.1-1.7-.2-.7-.3-1.5-.1-2.5.2-1.8.7-2.9 1.4-3.5.8-.7 1.7-1 2.8-1zM97.4 63.8l-3.1 8-2.1-.8 2-5-1.5-.6-1.8 4.7-2-.8 1.8-4.7-1.9-.7-2 5.2-2.2-.9 3.2-8.2 9.6 3.8zM92.4 75.2l-1.8 2.6-6.4-4.5-2.9 4.1-2.1-1.5 4.7-6.7 8.5 6zM85.4 84.4l-5.9 5.3L78 88l3.5-3.1-1.2-1.4-3 2.7-1.4-1.6 3-2.7-2.8-3.2 2.4-2.1 6.9 7.8zM62.3 88.7l3.4-1.3-.1-1.8 3.1-1.1v11.1l-3.3 1.2-7.3-8.4 3.1-1.2 1.1 1.5zm1.4 1.9l2.4 3.1-.2-3.9-2.2.8zM58.5 91.8l-3 .5c-.1-.5-.3-.9-.5-1.1-.4-.4-.9-.5-1.5-.5-.5 0-.8.2-1 .4-.2.2-.3.5-.3.8 0 .3.2.5.4.7.3.2.8.3 1.7.4 1.4.2 2.5.5 3.1 1 .7.5 1 1.1 1.1 1.9.1.5-.1 1-.3 1.5-.3.5-.7.9-1.3 1.2-.6.3-1.4.5-2.5.6-1.3.1-2.4 0-3.1-.4-.7-.4-1.2-1.2-1.5-2.2l3-.5c.1.5.3.8.6 1 .3.2.6.3 1.1.2.4 0 .6-.1.8-.3.2-.2.2-.4.2-.6 0-.2-.1-.3-.3-.4-.2-.1-.5-.2-1.1-.3-1.4-.2-2.5-.4-3.1-.6-.6-.2-1.1-.6-1.4-1-.3-.4-.5-.9-.6-1.5-.1-.7.1-1.3.4-1.9.3-.6.8-1.1 1.4-1.4.6-.4 1.4-.6 2.4-.7 1.8-.2 3 .1 3.7.7.9.6 1.4 1.4 1.6 2.5zM46 99.5l-3.2-.6.7-3.9-4 3.3-4.2-.7 4.4-3.2-2.8-7 3.9.7 1.4 4.6 1.9-1.4.4-2.5 3.2.6L46 99.5zM27.6 94.5l-3-1.9.1-4.1-3.7 1.8-3-1.9 6.7-2.9 2.4-3.7 2.7 1.7-2.4 3.7.2 7.3zM20.5 83.7c-1.2 1.1-2.5 1.7-3.9 1.6s-2.6-.7-3.7-2c-1.2-1.3-1.7-2.6-1.7-3.9.1-1.3.7-2.5 1.9-3.7.9-.8 1.8-1.3 2.6-1.6.8-.2 1.7-.2 2.5.1.8.3 1.6.8 2.4 1.7.8.9 1.3 1.7 1.6 2.5.2.8.2 1.7 0 2.6-.2 1-.8 1.9-1.7 2.7zm-2.2-2.4c.8-.7 1.2-1.4 1.3-2 .1-.6-.1-1.1-.6-1.6s-1-.8-1.6-.7c-.6 0-1.3.4-2.2 1.2-.7.7-1.1 1.3-1.2 1.9-.1.6.1 1.1.6 1.6.4.5 1 .7 1.6.7.7 0 1.4-.4 2.1-1.1zM4.2 69.8l-1.4-2.9 5.6-2.7c.6-.3 1.1-.4 1.7-.5.6-.1 1.1 0 1.7.2.5.2 1 .4 1.3.8.5.5.9 1.1 1.3 1.9l.6 1.5c.2.6.3 1.1.3 1.5 0 .5-.1.9-.3 1.4-.2.5-.5.8-.8 1.1-.5.5-1 .8-1.4 1l-5.6 2.7L5.8 73l5.7-2.8c.5-.2.8-.6 1-1 .1-.4.1-.9-.1-1.4-.2-.5-.6-.8-1-1-.4-.1-.9-.1-1.4.2l-5.8 2.8zM11.7 60.9L1.5 62.6l-.9-5.3c-.2-1-.2-1.7-.1-2.3.1-.5.3-1 .7-1.4.4-.4.9-.6 1.6-.8.6-.1 1.1-.1 1.5.1s.8.4 1.2.8c.2.2.4.6.6 1 .1-.4.1-.7.2-.9.1-.1.2-.3.5-.6.2-.3.4-.5.6-.6l2.7-2 .6 3.6-2.8 2.2c-.4.3-.6.5-.7.7-.2.5-.3.7-.2 1v.3l4.2-.7.5 3.2zm-6.6-2.2l-.2-1.3c0-.1-.1-.4-.3-.8-.1-.2-.2-.4-.4-.5-.2-.1-.4-.1-.7-.1-.3.1-.6.2-.7.4-.1.2-.2.6-.1 1.2l.3 1.5 2.1-.4zM6.7 50.6l.1-3.1c.5 0 .9-.1 1.2-.3.4-.3.7-.7.8-1.4 0-.5 0-.8-.2-1.1s-.4-.4-.7-.4c-.3 0-.5.1-.8.3-.2.2-.5.7-.7 1.6-.4 1.4-.9 2.3-1.5 2.9-.6.6-1.3.8-2.1.7-.5 0-1-.2-1.5-.6s-.8-.8-1-1.5c-.3-.6-.4-1.5-.3-2.5.1-1.3.5-2.3 1-3s1.4-1 2.5-1l-.1 3c-.5 0-.8.2-1.1.4-.2.2-.4.6-.4 1s0 .7.2.9.3.3.5.3.3 0 .5-.2c.1-.1.3-.5.5-1 .4-1.4.8-2.3 1.2-2.9.4-.6.8-1 1.3-1.2.5-.2 1-.3 1.6-.3.7.1 1.3.3 1.8.7.5.4.9 1 1.1 1.7.2.7.3 1.5.2 2.5-.2 1.8-.6 2.9-1.3 3.6-.8.6-1.7.9-2.8.9zM1.5 37l2.9-8.1 2.1.7-1.8 5.1 1.6.6L8 30.6l2 .7L8.2 36l1.9.7 1.9-5.2 2.2.8-2.9 8.2L1.5 37zM6.1 25.5l1.8-2.7 6.5 4.3 2.8-4.2 2.1 1.4-4.5 6.8-8.7-5.6zM12.9 16.2l5.8-5.4 1.5 1.6-3.4 3.2 1.2 1.3 2.9-2.8 1.4 1.5-2.9 2.8 2.9 3.1-2.3 2.2-7.1-7.5z" />
+            </svg>
+
+            <div id="indicator_box_4" class="indicator_box">
+                <div class="indicator_text">
+                    <h2>Skills:</h2>
+                    <p>What are you good at? Can you write and orally communicate well? Are you a tech wiz?
+                    </p>
+                    <p>Are you a natural teacher? Are you a good leader? Do you work well with teams?</p>
+                </div>
+            </div>
+        </div>
+
         <div class="understanding-text-container main-text">
             <h2 class="understanding-text">Understanding the demands of today’s role of work and the skills needed in your career will
                 also help you to make better decisions.</h2>
