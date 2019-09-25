@@ -2244,7 +2244,7 @@ h1 {
     transform: translate(2px, 0px);
 }
 #question_mark_1 > text {
-    -webkit-transition: fill .7s linear;
+  -webkit-transition: fill .7s linear;
   -moz-transition: fill .7s linear;
   -o-transition: fill .7s linear;
   transition: fill .7s linear;
@@ -2252,6 +2252,13 @@ h1 {
 #question_mark_1.clicked > text {
     fill: #7C7B7B;
 }
+#question_mark_1.clicked.changeColor > text {
+    -webkit-animation: changeColor 0.4s forwards;
+    -moz-animation: changeColor 0.4s forwards;
+    -o-animation: changeColor 0.4s forwards;
+    animation: changeColor 0.4s forwards;
+}
+
 
 #question_mark_2 {
 
