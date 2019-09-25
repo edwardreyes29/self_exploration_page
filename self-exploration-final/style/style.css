@@ -2271,18 +2271,6 @@ h1 {
     transform: translate(0px, -2px);
 }
 
-/**
-    These rules changes the color of the question mark 
-    indicator when mouseon function is invoked
-  */
-
-/* [class^="question_mark"].changeColor, [class^="question_mark"].clicked.changeColor, #question_mark_1.clicked.changeColor {
-    -webkit-animation: changeColor 0.8s forwards;
-    -moz-animation: changeColor 0.8s forwards;
-    -o-animation: changeColor 0.8s forwards;
-    animation: changeColor 0.8s forwards;
-} */
-
 #question_mark_2.changeColor > text, #question_mark_3.changeColor > text, #question_mark_4.changeColor > text {
     -webkit-animation: changeColor 0.4s forwards;
     -moz-animation: changeColor 0.4s forwards;
