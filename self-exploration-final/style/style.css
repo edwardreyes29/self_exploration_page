@@ -660,35 +660,37 @@ h1 {
     width: 95%;
     align-self: center;
     justify-self: center;
+    -webkit-transform: scale(0.3);
     transform: scale(0.3);
     cursor: pointer;
     -webkit-animation: 5s heartBeat_2 1.5s infinite;
     -moz-animation: 5s heartBeat_2 1.5s infinite;
     -o-animation: 5s heartBeat_2 1.5s infinite;
+    -ms-animation: 5s heartBeat_2 1.5s infinite;
     animation: 5s heartBeat_2 1.5s infinite;
 }
 
 @-webkit-keyframes heartBeat_2 {
     0% {
-        transform: scale(.3);
+        -webkit-transform: scale(.3);
     }
     12% {
-        transform: scale(.3);
+        -webkit-transform: scale(.3);
     }
     14% {
-        transform: scale(.5);
+        -webkit-transform: scale(.5);
     }
     16% {
-        transform: scale(.3);
+        -webkit-transform: scale(.3);
     }
     18% {
-        transform: scale(.4);
+        -webkit-transform: scale(.4);
     }
     20% {
-        transform: scale(.3);
+        -webkit-transform: scale(.3);
     }
     100% {
-        transform: scale(.3);
+        -webkit-transform: scale(.3);
     }
 }
 
@@ -1066,9 +1068,10 @@ h1 {
     padding: 0px;
     position: relative;
     display: grid;
-    grid-template-areas: "blue-triangle character-3";
+    grid-template-areas: "blue-triangle character-3"
+                         "gap-1 gap-2";
     grid-template-columns: minmax(426px, 462px) minmax(342px, 402px);
-    grid-template-rows: repeat(1, minmax(100px, 365px));
+    grid-template-rows: repeat(1, minmax(100px, 365px)) 40px;
     grid-gap: 0px;
 }
 
@@ -1077,9 +1080,45 @@ h1 {
     width: 80px;
     transform-origin: translate(50px, 80px);
     transform: translate(50px, 80px);
+    -webkit-animation: static_animation_circle 15s infinite;
+    -moz-animation: static_animation_circle 15s infinite;
+    -o-animation: static_animation_circle 15s infinite;
     animation: static_animation_circle 15s infinite;
 }
 
+@-webkit-keyframes static_animation_circle {
+    0% {
+        transform: translate(50px, 80px) rotate(0deg);
+    }
+    50% {
+        transform: translate(35px, 90px) rotate(-10deg);
+    }
+    100% {
+        transform: translate(50px, 80px) rotate(0deg);
+    }
+}
+@-moz-keyframes static_animation_circle {
+    0% {
+        transform: translate(50px, 80px) rotate(0deg);
+    }
+    50% {
+        transform: translate(35px, 90px) rotate(-10deg);
+    }
+    100% {
+        transform: translate(50px, 80px) rotate(0deg);
+    }
+}
+@-o-keyframes static_animation_circle {
+    0% {
+        transform: translate(50px, 80px) rotate(0deg);
+    }
+    50% {
+        transform: translate(35px, 90px) rotate(-10deg);
+    }
+    100% {
+        transform: translate(50px, 80px) rotate(0deg);
+    }
+}
 @keyframes static_animation_circle {
     0% {
         transform: translate(50px, 80px) rotate(0deg);
@@ -1095,9 +1134,36 @@ h1 {
 #red_circle.clicked {
     transform-origin: translate(0px, 0px);
     transform: translate(0px, 0px);
+    -webkit-animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
+    -moz-animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
+    -o-animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
     animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
 }
 
+@-webkit-keyframes moveCircle {
+    0% {
+        transform: translate(50px, 80px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+@-moz-keyframes moveCircle {
+    0% {
+        transform: translate(50px, 80px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+@-o-keyframes moveCircle {
+    0% {
+        transform: translate(50px, 80px);
+    }
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
 @keyframes moveCircle {
     0% {
         transform: translate(50px, 80px);
@@ -1107,6 +1173,39 @@ h1 {
     }
 }
 
+@-webkit-keyframes static_animation_circle_2 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+        transform: translate(5px, -10px) rotate(-10deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+@-moz-keyframes static_animation_circle_2 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+        transform: translate(5px, -10px) rotate(-10deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
+@-o-keyframes static_animation_circle_2 {
+    0% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+    50% {
+        transform: translate(5px, -10px) rotate(-10deg);
+    }
+    100% {
+        transform: translate(0px, 0px) rotate(0deg);
+    }
+}
 @keyframes static_animation_circle_2 {
     0% {
         transform: translate(0px, 0px) rotate(0deg);
@@ -1126,9 +1225,44 @@ h1 {
     width: 100px;
     transform: translate(-80px, 40px);
     /* transform: translate(-195px, 95px); */
+    -webkit-animation: static_animation_box 8.5s infinite;
+    -moz-animation: static_animation_box 8.5s infinite;
+    -o-animation: static_animation_box 8.5s infinite;
     animation: static_animation_box 8.5s infinite;
 }
-
+@-webkit-keyframes static_animation_box {
+    0% {
+        transform: translate(-80px, 40px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-80px, 40px) rotate(10deg);
+    }
+    100% {
+        transform: translate(-80px, 40px) rotate(0deg);
+    }
+}
+@-moz-keyframes static_animation_box {
+    0% {
+        transform: translate(-80px, 40px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-80px, 40px) rotate(10deg);
+    }
+    100% {
+        transform: translate(-80px, 40px) rotate(0deg);
+    }
+}
+@-o-keyframes static_animation_box {
+    0% {
+        transform: translate(-80px, 40px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-80px, 40px) rotate(10deg);
+    }
+    100% {
+        transform: translate(-80px, 40px) rotate(0deg);
+    }
+}
 @keyframes static_animation_box {
     0% {
         transform: translate(-80px, 40px) rotate(0deg);
@@ -1142,15 +1276,75 @@ h1 {
 }
 
 #orange_box.clicked {
+    -webkit-animation: moveBox 0.5s forwards, 1s, 8.5s static_animation_box_2 0.5s infinite;
+    -moz-animation: moveBox 0.5s forwards, 1s, 8.5s static_animation_box_2 0.5s infinite;
+    -o-animation: moveBox 0.5s forwards, 1s, 8.5s static_animation_box_2 0.5s infinite;
     animation: moveBox 0.5s forwards, 1s, 8.5s static_animation_box_2 0.5s infinite;
 }
-
+@-webkit-keyframes moveBox {
+    0% {
+        transform: translate(-80px, 40px);
+    }
+    100% {
+        transform: translate(-50px, -25px);
+    }
+}
+@-moz-keyframes moveBox {
+    0% {
+        transform: translate(-80px, 40px);
+    }
+    100% {
+        transform: translate(-50px, -25px);
+    }
+}
+@-o-keyframes moveBox {
+    0% {
+        transform: translate(-80px, 40px);
+    }
+    100% {
+        transform: translate(-50px, -25px);
+    }
+}
 @keyframes moveBox {
     0% {
         transform: translate(-80px, 40px);
     }
     100% {
         transform: translate(-50px, -25px);
+    }
+}
+
+@-webkit-keyframes static_animation_box_2 {
+    0% {
+        transform: translate(-50px, -25px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50px, -25px) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50px, -25px) rotate(0deg);
+    }
+}
+@-moz-keyframes static_animation_box_2 {
+    0% {
+        transform: translate(-50px, -25px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50px, -25px) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50px, -25px) rotate(0deg);
+    }
+}
+@-o-keyframes static_animation_box_2 {
+    0% {
+        transform: translate(-50px, -25px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50px, -25px) rotate(10deg);
+    }
+    100% {
+        transform: translate(-50px, -25px) rotate(0deg);
     }
 }
 
@@ -1178,9 +1372,45 @@ h1 {
     justify-self: center;
     transform: scale(0.4);
     cursor: pointer;
+    -webkit-animation: static_animation_triangle 9s infinite;
+    -moz-animation: static_animation_triangle 9s infinite;
+    -o-animation: static_animation_triangle 9s infinite;
     animation: static_animation_triangle 9s infinite;
 }
 
+@-webkit-keyframes static_animation_triangle {
+    0% {
+        transform: scale(0.4) rotate(0deg);
+    }
+    50% {
+        transform: scale(0.4) rotate(-10deg);
+    }
+    100% {
+        transform: scale(0.4) rotate(0deg);
+    }
+}
+@-moz-keyframes static_animation_triangle {
+    0% {
+        transform: scale(0.4) rotate(0deg);
+    }
+    50% {
+        transform: scale(0.4) rotate(-10deg);
+    }
+    100% {
+        transform: scale(0.4) rotate(0deg);
+    }
+}
+@-o-keyframes static_animation_triangle {
+    0% {
+        transform: scale(0.4) rotate(0deg);
+    }
+    50% {
+        transform: scale(0.4) rotate(-10deg);
+    }
+    100% {
+        transform: scale(0.4) rotate(0deg);
+    }
+}
 @keyframes static_animation_triangle {
     0% {
         transform: scale(0.4) rotate(0deg);
@@ -1195,9 +1425,35 @@ h1 {
 
 #blue-triangle.clicked {
     cursor: default;
+    -webkit-animation: static_animation_triangle 9s infinite;
+    -moz-animation: static_animation_triangle 9s infinite;
+    -o-animation: static_animation_triangle 9s infinite;
     animation: enlargeTriangle 0.5s forwards, 15s static_animation_triangle_2 0.5s infinite;
 }
-
+@-webkit-keyframes enlargeTriangle {
+    0% {
+        transform: scale(0.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-moz-keyframes enlargeTriangle {
+    0% {
+        transform: scale(0.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-o-keyframes enlargeTriangle {
+    0% {
+        transform: scale(0.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 @keyframes enlargeTriangle {
     0% {
         transform: scale(0.4);
@@ -1212,7 +1468,7 @@ h1 {
         transform: scale(1) rotate(0deg);
     }
     50% {
-        transform: scale(1) rotate(-10deg);
+        transform: scale(1) rotate(-8deg);
     }
     100% {
         transform: scale(1) rotate(0deg);
