@@ -3,13 +3,29 @@ function clickFunction(clicked_id) {
     console.log(element)
     var elementClassList = document.querySelectorAll("." + element.classList[0]);
 
-    for (var i = 0; i < elementClassList.length; i++) {
-        elementClassList[i].classList.add('clicked');
-    }   
+    if (element.id != 'toggle-button') {
+        for (var i = 0; i < elementClassList.length; i++) {
+            elementClassList[i].classList.add('clicked');
+        } 
+    }
+      
 
     console.log(element.id);
     if (element.id == 'toggle-button') {
-        document.getElementById('click_here_hover1').style.display = "none";
+        if (document.getElementById('click_here_hover1').style.visibility != "hidden")
+            document.getElementById('click_here_hover1').style.visibility = "hidden";
+        else
+        document.getElementById('click_here_hover1').style.visibility = "visible"
+
+        for (var i = 0; i < elementClassList.length; i++) {
+            if (elementClassList[i].classList.contains('clicked')) {
+                elementClassList[i].classList.remove('clicked');
+            } else {
+                elementClassList[i].classList.add('clicked');
+            }
+            
+        }  
+
     } else if (element.id == 'big-heart') { 
         document.getElementById('click_here_hover2').style.display = "none";
     } else if (element.id == 'blue-triangle') { 
@@ -54,7 +70,6 @@ function arrowHoverOn(over_id) {
     if(over_id == 'square_1') {
         var pulse = document.getElementById('pulse_1');
         pulse.classList.add('show');
-    
         var flashlight_logo = document.getElementById('flashlight_logo');
         flashlight_logo.classList.add('hide');
     } else if (over_id == 'square_2') {
