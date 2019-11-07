@@ -7,7 +7,7 @@
     min-width: 768px;
     height: auto;
     margin: 0px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     overflow-y: hidden;
     padding: 0px;
 }
@@ -37,7 +37,7 @@ h1 {
 /* Add underline to text using <span> (black) */
 
 .underline-text-2 {
-    border-bottom: 2px solid #000000;
+    font-weight: 800;
 }
 
 /* Make text this type of red */
@@ -107,7 +107,96 @@ h1 {
 #toggle-button.clicked {
     transform: translateX(0px);
     animation: toggleShift 0.5s forwards;
+    -webkit-animation: toggle-static-2 3s infinite;
+    -moz-animation: toggle-static-2 3s infinite;
+    -o-animation: toggle-static-2 3s infinite;
+    -ms-animation: toggle-static-2 3s infinite;
+    animation: toggle-static-2 3s infinite;
   }
+
+  @-webkit-keyframes toggle-static-2 {
+    0% {
+        -webkit-transform: translate(20px);
+    }
+    10% {
+        -webkit-transform: translate(15px);
+    }
+    20% {
+        -webkit-transform: translate(20px);
+    }
+    30% {
+        -webkit-transform: translate(12px);
+    }
+    40% {
+        -webkit-transform: translate(20px);
+    }
+    100% {
+        -webkit-transform: translate(20px);
+    }
+}
+
+@-moz-keyframes toggle-static-2 {
+    0% {
+        -moz-transform: translate(20px);
+    }
+    10% {
+        -moz-transform: translate(15px);
+    }
+    20% {
+        -moz-transform: translate(20px);
+    }
+    30% {
+        -moz-transform: translate(12px);
+    }
+    40% {
+        -moz-transform: translate(20px);
+    }
+    100% {
+        -moz-transform: translate(20px);
+    }
+}
+
+@-o-keyframes toggle-static-2 {
+    0% {
+        -o-transform: translate(20px);
+    }
+    10% {
+        -o-transform: translate(15px);
+    }
+    20% {
+        -o-transform: translate(20px);
+    }
+    30% {
+        -o-transform: translate(12px);
+    }
+    40% {
+        -o-transform: translate(20px);
+    }
+    100% {
+        -o-transform: translate(20px);
+    }
+}
+
+@keyframes toggle-static-2 {
+    0% {
+        transform: translate(20px);
+    }
+    10% {
+        transform: translate(15px);
+    }
+    20% {
+        transform: translate(20px);
+    }
+    30% {
+        transform: translate(12px);
+    }
+    40% {
+        transform: translate(20px);
+    }
+    100% {
+        transform: translate(20px);
+    }
+}
   
   @keyframes toggleShift {
     0% {
@@ -133,7 +222,7 @@ h1 {
   }
 
   .pulse {
-    display: none;
+    /* display: none; */
     /* stroke: #FFFF33; */
     stroke: #ef5656;
     stroke-width: 0px;
@@ -143,7 +232,7 @@ h1 {
     fill: white;
     fill-opacity: 0.2;
     transform-origin: 5px 5px;
-    animation-duration: 2s;
+    animation-duration: 5s;
     animation-name: pulse;
     animation-iteration-count: infinite;
   }
@@ -159,16 +248,20 @@ h1 {
       transform: scale(1);
       fill-opacity: 0.4;
     }
-    25% {
+    10% {
       /* stroke-opacity: 1; */
       fill-opacity: 0.6;
     }
-    100% {
+    25% {
       /* stroke-width: 0;
         stroke-opacity: 0; */
       transform: scale(6);
       fill-opacity: 0;
     }
+    100% {
+        fill-opacity: 0;
+    }
+   
   }
 
 /* Background for flashlight */
@@ -187,7 +280,7 @@ h1 {
 #title-section {
     position: relative;
     grid-area: title;
-    align-self: start;
+    align-self: center;
     justify-self: start;
     font-weight: 700;
     font-size: 150%;
@@ -195,6 +288,11 @@ h1 {
     margin: 0;
     padding-left: 20px;
     color: #ffffff;
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    transform: translateY(-50px);
     /* background: red; */
 }
 
@@ -878,7 +976,6 @@ h1 {
 }
 
 #big-heart.clicked {
-    cursor: default;
     -webkit-animation: enlargeHeart 0.5s forwards, 8s heartBeat 3s infinite;
     -moz-animation: enlargeHeart 0.5s forwards, 8s heartBeat 3s infinite;
     -o-animation: enlargeHeart 0.5s forwards, 8s heartBeat 3s infinite;
@@ -918,6 +1015,50 @@ h1 {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+
+#big-heart.shrink {
+    -webkit-animation: shrinkHeart 0.5s forwards, 5s heartBeat_2 1.5s infinite;
+    -moz-animation: shrinkHeart 0.5s forwards, 5s heartBeat_2 1.5s infinite;
+    -o-animation: shrinkHeart 0.5s forwards, 5s heartBeat_2 1.5s infinite;
+    animation: shrinkHeart 0.5s forwards, 5s heartBeat_2 1.5s infinite;
+}
+
+@-webkit-keyframes shrinkHeart {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.3);
+    }
+}
+
+@-moz-keyframes shrinkHeart {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.3);
+    }
+}
+
+@-o-keyframes shrinkHeart {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.3);
+    }
+}
+
+@keyframes shrinkHeart {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.3);
     }
 }
 
@@ -1266,10 +1407,10 @@ h1 {
 #red_circle.clicked {
     transform-origin: translate(0px, 0px);
     transform: translate(0px, 0px);
-    -webkit-animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
-    -moz-animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
-    -o-animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
-    animation: moveCircle 0.5s forwards, 12s static_animation_circle_2 0.5s infinite;
+    -webkit-animation: moveCircle 0.5s forwards, 15s static_animation_circle_2 0.5s infinite;
+    -moz-animation: moveCircle 0.5s forwards, 15s static_animation_circle_2 0.5s infinite;
+    -o-animation: moveCircle 0.5s forwards, 15s static_animation_circle_2 0.5s infinite;
+    animation: moveCircle 0.5s forwards, 15s static_animation_circle_2 0.5s infinite;
 }
 
 @-webkit-keyframes moveCircle {
@@ -1305,6 +1446,49 @@ h1 {
     }
     100% {
         transform: translate(0px, 0px);
+    }
+}
+
+
+#red_circle.shrink {
+    -webkit-animation: moveCircle2 0.5s forwards, 12s static_animation_circle 0.5s infinite;
+    -moz-animation: moveCircle2 0.5s forwards, 12s static_animation_circle 0.5s infinite;
+    -o-animation: moveCircle2 0.5s forwards, 12s static_animation_circle 0.5s infinite;
+    animation: moveCircle2 0.5s forwards, 12s static_animation_circle 0.5s infinite;
+}
+@-webkit-keyframes moveCircle2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(50px, 80px);
+    }
+}
+
+@-moz-keyframes moveCircle2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(50px, 80px);
+    }
+}
+
+@-o-keyframes moveCircle2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(50px, 80px);
+    }
+}
+
+@keyframes moveCircle2 {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(50px, 80px);
     }
 }
 
@@ -1508,6 +1692,48 @@ h1 {
     }
 }
 
+#orange_box.shrink {
+    -webkit-animation: moveBox2 0.5s forwards, 8.5s static_animation_box 0.5s infinite;
+    -moz-animation: moveBox2 0.5s forwards, 8.5s static_animation_box 0.5s infinite;
+    -o-animation: moveBox2 0.5s forwards, 8.5s static_animation_box 0.5s infinite;
+    animation: moveBox2 0.5s forwards, 8.5s static_animation_box 0.5s infinite;
+}
+@-webkit-keyframes moveBox2 {
+    0% {
+        transform: translate(-50px, -25px);
+    }
+    100% {
+        transform: translate(-80px, 40px);
+    }
+}
+
+@-moz-keyframes moveBox2 {
+    0% {
+        transform: translate(-50px, -25px);
+    }
+    100% {
+        transform: translate(-80px, 40px);
+    }
+}
+
+@-o-keyframes moveBox2 {
+    0% {
+        transform: translate(-50px, -25px);
+    }
+    100% {
+        transform: translate(-80px, 40px);
+    }
+}
+
+@keyframes moveBox2 {
+    0% {
+        transform: translate(-50px, -25px);
+    }
+    100% {
+        transform: translate(-80px, 40px);
+    }
+}
+
 /* Blue Triangle */
 
 #blue-triangle {
@@ -1575,10 +1801,10 @@ h1 {
 }
 
 #blue-triangle.clicked {
-    cursor: default;
-    -webkit-animation: static_animation_triangle 9s infinite;
-    -moz-animation: static_animation_triangle 9s infinite;
-    -o-animation: static_animation_triangle 9s infinite;
+    /* cursor: default; */
+    -webkit-animation: enlargeTriangle 0.5s forwards, 15s static_animation_triangle_2 0.5s infinite;
+    -moz-animation: enlargeTriangle 0.5s forwards, 15s static_animation_triangle_2 0.5s infinite;
+    -o-animation: enlargeTriangle 0.5s forwards, 15s static_animation_triangle_2 0.5s infinite;
     animation: enlargeTriangle 0.5s forwards, 15s static_animation_triangle_2 0.5s infinite;
 }
 
@@ -1629,6 +1855,50 @@ h1 {
         transform: scale(1) rotate(0deg);
     }
 }
+
+#blue-triangle.shrink {
+    -webkit-animation: shrinkTriangle 0.5s forwards, 9s static_animation_triangle 0.5s infinite;
+    -moz-animation: shrinkTriangle 0.5s forwards, 9s static_animation_triangle 0.5s infinite;
+    -o-animation: shrinkTriangle 0.5s forwards, 9s static_animation_triangle 0.5s infinite;
+    animation: shrinkTriangle 0.5s forwards, 9s static_animation_triangle 0.5s infinite;
+}
+
+@-webkit-keyframes shrinkTriangle {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+@-moz-keyframes shrinkTriangle {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+@-o-keyframes shrinkTriangle {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes shrinkTriangle {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.4);
+    }
+}
+
 
 /* Character 3 */
 
@@ -2821,13 +3091,13 @@ h1 {
 }
 
 #ask_yourself_text_1 {
-    /* position: fixed; */
+    position: absolute;
     transform: translate(7px, -8.5px);
     fill: #E8E2E2;
-    -webkit-animation: rotateText 20s infinite linear;
-    -moz-animation: rotateText 20s infinite linear;
-    -o-animation: rotateText 20s infinite linear;
-    animation: rotateText 20s infinite linear;
+    -webkit-animation: rotateText 32s infinite linear;
+    -moz-animation: rotateText 32s infinite linear;
+    -o-animation: rotateText 32s infinite linear;
+    animation: rotateText 32s infinite linear;
     -webkit-transition: fill 0.85s ease;
     -moz-transition: fill 0.85s ease;
     -o-transition: fill 0.85s ease;
@@ -2840,55 +3110,55 @@ h1 {
 
 #ask_yourself_text_2 {
     transform: translate(6px, 6px);
-    -webkit-animation: rotateText2 20s infinite linear;
-    -moz-animation: rotateText2 20s infinite linear;
-    -o-animation: rotateText2 20s infinite linear;
-    animation: rotateText2 20s infinite linear;
+    -webkit-animation: rotateText2 32s infinite linear;
+    -moz-animation: rotateText2 32s infinite linear;
+    -o-animation: rotateText2 32s infinite linear;
+    animation: rotateText2 32s infinite linear;
 }
 
 #ask_yourself_text_3 {
     transform: translate(6px, 6px);
-    -webkit-animation: rotateText2 20s infinite linear;
-    -moz-animation: rotateText2 20s infinite linear;
-    -o-animation: rotateText2 20s infinite linear;
-    animation: rotateText2 20s infinite linear;
+    -webkit-animation: rotateText2 32s infinite linear;
+    -moz-animation: rotateText2 32s infinite linear;
+    -o-animation: rotateText2 32s infinite linear;
+    animation: rotateText2 32s infinite linear;
 }
 
 #ask_yourself_text_4 {
     width: 75px;
     transform: translate(3.5px, 3px);
-    -webkit-animation: rotateText4 20s infinite linear;
-    -moz-animation: rotateText4 20s infinite linear;
-    -o-animation: rotateText4 20s infinite linear;
-    animation: rotateText4 20s infinite linear;
+    -webkit-animation: rotateText4 32s infinite linear;
+    -moz-animation: rotateText4 32s infinite linear;
+    -o-animation: rotateText4 32s infinite linear;
+    animation: rotateText4 32s infinite linear;
 }
 
 #ask_yourself_text_1.hideAsk {
-    -webkit-animation: rotateText 20s infinite linear, hideAsk 0.2s forwards;
-    -moz-animation: rotateText 20s infinite linear, hideAsk 0.2s forwards;
-    -o-animation: rotateText 20s infinite linear, hideAsk 0.2s forwards;
-    animation: rotateText 20s infinite linear, hideAsk 0.2s forwards;
+    -webkit-animation: rotateText 32s infinite linear, hideAsk 0.2s forwards;
+    -moz-animation: rotateText 32s infinite linear, hideAsk 0.2s forwards;
+    -o-animation: rotateText 32s infinite linear, hideAsk 0.2s forwards;
+    animation: rotateText 32s infinite linear, hideAsk 0.2s forwards;
 }
 
 #ask_yourself_text_2.hideAsk {
-    -webkit-animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
-    -moz-animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
-    -o-animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
-    animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
+    -webkit-animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
+    -moz-animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
+    -o-animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
+    animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
 }
 
 #ask_yourself_text_3.hideAsk {
-    -webkit-animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
-    -moz-animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
-    -o-animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
-    animation: rotateText2 20s infinite linear, hideAsk 0.2s forwards;
+    -webkit-animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
+    -moz-animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
+    -o-animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
+    animation: rotateText2 32s infinite linear, hideAsk 0.2s forwards;
 }
 
 #ask_yourself_text_4.hideAsk {
-    -webkit-animation: rotateText4 20s infinite linear, hideAsk 0.2s forwards;
-    -moz-animation: rotateText4 20s infinite linear, hideAsk 0.2s forwards;
-    -o-animation: rotateText4 20s infinite linear, hideAsk 0.2s forwards;
-    animation: rotateText4 20s infinite linear, hideAsk 0.2s forwards;
+    -webkit-animation: rotateText4 32s infinite linear, hideAsk 0.2s forwards;
+    -moz-animation: rotateText4 32s infinite linear, hideAsk 0.2s forwards;
+    -o-animation: rotateText4 32s infinite linear, hideAsk 0.2s forwards;
+    animation: rotateText4 32s infinite linear, hideAsk 0.2s forwards;
 }
 
 @-webkit-keyframes hideAsk {

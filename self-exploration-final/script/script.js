@@ -3,19 +3,17 @@ function clickFunction(clicked_id) {
     console.log(element)
     var elementClassList = document.querySelectorAll("." + element.classList[0]);
 
-    if (element.id != 'toggle-button') {
-        for (var i = 0; i < elementClassList.length; i++) {
-            elementClassList[i].classList.add('clicked');
-        } 
-    }
-      
-
+    // if (element.id != 'toggle-button') {
+    //     for (var i = 0; i < elementClassList.length; i++) {
+    //         elementClassList[i].classList.add('clicked');
+    //     } 
+    // } 
     console.log(element.id);
     if (element.id == 'toggle-button') {
         if (document.getElementById('click_here_hover1').style.visibility != "hidden")
             document.getElementById('click_here_hover1').style.visibility = "hidden";
         else
-        document.getElementById('click_here_hover1').style.visibility = "visible"
+            document.getElementById('click_here_hover1').style.visibility = "visible"
 
         for (var i = 0; i < elementClassList.length; i++) {
             if (elementClassList[i].classList.contains('clicked')) {
@@ -27,9 +25,40 @@ function clickFunction(clicked_id) {
         }  
 
     } else if (element.id == 'big-heart') { 
-        document.getElementById('click_here_hover2').style.display = "none";
+        for (var i = 0; i < elementClassList.length; i++) {
+            if (elementClassList[i].classList.contains('clicked')) {
+                elementClassList[i].classList.remove('clicked');
+                elementClassList[i].classList.add('shrink');
+            } else {
+                elementClassList[i].classList.add('clicked');
+                elementClassList[i].classList.remove('shrink');
+            }
+            
+        }
+        if (document.getElementById('click_here_hover2').style.visibility != "hidden")
+        document.getElementById('click_here_hover2').style.visibility = "hidden";
+        else
+            document.getElementById('click_here_hover2').style.visibility = "visible"
+        
+            // document.getElementById('click_here_hover2').style.display = "none";
+
     } else if (element.id == 'blue-triangle') { 
-        document.getElementById('click_here_hover3').style.display = "none";
+        console.log("hello there general kenobi")
+        for (var i = 0; i < elementClassList.length; i++) {
+            if (elementClassList[i].classList.contains('clicked')) {
+                elementClassList[i].classList.remove('clicked');
+                elementClassList[i].classList.add('shrink');
+            } else {
+                elementClassList[i].classList.add('clicked');
+                elementClassList[i].classList.remove('shrink');
+            }
+            
+        }  
+        if (document.getElementById('click_here_hover3').style.visibility != "hidden")
+            document.getElementById('click_here_hover3').style.visibility = "hidden";
+        else
+            document.getElementById('click_here_hover3').style.visibility = "visible"
+        // document.getElementById('click_here_hover3').style.display = "none";
     }
 
 }
