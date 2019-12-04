@@ -296,6 +296,13 @@ h1 {
     /* background: red; */
 }
 
+.logo {
+    grid-area: title;
+    align-self: center;
+    justify-self: center;
+    transform: translate(-50px, 50px);
+}
+
 /* Flashlight */
 
 #flashlight {
@@ -637,12 +644,12 @@ h1 {
         overflow-y: hidden;
         grid-template-areas: "title" "ask-yourself-1" "character-1" "self-exploration-text";
         grid-template-columns: minmax(375px, 414px);
-        grid-template-rows: 100px 86px 262px 200px;
+        grid-template-rows: 150px 86px 262px 200px;
         grid-gap: 0px;
     }
     .flashlight-background-1 {
         grid-area: title;
-        background: linear-gradient(#60513E, #7A694F);
+        background: linear-gradient(#911242, #F34A14);
         z-index: -2;
     }
     /* Flashlight */
@@ -651,10 +658,10 @@ h1 {
         grid-row: 2/5;
         align-self: center;
         justify-self: start;
-        -webkit-transform: translate(-450px, 45px);
-        -moz-transform: translate(-450px, 45px);
-        -o-transform: translate(-450px, 45px);
-        transform: translate(-450px, 45px);
+        -webkit-transform: translate(-450px, 52px);
+        -moz-transform: translate(-450px, 52px);
+        -o-transform: translate(-450px, 52px);
+        transform: translate(-450px, 52px);
         z-index: -3;
         
     }
@@ -702,7 +709,7 @@ h1 {
         width: 80%;
         margin-left: 45px;
         margin-right: 45px;
-        font-size: 12px;
+        font-size: 15px;
     }
     /* Light of flashlight */
     #light {
@@ -720,6 +727,16 @@ h1 {
         padding-left: 0px;
         padding: 0;
         color: #ffffff;
+        transform: translate(20px, -40px);
+    }
+    .logo {
+        grid-area: title;
+        justify-self: center;
+        align-self: center;
+        width: 90px;
+        margin-left: 350px;
+        margin-right: 250px;
+        margin-bottom: 50px;
     }
     #click_here_hover1 {
         display: none;
@@ -1163,7 +1180,7 @@ h1 {
     position: relative;
     align-self: start;
     justify-self: center;
-    font-size: 90%;
+    font-size: 18px;
     width: 60%;
     -webkit-transform: translate(5px, 160px) scale(0);
     -moz-transform: translate(5px, 160px) scale(0);
@@ -1184,7 +1201,7 @@ h1 {
         -webkit-transform: translate(5px, 160px) scale(0);
     }
     100% {
-        -webkit-transform: translate(25px, 220px) scale(1);
+        -webkit-transform: translate(25px, 210px) scale(1);
     }
 }
 
@@ -1193,7 +1210,7 @@ h1 {
         -moz-transform: translate(5px, 160px) scale(0);
     }
     100% {
-        -moz-transform: translate(25px, 220px) scale(1);
+        -moz-transform: translate(25px, 210px) scale(1);
     }
 }
 
@@ -1202,7 +1219,7 @@ h1 {
         -o-transform: translate(5px, 160px) scale(0);
     }
     100% {
-        -o-transform: translate(25px, 220px) scale(1);
+        -o-transform: translate(25px, 210px) scale(1);
     }
 }
 
@@ -1211,7 +1228,7 @@ h1 {
         transform: translate(5px, 160px) scale(0);
     }
     100% {
-        transform: translate(25px, 220px) scale(1);
+        transform: translate(25px, 210px) scale(1);
     }
 }
 
@@ -1302,11 +1319,11 @@ h1 {
     }
     #one-great-advice-text {
         grid-area: one-great-advice-text;
-        -webkit-transform: translate(0px, 0px);
-        -moz-transform: translate(0px, 0px);
-        -o-transform: translate(0px, 0px);
-        transform: translate(0px, 0px);
-        font-size: 12px;
+        -webkit-transform: translate(-15px, 30px);
+        -moz-transform: translate(-15px, 30px);
+        -o-transform: translate(-15px, 30px);
+        transform: translate(-15px, 30px);
+        font-size: 16px;
         width: 80%;
         margin-left: 45px;
         margin-right: 45px;
@@ -1813,7 +1830,7 @@ h1 {
         transform: scale(0.4);
     }
     100% {
-        transform: scale(1);
+        transform: scale(1.02);
     }
 }
 
@@ -1822,7 +1839,7 @@ h1 {
         transform: scale(0.4);
     }
     100% {
-        transform: scale(1);
+        transform: scale(1.02);
     }
 }
 
@@ -1831,7 +1848,7 @@ h1 {
         transform: scale(0.4);
     }
     100% {
-        transform: scale(1);
+        transform: scale(1.02);
     }
 }
 
@@ -1840,19 +1857,19 @@ h1 {
         transform: scale(0.4);
     }
     100% {
-        transform: scale(1);
+        transform: scale(1.02);
     }
 }
 
 @keyframes static_animation_triangle_2 {
     0% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1.02) rotate(0deg);
     }
     50% {
-        transform: scale(1) rotate(-8deg);
+        transform: scale(1.02) rotate(-8deg);
     }
     100% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1.02) rotate(0deg);
     }
 }
 
@@ -1916,7 +1933,7 @@ h1 {
     grid-area: blue-triangle;
     align-self: center;
     justify-self: center;
-    font-size: 85%;
+    font-size: 16px;
     margin-left: 100px;
     margin-right: 120px;
     transform: translate(0px, 20px) scale(0);
@@ -1981,34 +1998,34 @@ h1 {
     }
     @-webkit-keyframes still2 {
         0% {
-            transform: translate(35px, 35px) scale(1);
+            transform: translate(35px, 70px) scale(1.02);
         }
         100% {
-            transform: translate(35px, 35px) scale(1);
+            transform: translate(35px, 70px) scale(1.02);
         }
     }
     @-moz-keyframes still2 {
         0% {
-            transform: translate(35px, 35px) scale(1);
+            transform: translate(35px, 70px) scale(1.02);
         }
         100% {
-            transform: translate(35px, 35px) scale(1);
+            transform: translate(35px, 70px) scale(1.02);
         }
     }
     @-o-keyframes still2 {
         0% {
-            transform: translate(35px, 35px) scale(1);
+            transform: translate(35px, 70px) scale(1.02);
         }
         100% {
-            transform: translate(35px, 35px)scale(1);
+            transform: translate(35px, 70px)scale(1.02);
         }
     }
     @keyframes still2 {
         0% {
-            transform: translate(35px, 35px) scale(1);
+            transform: translate(35px, 70px) scale(1.02);
         }
         100% {
-            transform: translate(35px, 35px) scale(1);
+            transform: translate(35px, 70px) scale(1.02);
         }
     }
     #red_circle {
@@ -2028,7 +2045,7 @@ h1 {
     }
     #furthermore-text {
         grid-area: furthermore-text;
-        font-size: 12px;
+        font-size: 14px;
         width: 80%;
         align-self: start;
         justify-self: center;
@@ -2036,7 +2053,7 @@ h1 {
         margin-left: 45px;
         margin-right: 45px;
         padding: 0px;
-        transform: translateY(-10px);
+        transform: translateY(0px);
         z-index: 1;
     }
     #mobile-ask-yourself-box-3 {
@@ -2126,11 +2143,13 @@ h1 {
 
 /*========== Job Boxes ==========*/
 
+
+
 .job-boxes-container {
     grid-area: job-boxes;
     align-self: center;
     justify-self: center;
-    width: 740px;
+    width: 760px;
     height: 180px;
     display: -moz-box;
     display: flex;
@@ -2143,6 +2162,12 @@ h1 {
     width: 170px;
     height: 170px;
     border-radius: 15px;
+    bottom: 0px;
+    transition: bottom 0.3s ease;
+}
+
+.job-box:hover {
+    bottom: 10px
 }
 
 .job-box-text {
@@ -2155,12 +2180,22 @@ h1 {
     transform: translate(52px, 30px);
 }
 
+#job-box-text-1{
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: white;
+    font-size: 170%;
+    transform: translate(36px, 30px);
+}
+
 #job-box-text-3 {
-    transform: translate(40px, 30px);
+    transform: translate(22px, 30px);
 }
 
 #job-box-text-4 {
-    transform: translate(18px, 30px);
+    transform: translate(52px, 30px);
 }
 
 .job-text {
@@ -2215,7 +2250,7 @@ h1 {
     background: #8B6C5B;
 }
 
-/* Job boexes */
+/* Job boxes */
 
 @media (max-width: 732px) {
     .job-boxes-container {
@@ -2256,7 +2291,7 @@ h1 {
     }
     .understanding-text {
         font-size: 95%;
-        padding-bottom: 15px;
+        padding-bottom: 0px;
     }
     .job-section-text {
         font-size: 100%;
@@ -2268,6 +2303,18 @@ h1 {
     }
     #question_indicator_4 {
         display: none;
+    }
+
+    .job-box { 
+        /* Make responsive square with vmin */
+        /* 80% of the minimum dimension */
+        transition: border 0.5s ease !important;
+        /* transition: bow-shadow 0.3s ease-in-out; */
+        padding-top: 10px;
+        margin-bottom:10px;
+    }
+    .job-box:hover {
+        bottom: 0px !important;
     }
 }
 
@@ -2315,27 +2362,32 @@ h1 {
     padding: 0px;
     position: relative;
     display: grid;
-    grid-template-areas: "shape-group-bottom logo career-center space";
-    grid-template-columns: minmax(100px, 180px) 136px 369px 179px;
-    grid-template-rows: 210px;
+    grid-template-areas: "logo-1" "logo-2";
+    /* grid-template-columns: 400px; */
+    grid-template-rows: 160px;
     grid-gap: 0px;
+    margin-left: 20%;
+    margin-right: 20%
 }
 
 .career-center-explore-text {
-    grid-area: career-center;
+    grid-area: logo-1;
     align-self: center;
     justify-self: center;
     margin-top: 20px;
     font-weight: 500;
-    font-size: 125%;
+    font-size: 20px;
+    text-align: center
 }
 
 .career-center-link-text {
-    grid-area: career-center;
+    grid-area: logo-1;
     align-self: center;
     justify-self: center;
     font-size: 110%;
     font-weight: 400;
+    text-align: center;
+
 }
 
 .link {
@@ -2345,18 +2397,34 @@ h1 {
     color: #0645AD;
 }
 
-.logo {
-    grid-area: logo;
-    align-self: center;
-    justify-self: center;
-    transform: translateY(-25px);
-}
-
 .shape-group-bottom {
-    grid-area: shape-group-bottom;
+    grid-area: logo-2;
     align-self: end;
     justify-self: start;
-    transform: translate(-15px, 10px);
+    transform: translate(-205px, 10px);
+}
+
+.career-center-link {
+    position: relative;
+    grid-area: logo-2;
+    justify-self: center;
+    align-self: center;
+    box-shadow: 3px 3px 1px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 2px 3px #ccc;
+    -moz-box-shadow: 3px 3px 2px 3px #ccc;
+    bottom: 0px;
+    transition: bottom 0.3s ease;
+    margin-top: 10px;
+}
+
+.career-center-link:hover {
+    position: relative;
+    bottom: 10px;
+   
+}
+
+.career-center-logo {
+    width: 200px;
 }
 
 /* .job-section {
@@ -2372,8 +2440,10 @@ h1 {
         overflow-y: hidden;
         grid-template-areas: "career-center" "career-center-link" "logo";
         grid-template-columns: minmax(375px, 414px);
-        grid-template-rows: 88px 59px 150px;
+        grid-template-rows: 88px 59px 220px;
         grid-gap: 0px;
+        margin-left: 0%;
+        margin-right: 0%
     }
     .career-center-explore-text {
         grid-area: career-center;
@@ -2391,17 +2461,34 @@ h1 {
         justify-self: center;
         font-size: 115%;
     }
-    .logo {
-        grid-area: logo;
-        align-self: center;
-        justify-self: center;
-        transform: translateY(0px);
-    }
     .shape-group-bottom {
         grid-area: logo;
         align-self: end;
         justify-self: start;
         transform: translateX(-15px);
+    }
+
+    .career-center-link {
+        position: relative;
+        grid-area: logo;
+        justify-self: center;
+        align-self: center;
+        box-shadow: 3px 3px 1px 3px #ccc;
+        -webkit-box-shadow: 3px 3px 2px 3px #ccc;
+        -moz-box-shadow: 3px 3px 2px 3px #ccc;
+        bottom: 0px;
+        transition: bottom 0.3s ease;
+        margin-top: 10px;
+    }
+    
+    .career-center-link:hover {
+        position: relative;
+        bottom: 0px;
+       
+    }
+    
+    .career-center-logo {
+        width: 200px;
     }
 }
 
@@ -3433,14 +3520,12 @@ h1 {
         height: 73px;
     }
 }
-
 #indicator_box_2.expand {
     -webkit-animation: expandBox2 0.15s forwards ease-out;
     -moz-animation: expandBox2 0.15s forwards ease-out;
     -o-animation: expandBox2 0.15s forwards ease-out;
     animation: expandBox2 0.15s forwards ease-out;
 }
-
 @-webkit-keyframes expandBox2 {
     0% {
         opacity: 0;
@@ -3458,7 +3543,6 @@ h1 {
         height: 73px;
     }
 }
-
 @-moz-keyframes expandBox2 {
     0% {
         opacity: 0;
@@ -3476,7 +3560,6 @@ h1 {
         height: 73px;
     }
 }
-
 @-o-keyframes expandBox2 {
     0% {
         opacity: 0;
