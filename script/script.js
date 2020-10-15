@@ -3,17 +3,62 @@ function clickFunction(clicked_id) {
     console.log(element)
     var elementClassList = document.querySelectorAll("." + element.classList[0]);
 
-    for (var i = 0; i < elementClassList.length; i++) {
-        elementClassList[i].classList.add('clicked');
-    }   
-
+    // if (element.id != 'toggle-button') {
+    //     for (var i = 0; i < elementClassList.length; i++) {
+    //         elementClassList[i].classList.add('clicked');
+    //     } 
+    // } 
     console.log(element.id);
-    if (element.id == 'toggle_button') {
-        document.getElementById('click_here_hover').style.display = "none";
-    } else if (element.id == 'big_heart') { 
-        document.getElementById('click_here_hover2').style.display = "none";
-    } else if (element.id == 'blue_triangle') { 
-        document.getElementById('click_here_hover3').style.display = "none";
+    if (element.id == 'toggle-button') {
+        if (document.getElementById('click_here_hover1').style.visibility != "hidden")
+            document.getElementById('click_here_hover1').style.visibility = "hidden";
+        else
+            document.getElementById('click_here_hover1').style.visibility = "visible"
+
+        for (var i = 0; i < elementClassList.length; i++) {
+            if (elementClassList[i].classList.contains('clicked')) {
+                elementClassList[i].classList.remove('clicked');
+            } else {
+                elementClassList[i].classList.add('clicked');
+            }
+            
+        }  
+
+    } else if (element.id == 'big-heart') { 
+        for (var i = 0; i < elementClassList.length; i++) {
+            if (elementClassList[i].classList.contains('clicked')) {
+                elementClassList[i].classList.remove('clicked');
+                elementClassList[i].classList.add('shrink');
+            } else {
+                elementClassList[i].classList.add('clicked');
+                elementClassList[i].classList.remove('shrink');
+            }
+            
+        }
+        if (document.getElementById('click_here_hover2').style.visibility != "hidden")
+        document.getElementById('click_here_hover2').style.visibility = "hidden";
+        else
+            document.getElementById('click_here_hover2').style.visibility = "visible"
+        
+            // document.getElementById('click_here_hover2').style.display = "none";
+
+    } else if (element.id == 'blue-triangle') { 
+        console.log("hello there general kenobi")
+        for (var i = 0; i < elementClassList.length; i++) {
+            if (elementClassList[i].classList.contains('clicked')) {
+                elementClassList[i].classList.remove('clicked');
+                elementClassList[i].classList.add('shrink');
+            } else {
+                elementClassList[i].classList.add('clicked');
+                elementClassList[i].classList.remove('shrink');
+            }
+            
+        }  
+        if (document.getElementById('click_here_hover3').style.visibility != "hidden")
+            document.getElementById('click_here_hover3').style.visibility = "hidden";
+        else
+            document.getElementById('click_here_hover3').style.visibility = "visible"
+        // document.getElementById('click_here_hover3').style.display = "none";
     }
 
 }
@@ -54,7 +99,6 @@ function arrowHoverOn(over_id) {
     if(over_id == 'square_1') {
         var pulse = document.getElementById('pulse_1');
         pulse.classList.add('show');
-    
         var flashlight_logo = document.getElementById('flashlight_logo');
         flashlight_logo.classList.add('hide');
     } else if (over_id == 'square_2') {
@@ -116,3 +160,33 @@ function indicatorHoverOff(indicator_id){
     element[0].classList.remove('hideAsk');
     element[0].classList.add('showAsk');
 }
+
+
+// function clickPromptOn(this_id) {
+//     var element = document.getElementById(this_id).getElementsByClassName('square');
+//     console.log(element[0].id);
+//     for (let i = 0; i < element.length; i++) {
+//         if (element[i].id == 'square-2') {
+//             setTimeout(function () {
+//                 element[i].classList.add('hovered');
+//             }, 10);
+            
+//         } else if (element[i].id == 'square-3') {
+//             setTimeout(function () {
+//                 element[i].classList.add('hovered');
+//             }, 10);
+            
+//         }
+//     }
+// }
+// function clickPromptOff (this_id) {
+//     var element = document.getElementById(this_id).getElementsByClassName('square');
+//     console.log(element[0].id);
+//     for (let i = 0; i < element.length; i++) {
+//         if (element[i].id == 'square-2') {
+//             element[i].classList.remove('hovered');
+//         } else if (element[i].id == 'square-3') {
+//             element[i].classList.remove('hovered');
+//         }
+//     }
+// }
